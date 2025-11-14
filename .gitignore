@@ -7,11 +7,11 @@
 
 !ghostty
 !ghostty/config
-!ghostty/shaders/
-!ghostty/shaders2/
-!ghostty/shaders2/cursor_blaze.glsl
-!ghostty/shaders/cursor_warp.glsl
-!ghostty/shaders/cursor_tail.glsl
+!ghostty/cursor_blaze.glsl
+!ghostty/cursor_sweep.glsl
+!ghostty/cursor_tail.glsl
+!ghostty/cursor_warp.glsl
+!ghostty/in-game-crt.glsl
 
 !karabiner
 !karabiner/karabiner.json
