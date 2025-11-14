@@ -12,5 +12,5 @@ custom-shader = shaders2/cursor_blaze.glsl
 # Stupid shaders.
 #custom-shader = shaders2/glow-rgbsplit-twitchy.glsl
 #custom-shader = shaders2/glitchy.glsl
-custom-shader = shaders2/in-game-crt.glsl
+#custom-shader = shaders2/in-game-crt.glsl
 #custom-shader = shaders2/bloom.glsl
