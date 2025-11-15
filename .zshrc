@@ -3,6 +3,7 @@ export PATH="$PATH:$HOME/.fzf/bin/"
 export PATH="$PATH:$HOME/.local/bin/"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export FORGIT_LOG_FZF_OPTS='--reverse'
+export EDITOR=code
 
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   # If you're using macOS, you'll want this enabled

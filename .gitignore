@@ -4,14 +4,10 @@
 !starship.toml
 !btop
 !yazi
+!yazi/**
 
 !ghostty
-!ghostty/config
-!ghostty/cursor_blaze.glsl
-!ghostty/cursor_sweep.glsl
-!ghostty/cursor_tail.glsl
-!ghostty/cursor_warp.glsl
-!ghostty/in-game-crt.glsl
+!ghostty/**
 
 !karabiner
 !karabiner/karabiner.json

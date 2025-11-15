@@ -4,6 +4,15 @@ background-blur = 30
 window-padding-x = 5
 focus-follows-mouse = true
 bell-features = system,attention,border
+#theme = light:GitHub,dark:Github Dark Dimmed
+#theme = dark:GitHub,light:Github Dark Dimmed
+
+cursor-color = red
+cursor-style = bar
+adjust-cursor-thickness = 3
+quick-terminal-animation-duration = 2
+
+cursor-click-to-move = true
 
 # Trailing cursor
 #custom-shader = shaders/cursor_tail.glsl
