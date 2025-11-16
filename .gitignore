@@ -7,7 +7,10 @@
 !yazi/**
 
 !ghostty
-!ghostty/**
+!ghostty/config
+!ghostty/cursor_blaze.glsl
+!ghostty/cursor_warp.glsl
+!ghostty/cursor_tail.glsl
 
 !karabiner
 !karabiner/karabiner.json
