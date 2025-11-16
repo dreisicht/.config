@@ -50,7 +50,7 @@ zinit snippet OMZP::colorize
 zinit cdreplay -q
 
 # Aliases
-alias l='eza --icons -s=modified -r'
+alias l='eza --icons -a -s=modified -r'
 alias ll='eza --icons -a -l --git --git-repos-no-status'
 alias t='eza --icons -T'
 alias vim='nvim'
@@ -96,7 +96,7 @@ setopt hist_find_no_dups
 
 # Completion styling
 export FZF_DEFAULT_OPTS='--reverse --inline-info --ansi --height ~75% --preview-window "right,60%,,+{2}+3/3,~3"'
-export FZF_CTRL_T_COMMAND='fd --type f --color=always -u'
+export FZF_CTRL_T_COMMAND='fd --type f --color=always --no-ignore -u'
 export FZF_ALT_C_COMMAND='fd --type d --color=always --no-ignore'
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
