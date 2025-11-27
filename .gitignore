@@ -4,6 +4,7 @@
 !starship.toml
 !btop
 !yazi
+yazi/plugins
 !yazi/**
 
 !ghostty
