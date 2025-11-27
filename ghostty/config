@@ -15,11 +15,11 @@ quick-terminal-animation-duration = 2
 cursor-click-to-move = true
 
 # Trailing cursor
-#custom-shader = shaders/cursor_tail.glsl
-custom-shader = shaders2/cursor_blaze.glsl
+#custom-shader = cursor_tail.glsl
+custom-shader = cursor_blaze.glsl
 
 # Stupid shaders.
-#custom-shader = shaders2/glow-rgbsplit-twitchy.glsl
-#custom-shader = shaders2/glitchy.glsl
-#custom-shader = shaders2/in-game-crt.glsl
-#custom-shader = shaders2/bloom.glsl
+#custom-shader = glow-rgbsplit-twitchy.glsl
+#custom-shader = glitchy.glsl
+#custom-shader = in-game-crt.glsl
+#custom-shader = bloom.glsl
