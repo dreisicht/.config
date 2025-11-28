@@ -76,6 +76,17 @@ bindkey '^[[B' history-search-forward   # Down arrow
 bindkey '^[w' kill-region
 bindkey " " fzf-cd-widget
 
+# Ctrl + Left/Right jump words
+bindkey "^[[1;5D" backward-word  # Ctrl + Left
+bindkey "^[[1;5C" forward-word   # Ctrl + Right
+
+# Home / End keys
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+bindkey "^H" backward-kill-word
+bindkey "^[[3;5~" kill-word
+
 # History
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
@@ -143,9 +154,9 @@ export FZF_CTRL_T_OPTS="
   --preview-window 'right,60%,,+{2}+3/3,~3'
   --prompt '📄>'
   --color header:italic
-  --header 'Enter: Accept | CTRL-E: VS Code | CTRL-V: vim'
+  --header 'Enter: Accept | CTRL-Enter: VS Code | CTRL-V: vim'
 
-  --bind 'ctrl-e:become(code --goto {1}:{2})'
+  --bind 'ctrl-enter:become(code --goto {1}:{2})'
   --bind 'ctrl-v:become(nvim )'"
 #    'ctrl-/:change-preview-window(down|hidden|)'\
 
@@ -201,7 +212,7 @@ fzf-history-widget() {
       BUFFER=$cmd
       zle accept-line
       ;;
-    ctrl-e)
+    ctrl-enter)
       # just insert so you can edit
       BUFFER+=$cmd
       zle -R
@@ -258,7 +269,7 @@ fif() {
     # 3. Open the file in VS Code
     RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case --no-ignore"
     INITIAL_QUERY="${*:-}"
-    fzf --ansi --disabled --query "$INITIAL_QUERY" \
+    fzf --no-ignore --ansi --disabled --query "$INITIAL_QUERY" \
         --bind "start:reload:$RG_PREFIX {q}" \
         --bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
         --bind "alt-enter:unbind(change,alt-enter)+change-prompt(2. fzf 📄> )+enable-search+clear-query" \
