@@ -85,8 +85,8 @@ setopt HIST_REDUCE_BLANKS        # remove superfluous blanks before recording en
 setopt SHARE_HISTORY             # share history between all sessions.
 setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
 setopt autocd
-# HISTFILE=~/.zsh_history
-# setopt appendhistory
+HISTFILE=~/.zsh_history
+setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
@@ -96,8 +96,8 @@ setopt hist_find_no_dups
 
 # Completion styling
 export FZF_DEFAULT_OPTS='--reverse --inline-info --ansi --height ~75% --preview-window "right,60%,,+{2}+3/3,~3"'
-export FZF_CTRL_T_COMMAND='fd --type f --color=always --no-ignore -u'
-export FZF_ALT_C_COMMAND='fd --type d --color=always --no-ignore'
+export FZF_CTRL_T_COMMAND='fd --type f --color=always -u'
+export FZF_ALT_C_COMMAND='fd --type d --color=always -u'
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group supporte
@@ -256,7 +256,7 @@ fif() {
     # 2. Interactively restart Ripgrep with reload action
     #    * Press alt-enter to switch to fzf-only filtering
     # 3. Open the file in VS Code
-    RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
+    RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case --no-ignore"
     INITIAL_QUERY="${*:-}"
     fzf --ansi --disabled --query "$INITIAL_QUERY" \
         --bind "start:reload:$RG_PREFIX {q}" \
