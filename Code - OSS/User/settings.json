@@ -1,0 +1,433 @@
+{
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.detectIndentation": false,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "AREPL.skipLandingPage": true,
+    "autopep8.args": [
+        "--indent-size=2",
+        "--ignore",
+        "E402"
+    ],
+    "bazel.buildifierFixOnFormat": true,
+    "bazel.enableCodeLens": true,
+    "bazel.queriesShareServer": false,
+    "blender.executables": [
+        {
+            "isDebug": false,
+            "name": "",
+            "path": "C:/Program Files (x86)/Steam/steamapps/common/Blender/blender.exe"
+        }
+    ],
+    "C_Cpp.addNodeAddonIncludePaths": true,
+    "C_Cpp.autoAddFileAssociations": true,
+    "C_Cpp.clang_format_path": "clang-format",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.codeAnalysis.clangTidy.path": "clang-tidy",
+    "C_Cpp.default.mergeConfigurations": true,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "cmake.configureOnOpen": false,
+    "cmake.showOptionsMovedNotification": false,
+    "cpp-check-lint.cppcheck.--enable=": "",
+    "cpp-check-lint.cppcheck.--executable": "",
+    "cpp-check-lint.cppcheck.--std_c++=": "c++20",
+    "cpp-check-lint.cppcheck.--suppress=": [
+        "unmatchedSuppression",
+        "missingIncludeSystem",
+        "missingInclude"
+    ],
+    "cpp-check-lint.cpplint.--filter=": "-whitespace,-legal/copyright,-build/include_order,-build/c++17",
+    "cSpell.allowCompoundWords": false,
+    "cSpell.checkOnlyEnabledFileTypes": true,
+    "cSpell.ignorePaths": [
+        "package-lock.json",
+        "node_modules",
+        "vscode-extension",
+        ".git/objects",
+        ".vscode",
+        ".vscode-insiders"
+    ],
+    "cSpell.ignoreRegExpList": [
+        "[/\b[A-Z]{3,5}\b/g]"
+    ],
+    "cSpell.language": "en,de-de",
+    "cSpell.languageSettings": [
+        {
+            // Includes comments as well as strings.
+            "includeRegExpList": [
+                "/#.*/",
+                "/('''|\"\"\")[^\\1]+?\\1/g",
+                "(\"\"\"(?:.|\\n)*?\"\"\")",
+                "'''((.|\n)*)'''",
+                "\".*?\"|'.*?'"
+            ],
+            "languageId": "python"
+        },
+        {
+            "includeRegExpList": [
+                "CStyleComment"
+            ],
+            "languageId": "json,jsonc,javascript,c,typescript"
+        },
+        {
+            // Turn off compound words, because it is only checking strings.
+            "allowCompoundWords": false,
+            // Exclude includes, because they are also strings.
+            "ignoreRegExpList": [
+                "/#include.*/"
+            ],
+            "includeRegExpList": [
+                "CStyleComment",
+                "string"
+            ],
+            "languageId": "cpp,c"
+        }
+    ],
+    "cSpell.showAutocompleteSuggestions": true,
+    "cSpell.useGitignore": true,
+    "cSpell.userWords": [
+        "Baintner",
+        "denoise",
+        "denoising",
+        "Denoising",
+        "eevee",
+        "nvidia",
+        "OPTIX",
+        "percres",
+        "SHEETCACHE",
+        "shotname",
+        "srcs",
+        "subfolders",
+        "xres",
+        "yres"
+    ],
+    "debug.onTaskErrors": "abort",
+    "debug.toolBarLocation": "commandCenter",
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": true,
+    "editor.autoIndent": "advanced",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorWidth": 2,
+    "editor.fontFamily": "FiraCode Nerd Font Ret",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.inlayHints.enabled": "off",
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.size": "fit",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.quickSuggestionsDelay": 0,
+    "editor.renderWhitespace": "boundary",
+    "editor.scrollBeyondLastLine": false,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            "selfParameter": "#b20732"
+        }
+    },
+    "editor.smoothScrolling": true,
+    "editor.stickyTabStops": true,
+    "editor.suggest.shareSuggestSelections": true,
+    "editor.tokenColorCustomizations": {
+        "[GitHub Dark*]": {
+            "textMateRules": [
+                {
+                    "name": "all parameters",
+                    "scope": [
+                        "variable.parameter"
+                    ],
+                    "settings": {
+                        "foreground": "#dbc88e"
+                    }
+                }
+            ]
+        },
+        "[GitHub Light*]": {
+            "textMateRules": [
+                {
+                    "name": "all parameters",
+                    "scope": [
+                        "variable.parameter"
+                    ],
+                    "settings": {
+                        "foreground": "#886b0d"
+                    }
+                },
+                {
+                    "name": "strings",
+                    "scope": [
+                        "string.quoted.single.python"
+                    ],
+                    "settings": {
+                        "foreground": "#4d80b9"
+                    }
+                }
+            ]
+        },
+        "[GitHub*]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "variable.language.special.self.python"
+                    ],
+                    "settings": {
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": [
+                        "variable.parameter.function.language.python",
+                        "storage"
+                    ],
+                    "settings": {
+                        "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    "scope": [
+                        "support.type.property-name.json"
+                    ],
+                    "settings": {
+                        "foreground": "#a185d6"
+                    }
+                },
+                {
+                    "scope": [
+                        "entity.name.namespace"
+                    ],
+                    "settings": {
+                        "foreground": "#906c8c"
+                    }
+                }
+            ]
+        },
+        "textMateRules": [
+            {
+                "scope": "googletest.failed",
+                "settings": {
+                    "foreground": "#f00"
+                }
+            },
+            {
+                "scope": "googletest.passed",
+                "settings": {
+                    "foreground": "#0f0"
+                }
+            },
+            {
+                "scope": "googletest.run",
+                "settings": {
+                    "foreground": "#aaa"
+                }
+            }
+        ]
+    },
+    "editor.wordWrap": "off",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.associations": {
+        "*.spec": "ini",
+        "BUILD": "starlark",
+        "filesystem": "cpp",
+        "thread": "cpp",
+        "vector": "cpp"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.ignoreRebaseWarning": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": true,
+        "cpp": false,
+        "starlark": true
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "gitlens.views.branches.branches.layout": "list",
+    "gtest-adapter.debugConfig": "bazel test ${WORKSPACEFOLDER}",
+    "indentRainbow.colorOnWhiteSpaceOnly": true,
+    "indentRainbow.colors": [
+        "rgba(128,128,220,0.04)",
+        "rgba(0,0,0,0)"
+    ],
+    "indentRainbow.errorColor": "rgba(178,0,0,0)",
+    "isort.args": [
+        "-l 100"
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "command": "latexmk",
+            "name": "latexmk"
+        }
+    ],
+    "notebook.stickyScroll.enabled": true,
+    "pylint.args": [
+        "--indent-string='  '",
+        "--extension-pkg-whitelist=PySide6,cache_pb2,state_pb2,bpy,numpy",
+        "--generated-members=PySide6,bpy"
+    ],
+    "pylint.importStrategy": "fromEnvironment",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": [
+        ".venv/Lib/site-packages/",
+        ".venv/Lib/site-packages/bpy/4.5/scripts/modules"
+    ],
+    "python.analysis.typeCheckingMode": "standard",
+    "python.autoComplete.extraPaths": [
+        "C:/Users/peter/AppData/Local/Programs/Python/Python310/Lib/site-packages"
+    ],
+    "python.terminal.shellIntegration.enabled": true,
+    "pythonIndent.trimLinesWithOnlyWhitespace": true,
+    "pythonIndent.useTabOnHangingIndent": true,
+    "redhat.telemetry.enabled": false,
+    "remote.SSH.remotePlatform": {
+        "147.189.192.220": "linux",
+        "147.189.193.190": "linux",
+        "147.189.194.246": "linux",
+        "147.189.196.144": "linux"
+    },
+    "search.collapseResults": "auto",
+    "security.workspace.trust.untrustedFiles": "open",
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 2,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Ret",
+    "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.minimumContrastRatio": 2,
+    "terminal.integrated.persistentSessionScrollback": 1000,
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "window.autoDetectColorScheme": true,
+    "workbench.colorCustomizations": {
+        "[GitHub Dark*]": {
+            "activityBar.activeBackground": "#343a41",
+            // "statusBar.border": "#ff000000",
+            "activityBar.border": "#ff000000",
+            "contrastBorder": "#776a6a00",
+            "editor.background": "#15181b",
+            "editorBracketMatch.border": "#ffffff70",
+            "editorOverviewRuler.background": "#1b1f23",
+            "editorWhitespace.foreground": "#292929",
+            "focusBorder": "#414141",
+            "menu.border": "#57575700",
+            "menubar.selectionBorder": "#ff000000",
+            "panel.border": "#1d1d1d",
+            "sideBar.border": "#1a1b3000",
+            "tab.border": "#57575770",
+            "terminal.ansiBlue": "#476991",
+            "terminal.ansiGreen": "#53ad71",
+            "terminal.ansiRed": "#d37562",
+            "terminal.ansiYellow": "#d8bf76"
+        },
+        "[GitHub Light*]": {
+            "activityBar.activeBackground": "#e7e7e7e7",
+            "editorOverviewRuler.background": "#fafbff",
+            "editorWhitespace.foreground": "#e7e7e7e7",
+            "terminal.ansiBlue": "#88b1e4",
+            "terminal.ansiGreen": "#509c69",
+            "terminal.ansiRed": "#d37562",
+            "terminal.ansiYellow": "#d8bf76"
+        },
+        "editor.foldBackground": "#d5e4f04b",
+        "editorBracketHighlight.foreground2": "#505050",
+        "editorBracketHighlight.foreground4": "#505050",
+        "editorBracketHighlight.foreground6": "#505050",
+        "editorCursor.foreground": "#ff0000",
+        "editorGutter.modifiedBackground": "#498fe3",
+        "editorIndentGuide.activeBackground1": "#2188ff",
+        "editorOverviewRuler.errorForeground": "#ff0000",
+        "editorOverviewRuler.warningForeground": "#e0c000",
+        "gitDecoration.modifiedResourceForeground": "#498fe3",
+        "gitDecoration.stageModifiedResourceForeground": "#51a0aa",
+        "list.warningForeground": "#e0c000",
+        "statusBar.debuggingBackground": "#51c79a",
+        "statusBar.debuggingBorder": "#181818",
+        "statusBar.debuggingForeground": "#000000",
+        "statusBar.noFolderBackground": "#d8bf76",
+        "statusBar.noFolderForeground": "#2f4752",
+        "statusBarItem.errorBackground": "#b95878",
+        "statusBarItem.errorForeground": "#ffffff",
+        "statusBarItem.warningBackground": "#b48911",
+        "statusBarItem.warningForeground": "#ffffff",
+        "terminalCursor.foreground": "#ff0000"
+    },
+    // "workbench.colorTheme": "GitHub Dark",
+    "workbench.editor.alwaysShowEditorActions": true,
+    "workbench.list.smoothScrolling": true,
+    "workbench.panel.defaultLocation": "right",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "workbench.reduceMotion": "off",
+    "workbench.tree.enableStickyScroll": true,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "[cpp]": {
+        "editor.stickyScroll.defaultModel": "outlineModel",
+        "editor.stickyTabStops": true
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "telemetry.feedback.enabled": false,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "debug.console.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.minimap.autohide": "mouseover",
+    "clangd.arguments": [
+        "--header-insertion=never",
+        "--query-driver=**"
+    ],
+    "git.blame.editorDecoration.enabled": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "icontheme.darkIconTheme": "Catppuccin Macchiato",
+    "icontheme.lightIconTheme": "Catppuccin Latte",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "editor.inlineSuggest.edits.showCollapsed": true
+}

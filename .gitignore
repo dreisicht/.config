@@ -5,7 +5,6 @@
 !btop
 !yazi
 yazi/plugins
-!yazi/**
 
 !ghostty
 !ghostty/config
@@ -17,3 +16,14 @@ yazi/plugins
 !karabiner/karabiner.json
 
 !README.md
+
+!hypr/
+!hypr/**
+
+!Code - OSS/
+!Code - OSS/User/
+!Code - OSS/User/keybindings.json
+!Code - OSS/User/settings.json
+
+!noctalia
+!noctalia/**
