@@ -1,0 +1,19 @@
+{
+    "closeOnFocusLoss": true,
+    "considerPreedit": true,
+    "faviconService": "twenty",
+    "font": {
+        "size": 10.5
+    },
+    "keybinding": "default",
+    "keybinds": {},
+    "popToRootOnClose": true,
+    "rootSearch": {
+        "searchFiles": false
+    },
+    "window": {
+        "csd": true,
+        "opacity": 0,
+        "rounding": 10
+    }
+}

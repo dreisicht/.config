@@ -27,3 +27,10 @@ yazi/plugins
 
 !noctalia
 !noctalia/**
+
+!vicinae
+!vicinae/**
+
+!easyeffects
+!easyeffects/db/
+!easyeffects/db/equalizerrc
