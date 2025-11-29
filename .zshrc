@@ -154,9 +154,9 @@ export FZF_CTRL_T_OPTS="
   --preview-window 'right,60%,,+{2}+3/3,~3'
   --prompt '📄>'
   --color header:italic
-  --header 'Enter: Accept | CTRL-Enter: VS Code | CTRL-V: vim'
+  --header 'Enter: Accept | CTRL-E: VS Code | CTRL-V: vim'
 
-  --bind 'ctrl-enter:become(code --goto {1}:{2})'
+  --bind 'ctrl-e:become(code --goto {1}:{2})'
   --bind 'ctrl-v:become(nvim )'"
 #    'ctrl-/:change-preview-window(down|hidden|)'\
 
@@ -212,7 +212,7 @@ fzf-history-widget() {
       BUFFER=$cmd
       zle accept-line
       ;;
-    ctrl-enter)
+    ctrl-e)
       # just insert so you can edit
       BUFFER+=$cmd
       zle -R

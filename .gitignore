@@ -34,3 +34,6 @@ yazi/plugins
 !easyeffects
 !easyeffects/db/
 !easyeffects/db/equalizerrc
+
+!btop/
+!btop/btop.conf
