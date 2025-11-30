@@ -4,22 +4,38 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
+# [█](fg:0)\
+# [█](fg:8)\
+# [█](fg:7)\
+# [█](fg:6)\
+# [█](fg:5)\
+# [█](fg:4)\
+# [█](fg:2)\
+# [█](fg:3)\
+# [█](fg:1)\
+# [.](fg:0)\
+# [█](fg:9)\
+# [█](fg:10)\
+# [█](fg:11)\
+# [█](fg:12)\
+# [█](fg:13)\
+# [█](fg:14)\
+# [█](fg:15)\
+
 #  
 format = """
-[](fg:4)\
+[](fg:0)\
 $os\
-[](bg:7 fg:4)\
+$username\
+$sudo\
+[](bg:7 fg:0)\
 $directory\
-[](fg:7)\
-
-[](fg:5)\
-$cmd_duration\
-[](fg:1 bg:5)\
+[](fg:7 bg:1)\
 $git_branch\
 $git_status\
 $git_state\
 $git_metrics\
-[](fg:3 bg:1)\
+[](fg:1 bg:3)\
 $c\
 $cpp\
 $rust\
@@ -30,21 +46,17 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:2 bg:3)\
+[](fg:3 bg:2)\
 $package\
-[](fg:6 bg:2)\
 $docker_context\
 $conda\
 $pixi\
-[](fg:4 bg:6)\
-$username\
-$sudo\
-[](fg:7 bg:4)\
+[](fg:2 bg:6)\
+$cmd_duration\
+[](fg:6 bg:4)\
 $battery\
 $memory_usage\
-[](fg:0 bg:7)\
-$time\
-[](fg:0)\
+[](fg:4)\
 $line_break\
 $character
 """
@@ -52,7 +64,7 @@ $character
 [os]
 disabled = false
 format = "[$symbol ]($style)"
-style = "bg:4"
+style = "bg:0"
 
 [os.symbols]
 Windows = "󰍲"
@@ -82,9 +94,9 @@ openSUSE = ""
 
 [username]
 show_always = true
-style_user = "bg:4 "
-style_root = "bg:4 "
-format = '[ $user ]($style)'
+style_user = "bg:0 "
+style_root = "bg:0 "
+format = '[$user ]($style)'
 [username.aliases]
 peterbaintner = "pb"
 
@@ -119,7 +131,7 @@ format = '\([$state( $progress_current/$progress_total)]($style)\) '
 disabled = false
 added_style = "fg:#005d30 bg:1"
 deleted_style = "fg:#5d0030 bg:1"
-format = '([+$added ]($added_style))([-$deleted ]($deleted_style))'
+format = '([+$added ]($added_style))([-$deleted]($deleted_style))'
 
 [nodejs]
 symbol = ""
@@ -172,25 +184,25 @@ style = " bg:3"
 pyenv_prefix = " in "
 pyenv_version_name = true
 version_format = '${raw}'
-format = '[${symbol}(${version})( $virtualenv) ]($style)'
+format = '[ ${symbol}(${version})( $virtualenv)]($style)'
 
 [package]
 style = " bg:2"
 symbol = "󰏗 "
-format = '[$symbol$version ]($style)'
+format = '[ $symbol$version]($style)'
 
 [docker_context]
 symbol = ""
-style = "bg:7"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:7)]($style)'
+style = "bg:2"
+format = '[[ $symbol( $context)](fg:#83a598 bg:7)]($style)'
 
 [conda]
-style = "bg:7"
-format = '[[ $symbol( $environment) ](fg:#83a598 bg:7)]($style)'
+style = "bg:2"
+format = '[[ $symbol( $environment)](fg:#83a598 bg:7)]($style)'
 
 [pixi]
-style = "bg:7"
-format = '[[ $symbol( $version)( $environment) ]( bg:7)]($style)'
+style = "bg:2"
+format = '[[ $symbol( $version)( $environment)]( bg:7)]($style)'
 
 [time]
 disabled = false
@@ -200,18 +212,18 @@ format = '[[  $time ]( bg:0)]($style)'
 
 [battery]
 disabled = false
-format = "[$symbol$percentage ]($style)"
+format = "[ $symbol$percentage]($style)"
 
 [[battery.display]]
 threshold = 20
-style = 'bold fg:red bg:7'
+style = 'bold fg:red bg:4'
 
 [memory_usage]
 disabled = false
 threshold = 90
 symbol = " "
-style = "bg:7"
-format = '[$symbol ${ram}( | ${swap}) ]($style)'
+style = "bg:4"
+format = '[ $symbol ${ram}( | ${swap})]($style)'
 
 [line_break]
 disabled = false
@@ -231,7 +243,7 @@ vimcmd_replace_symbol = '[❮](bold fg:5)'
 vimcmd_visual_symbol = '[❮](bold fg:3)'
 
 [cmd_duration]
-style = " bg:5"
+style = " bg:6"
 format = "[took $duration ]($style)"
 
 [sudo]

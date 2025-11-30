@@ -429,5 +429,6 @@
     "icontheme.darkIconTheme": "Catppuccin Macchiato",
     "icontheme.lightIconTheme": "Catppuccin Latte",
     "workbench.iconTheme": "catppuccin-mocha",
-    "editor.inlineSuggest.edits.showCollapsed": true
+    "editor.inlineSuggest.edits.showCollapsed": true,
+    "diffEditor.hideUnchangedRegions.enabled": true
 }
