@@ -96,7 +96,7 @@ openSUSE = ""
 show_always = true
 style_user = "bg:0 "
 style_root = "bg:0 "
-format = '[$user ]($style)'
+format = '[$user]($style)'
 [username.aliases]
 peterbaintner = "pb"
 
@@ -248,6 +248,6 @@ format = "[took $duration ]($style)"
 
 [sudo]
 disabled = false
-style = " bg:4"
-symbol = "🧙"
-format = "[as $symbol]($style)"
+style = " bg:0"
+symbol = "•"
+format = "[$symbol]($style)"
