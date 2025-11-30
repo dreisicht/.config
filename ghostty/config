@@ -75,4 +75,4 @@ custom-shader = cursor_blaze.glsl
 
 #theme = light:GitHub,dark:Github Dark Dimmed
 #theme = dark:GitHub,light:Github Dark Dimmed
-theme = noctalia
+#theme = noctalia
