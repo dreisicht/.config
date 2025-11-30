@@ -26,7 +26,7 @@
     "bar": {
         "backgroundOpacity": 0.66,
         "capsuleOpacity": 1,
-        "density": "comfortable",
+        "density": "default",
         "exclusive": true,
         "floating": false,
         "marginHorizontal": 0.25,
@@ -34,7 +34,7 @@
         "monitors": [
         ],
         "outerCorners": true,
-        "position": "right",
+        "position": "top",
         "showCapsule": true,
         "widgets": {
             "center": [
@@ -44,6 +44,14 @@
                     "hideUnoccupied": false,
                     "id": "Workspace",
                     "labelMode": "name"
+                },
+                {
+                    "customFont": "",
+                    "formatHorizontal": "HH:mm",
+                    "formatVertical": "HH mm",
+                    "id": "Clock",
+                    "useCustomFont": false,
+                    "usePrimaryColor": true
                 }
             ],
             "left": [
@@ -52,7 +60,7 @@
                     "customIconPath": "",
                     "icon": "",
                     "id": "ControlCenter",
-                    "useDistroLogo": true
+                    "useDistroLogo": false
                 },
                 {
                     "diskPath": "/",
@@ -64,7 +72,9 @@
                     "showMemoryUsage": true,
                     "showNetworkStats": true,
                     "usePrimaryColor": false
-                },
+                }
+            ],
+            "right": [
                 {
                     "id": "ScreenRecorder"
                 },
@@ -75,25 +85,11 @@
                     "maxWidth": 145,
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
-                    "showArtistFirst": true,
+                    "showArtistFirst": false,
                     "showProgressRing": true,
                     "showVisualizer": true,
                     "useFixedWidth": false,
                     "visualizerType": "wave"
-                },
-                {
-                    "colorizeIcons": false,
-                    "hideMode": "visible",
-                    "id": "ActiveWindow",
-                    "maxWidth": 145,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "useFixedWidth": false
-                }
-            ],
-            "right": [
-                {
-                    "id": "ScreenRecorder"
                 },
                 {
                     "blacklist": [
@@ -103,11 +99,6 @@
                     "id": "Tray",
                     "pinned": [
                     ]
-                },
-                {
-                    "hideWhenZero": true,
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true
                 },
                 {
                     "displayMode": "alwaysShow",
@@ -124,12 +115,9 @@
                     "id": "NightLight"
                 },
                 {
-                    "customFont": "",
-                    "formatHorizontal": "HH:mm dddd, MMMM dd",
-                    "formatVertical": "HH mm - dd MM",
-                    "id": "Clock",
-                    "useCustomFont": false,
-                    "usePrimaryColor": true
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
                 }
             ]
         }
@@ -137,7 +125,7 @@
     "brightness": {
         "brightnessStep": 5,
         "enableDdcSupport": true,
-        "enforceMinimum": true
+        "enforceMinimum": false
     },
     "changelog": {
         "lastSeenVersion": ""
@@ -412,7 +400,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "beach",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
         "wallhavenResolutionWidth": "",

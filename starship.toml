@@ -12,8 +12,6 @@ $os\
 $directory\
 [](fg:7)\
 
-$fill\
-
 [](fg:5)\
 $cmd_duration\
 [](fg:1 bg:5)\
@@ -73,6 +71,7 @@ Android = ""
 AOSC = ""
 Arch = "󰣇"
 Artix = "󰣇"
+CachyOS = "󰣇"
 EndeavourOS = ""
 CentOS = ""
 Debian = "󰣚"

@@ -6,14 +6,18 @@
         "size": 10.5
     },
     "keybinding": "default",
-    "keybinds": {},
+    "keybinds": {
+    },
     "popToRootOnClose": true,
     "rootSearch": {
         "searchFiles": false
     },
+    "theme": {
+        "name": "matugen"
+    },
     "window": {
         "csd": true,
-        "opacity": 0,
+        "opacity": 0.9,
         "rounding": 10
     }
 }
