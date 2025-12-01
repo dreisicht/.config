@@ -248,6 +248,6 @@ format = "[  $duration]($style)"
 
 [sudo]
 disabled = false
-style = " bg:0"
+style = " bg:4"
 symbol = "•"
 format = "[$symbol]($style)"
