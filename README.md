@@ -68,3 +68,5 @@ hyprpm enable Hyprspace
 
 - Mount hdd automatically
 - Create drive on ssd 2TB
+
+### Snapshots

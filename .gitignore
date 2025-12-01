@@ -37,3 +37,6 @@ yazi/plugins
 
 !btop/
 !btop/btop.conf
+
+!zsh/
+!zsh/**
