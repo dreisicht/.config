@@ -24,11 +24,11 @@ add_newline = false
 
 #  
 format = """
-[](fg:0)\
+[](fg:4)\
 $os\
 $username\
 $sudo\
-[](bg:7 fg:0)\
+[](bg:7 fg:4)\
 $directory\
 [](fg:7 bg:1)\
 $git_branch\
@@ -64,7 +64,7 @@ $character
 [os]
 disabled = false
 format = "[$symbol ]($style)"
-style = "bg:0"
+style = "bg:4"
 
 [os.symbols]
 Windows = "󰍲"
@@ -94,8 +94,8 @@ openSUSE = ""
 
 [username]
 show_always = true
-style_user = "bg:0 "
-style_root = "bg:0 "
+style_user = "bg:4 "
+style_root = "bg:4 "
 format = '[$user]($style)'
 [username.aliases]
 peterbaintner = "pb"
@@ -244,7 +244,7 @@ vimcmd_visual_symbol = '[❮](bold fg:3)'
 
 [cmd_duration]
 style = " bg:6"
-format = "[took $duration ]($style)"
+format = "[  $duration]($style)"
 
 [sudo]
 disabled = false
