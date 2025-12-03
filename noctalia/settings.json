@@ -4,8 +4,7 @@
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
         "enableClipboardHistory": false,
-        "pinnedExecs": [
-        ],
+        "pinnedExecs": [],
         "position": "center",
         "sortByMostUsed": true,
         "terminalCommand": "xterm -e",
@@ -15,8 +14,7 @@
     "audio": {
         "cavaFrameRate": 120,
         "externalMixer": "pwvucontrol || pavucontrol",
-        "mprisBlacklist": [
-        ],
+        "mprisBlacklist": [],
         "preferredPlayer": "spotify",
         "visualizerQuality": "high",
         "visualizerType": "linear",
@@ -31,8 +29,7 @@
         "floating": false,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
-        "monitors": [
-        ],
+        "monitors": [],
         "outerCorners": true,
         "position": "top",
         "showCapsule": true,
@@ -57,7 +54,9 @@
             "left": [
                 {
                     "colorizeDistroLogo": true,
+                    "colorizeSystemIcon": "none",
                     "customIconPath": "",
+                    "enableColorization": false,
                     "icon": "",
                     "id": "ControlCenter",
                     "useDistroLogo": false
@@ -92,13 +91,11 @@
                     "visualizerType": "wave"
                 },
                 {
-                    "blacklist": [
-                    ],
+                    "blacklist": [],
                     "colorizeIcons": false,
                     "drawerEnabled": false,
                     "id": "Tray",
-                    "pinned": [
-                    ]
+                    "pinned": []
                 },
                 {
                     "displayMode": "alwaysShow",
@@ -126,6 +123,26 @@
         "brightnessStep": 5,
         "enableDdcSupport": true,
         "enforceMinimum": false
+    },
+    "calendar": {
+        "cards": [
+            {
+                "enabled": true,
+                "id": "calendar-header-card"
+            },
+            {
+                "enabled": true,
+                "id": "calendar-month-card"
+            },
+            {
+                "enabled": true,
+                "id": "timer-card"
+            },
+            {
+                "enabled": true,
+                "id": "weather-card"
+            }
+        ]
     },
     "changelog": {
         "lastSeenVersion": ""
@@ -204,12 +221,9 @@
         "displayMode": "auto_hide",
         "enabled": false,
         "floatingRatio": 1,
-        "monitors": [
-        ],
+        "monitors": [],
         "onlySameOutput": true,
-        "pinnedApps": [
-        ],
-        "radiusRatio": 0.1,
+        "pinnedApps": [],
         "size": 1
     },
     "general": {
@@ -268,8 +282,7 @@
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 3,
-        "monitors": [
-        ],
+        "monitors": [],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
         "respectExpireTimeout": false
@@ -278,9 +291,9 @@
         "autoHideMs": 2000,
         "backgroundOpacity": 1,
         "enabled": true,
+        "enabledTypes": [],
         "location": "top_right",
-        "monitors": [
-        ],
+        "monitors": [],
         "overlayLayer": true
     },
     "screenRecorder": {
@@ -332,17 +345,21 @@
         ],
         "showHeader": true
     },
-    "settingsVersion": 23,
-    "setupCompleted": true,
+    "settingsVersion": 26,
     "systemMonitor": {
         "cpuCriticalThreshold": 95,
+        "cpuPollingInterval": 3000,
         "cpuWarningThreshold": 80,
         "criticalColor": "#f7768e",
         "diskCriticalThreshold": 90,
+        "diskPollingInterval": 3000,
         "diskWarningThreshold": 80,
         "memCriticalThreshold": 90,
+        "memPollingInterval": 3000,
         "memWarningThreshold": 80,
+        "networkPollingInterval": 3000,
         "tempCriticalThreshold": 95,
+        "tempPollingInterval": 3000,
         "tempWarningThreshold": 80,
         "useCustomColors": false,
         "warningColor": "#9ece6a"
@@ -352,6 +369,7 @@
         "cava": false,
         "code": false,
         "discord": false,
+        "emacs": false,
         "enableUserTemplates": false,
         "foot": false,
         "fuzzel": false,
@@ -359,6 +377,7 @@
         "gtk": true,
         "kcolorscheme": true,
         "kitty": false,
+        "niri": false,
         "pywalfox": false,
         "qt": true,
         "spicetify": false,
@@ -378,15 +397,13 @@
         "tooltipsEnabled": true
     },
     "wallpaper": {
-        "defaultWallpaper": "/etc/xdg/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
         "directory": "/home/peterbaintner/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
         "fillMode": "crop",
         "hideWallpaperFilenames": false,
-        "monitors": [
-        ],
+        "monitorDirectories": [],
         "overviewEnabled": false,
         "panelPosition": "follow_bar",
         "randomEnabled": false,

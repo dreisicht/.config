@@ -21,11 +21,9 @@ hyprpm enable Hyprspace
 ## TODOs
 
 ### issues
-
 - gtk window weird -> file dialog
 
 ### vicinae
-
 - close when clicking outside of area
 <!-- - hook up paste manager -->
 
@@ -45,28 +43,34 @@ hyprpm enable Hyprspace
   - show disk IO
 
 ### Affinity Photo
+- no starting
 
 ### starship
-
-- one sided prompt
+<!-- - one sided prompt -->
 
 ### btop++
-
 - Disk I/O
 
 ### Audio
+- Equalizer
+- headphone plugin/remove
 
 ### SSH
+- Access from local network
+- access from internet
 
 ### Bootup animation
+- replace
 
-### screen off after time
+### hypridle
+- screen off after time
 
 ### iCloud
+- mount
 
 ### Drives
-
 - Mount hdd automatically
 - Create drive on ssd 2TB
 
-### Snapshots
+### Snappr
+- add home
