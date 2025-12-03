@@ -14,7 +14,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz compinit && compinit
 
 zinit ice depth=1
-zinit light starship/starship
+# Using starship from system install instead.
+# zinit light starship/starship
 eval "$(starship init zsh)"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions

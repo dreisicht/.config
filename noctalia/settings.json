@@ -4,7 +4,8 @@
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
         "enableClipboardHistory": false,
-        "pinnedExecs": [],
+        "pinnedExecs": [
+        ],
         "position": "center",
         "sortByMostUsed": true,
         "terminalCommand": "xterm -e",
@@ -14,7 +15,8 @@
     "audio": {
         "cavaFrameRate": 120,
         "externalMixer": "pwvucontrol || pavucontrol",
-        "mprisBlacklist": [],
+        "mprisBlacklist": [
+        ],
         "preferredPlayer": "spotify",
         "visualizerQuality": "high",
         "visualizerType": "linear",
@@ -29,7 +31,8 @@
         "floating": false,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
-        "monitors": [],
+        "monitors": [
+        ],
         "outerCorners": true,
         "position": "top",
         "showCapsule": true,
@@ -91,11 +94,13 @@
                     "visualizerType": "wave"
                 },
                 {
-                    "blacklist": [],
+                    "blacklist": [
+                    ],
                     "colorizeIcons": false,
                     "drawerEnabled": false,
                     "id": "Tray",
-                    "pinned": []
+                    "pinned": [
+                    ]
                 },
                 {
                     "displayMode": "alwaysShow",
@@ -221,9 +226,11 @@
         "displayMode": "auto_hide",
         "enabled": false,
         "floatingRatio": 1,
-        "monitors": [],
+        "monitors": [
+        ],
         "onlySameOutput": true,
-        "pinnedApps": [],
+        "pinnedApps": [
+        ],
         "size": 1
     },
     "general": {
@@ -264,7 +271,7 @@
         "weatherShowEffects": true
     },
     "network": {
-        "wifiEnabled": false
+        "wifiEnabled": true
     },
     "nightLight": {
         "autoSchedule": true,
@@ -282,7 +289,8 @@
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 3,
-        "monitors": [],
+        "monitors": [
+        ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
         "respectExpireTimeout": false
@@ -291,9 +299,11 @@
         "autoHideMs": 2000,
         "backgroundOpacity": 1,
         "enabled": true,
-        "enabledTypes": [],
+        "enabledTypes": [
+        ],
         "location": "top_right",
-        "monitors": [],
+        "monitors": [
+        ],
         "overlayLayer": true
     },
     "screenRecorder": {
@@ -373,7 +383,7 @@
         "enableUserTemplates": false,
         "foot": false,
         "fuzzel": false,
-        "ghostty": true,
+        "ghostty": false,
         "gtk": true,
         "kcolorscheme": true,
         "kitty": false,
@@ -403,7 +413,8 @@
         "fillColor": "#000000",
         "fillMode": "crop",
         "hideWallpaperFilenames": false,
-        "monitorDirectories": [],
+        "monitorDirectories": [
+        ],
         "overviewEnabled": false,
         "panelPosition": "follow_bar",
         "randomEnabled": false,

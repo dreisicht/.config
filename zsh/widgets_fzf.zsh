@@ -111,3 +111,14 @@ function y() {
 
 zle -N y
 bindkey '^Y' y
+
+pmi(){
+  # PMI - PacMan Install
+  # search and install a package
+  pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
+}
+
+pmr (){
+  # PMR - PacMan Remove
+  pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns
+}
