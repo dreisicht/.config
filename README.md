@@ -9,7 +9,7 @@ ln -s .config/.zshrc .zshrc
 ## Base install
 
 ```
-sudo pacman -S zen-browser cachyos-gaming-meta easyeffects hyprpicker liquidctl lsp-plugins hyprshot signal-desktop uv yazi blender steam gping btop git ghostty code yay vicinae starship ttf-firacode-nerd gwenview webcord fzf
+sudo pacman -S zen-browser cachyos-gaming-meta easyeffects hyprpicker liquidctl lsp-plugins hyprshot signal-desktop uv yazi blender steam gping btop git ghostty code yay vicinae starship ttf-firacode-nerd gwenview fzf
 ```
 
 zen theme
