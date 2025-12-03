@@ -24,7 +24,7 @@
         "volumeStep": 5
     },
     "bar": {
-        "backgroundOpacity": 0.66,
+        "backgroundOpacity": 0.49,
         "capsuleOpacity": 1,
         "density": "default",
         "exclusive": true,
@@ -245,7 +245,7 @@
         "language": "",
         "lockOnSuspend": false,
         "radiusRatio": 0.59,
-        "scaleRatio": 1.2,
+        "scaleRatio": 1,
         "screenRadiusRatio": 1,
         "shadowDirection": "bottom",
         "shadowOffsetX": 0,
@@ -280,7 +280,7 @@
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "4000"
+        "nightTemp": "4184"
     },
     "notifications": {
         "backgroundOpacity": 1,

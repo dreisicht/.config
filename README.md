@@ -10,7 +10,7 @@ ln -s .config/.zshrc .zshrc
 ## Base install
 
 ```
-sudo pacman -S zen-browser cachyos-gaming-meta easyeffects hyprpicker liquidctl lsp-plugins hyprshot signal-desktop uv yazi blender steam gping btop git ghostty code yay starship ttf-firacode-nerd gwenview fzf noctalia-shell ddcutil brightnessctl wlsunset zoxide
+sudo pacman -S zen-browser cachyos-gaming-meta easyeffects hyprpicker liquidctl lsp-plugins hyprshot signal-desktop uv yazi blender steam gping btop git ghostty code yay starship ttf-firacode-nerd gwenview fzf noctalia-shell ddcutil brightnessctl wlsunset zoxide openssh nwg-look qt6ct ffmpeg 7zip jq poppler fd ripgrep resvg imagemagick
 
 yay -S vicinae-bin
 mkdir third_party && cd third_party
@@ -44,21 +44,21 @@ hyprpm enable Hyprspace
 
 ### Noctalia
 
-- wishlist:
-  - weather
-  - show disk IO
+<!-- - wishlist: -->
+  <!-- - weather -->
+  <!-- - show disk IO -->
 
 ### Affinity Photo
-- no starting
+<!-- - no starting -->
 
 ### starship
 <!-- - one sided prompt -->
 
 ### btop++
-- Disk I/O
+<!-- - Disk I/O -->
 
 ### Audio
-- Equalizer
+<!-- - Equalizer -->
 - headphone plugin/remove
 
 ### SSH
@@ -66,10 +66,10 @@ hyprpm enable Hyprspace
 - access from internet
 
 ### Bootup animation
-- replace
+<!-- - replace -->
 
 ### hypridle
-- screen off after time
+<!-- - screen off after time -->
 
 ### iCloud
 - mount
@@ -79,4 +79,10 @@ hyprpm enable Hyprspace
 - Create drive on ssd 2TB
 
 ### Snappr
-- add home
+<!-- - add home -->
+
+### VS Code
+distinction between delete until next word and next sentence with ctrl+backspace?
+
+### zsh
+fif still ignoring files
