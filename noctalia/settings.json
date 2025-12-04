@@ -24,7 +24,7 @@
         "volumeStep": 5
     },
     "bar": {
-        "backgroundOpacity": 0.49,
+        "backgroundOpacity": 0.78,
         "capsuleOpacity": 1,
         "density": "default",
         "exclusive": true,
@@ -158,7 +158,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "matugenSchemeType": "scheme-fruit-salad",
-        "predefinedScheme": "Tokyo Night",
+        "predefinedScheme": "Rose Pine",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
@@ -383,7 +383,7 @@
         "enableUserTemplates": false,
         "foot": false,
         "fuzzel": false,
-        "ghostty": false,
+        "ghostty": true,
         "gtk": true,
         "kcolorscheme": true,
         "kitty": false,
@@ -411,7 +411,7 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
-        "fillMode": "crop",
+        "fillMode": "center",
         "hideWallpaperFilenames": false,
         "monitorDirectories": [
         ],

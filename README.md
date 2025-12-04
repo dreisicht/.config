@@ -47,6 +47,8 @@ hyprpm enable Hyprspace
 <!-- - wishlist: -->
   <!-- - weather -->
   <!-- - show disk IO -->
+dms (dank material shell) is doing some magic when installing, so that after installing it and removing only the dank-material-shell-bin (or however the pacman package is called), dynamic switching of dark and light theme is working.
+Theme, vs code open file dialog weird.
 
 ### Affinity Photo
 <!-- - no starting -->
