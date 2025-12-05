@@ -17,3 +17,4 @@ bindkey "^H" backward-kill-word
 bindkey "^[[3;5~" kill-word
 
 bindkey -s '^B' 'btop\n'
+bindkey '2;6u' fif

@@ -84,7 +84,7 @@ fif() {
     # 2. Interactively restart Ripgrep with reload action
     #    * Press alt-enter to switch to fzf-only filtering
     # 3. Open the file in VS Code
-    RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case --no-ignore"
+    RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case --no-ignore --hidden"
     INITIAL_QUERY="${*:-}"
     fzf --ansi --disabled --query "$INITIAL_QUERY" \
         --bind "start:reload:$RG_PREFIX {q}" \

@@ -143,5 +143,49 @@
     "key": "enter",
     "command": "-acceptSelectedSuggestion",
     "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+  },
+  {
+    "key": "alt+left",
+    "command": "cursorWordPartLeft"
+  },
+  {
+    "key": "alt+right",
+    "command": "cursorWordPartRight"
+  },
+  {
+    "key": "alt+backspace",
+    "command": "deleteWordPartLeft"
+  },
+  {
+    "key": "alt+delete",
+    "command": "deleteWordPartRight"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "-editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+left",
+    "command": "-editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "cursorWordPartRightSelect"
+  },
+  {
+    "key": "shift+alt+left",
+    "command": "cursorWordPartLeftSelect"
   }
 ]

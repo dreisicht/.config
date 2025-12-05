@@ -24,40 +24,41 @@ hyprpm update
 hyprpm add https://github.com/KZDKM/Hyprspace
 hyprpm enable Hyprspace
 
+### Yazi
+ya pkg add yazi-rs/plugins:chmod
+ya pkg add yazi-rs/plugins:mount
+ya pkg add yazi-rs/plugins:git
+
+## Updates
+hyprpm update
+
+dms (dank material shell) is doing some magic when installing, so that after installing it and removing only the dank-material-shell-bin (or however the pacman package is called), dynamic switching of dark and light theme is working.
+Theme, vs code open file dialog weird.
+
+
 ## TODOs
+
+### New concept for shortcuts in fzf widgets
+- Ctrl-Enter would be cool for open in editor
+- enter for paste
+- ctrl+p as in vs code for jump to file -> ctrl+p unhandy and ctrl+t is used for similar in vs code.
+<!-- - ctrl + shift + f for fif -->
+<!-- - middle click for copy/paste? -->
 
 ### issues
 - gtk window weird -> file dialog
 
 ### vicinae
 - close when clicking outside of area
+- cliboard manager not working
 <!-- - hook up paste manager -->
 
-### Hyprland
-<!-- - help shortcuts -->
-<!-- - Vicinae fade out animation -->
-<!-- - switch workspaces animation -->
-<!-- - shortcuts ctrl + mainmod for move with window into workspace -->
-<!-- - something else instead of mainmod s for scratchpad, like maybe super-^? -->
-<!-- - drag windows to other workspaces? -->
-<!-- - notification on mute -->
+### iCloud
+- mount
 
-### Noctalia
-
-<!-- - wishlist: -->
-  <!-- - weather -->
-  <!-- - show disk IO -->
-dms (dank material shell) is doing some magic when installing, so that after installing it and removing only the dank-material-shell-bin (or however the pacman package is called), dynamic switching of dark and light theme is working.
-Theme, vs code open file dialog weird.
-
-### Affinity Photo
-<!-- - no starting -->
-
-### starship
-<!-- - one sided prompt -->
-
-### btop++
-<!-- - Disk I/O -->
+### Drives
+- Mount hdd automatically
+- Create drive on ssd 2TB
 
 ### Audio
 <!-- - Equalizer -->
@@ -67,24 +68,46 @@ Theme, vs code open file dialog weird.
 - Access from local network
 - access from internet
 
+### Hyprland
+<!-- - help shortcuts -->
+<!-- - Vicinae fade out animation -->
+<!-- - switch workspaces animation -->
+<!-- - shortcuts ctrl + mainmod for move with window into workspace -->
+<!-- - something else instead of mainmod s for scratchpad, like maybe super-^? -->
+<!-- - drag windows to other workspaces? -->
+<!-- - notification on mute -->
+<!-- Groups header coloring -->
+
+### Noctalia
+
+<!-- - wishlist: -->
+  <!-- - weather -->
+  <!-- - show disk IO -->
+
+### Affinity Photo
+<!-- - no starting -->
+
+### starship
+<!-- - one sided prompt -->
+
+### btop++
+<!-- - Disks not showing up -->
+
 ### Bootup animation
 <!-- - replace -->
 
 ### hypridle
 <!-- - screen off after time -->
 
-### iCloud
-- mount
-
-### Drives
-- Mount hdd automatically
-- Create drive on ssd 2TB
-
 ### Snappr
 <!-- - add home -->
 
 ### VS Code
-distinction between delete until next word and next sentence with ctrl+backspace?
+<!-- distinction between delete until next word and next sentence with ctrl+backspace? -->
 
 ### zsh
-fif still ignoring files
+<!-- fif still ignoring files -->
+
+### yazi
+<!-- backspage/del for trash -->
+
