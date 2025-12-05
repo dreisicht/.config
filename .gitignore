@@ -1,3 +1,6 @@
+*__pycache__*
+*.pyc
+
 *
 !.gitignore
 !.zshrc
@@ -40,3 +43,14 @@ yazi/plugins
 
 !zsh/
 !zsh/**
+
+!blender
+!blender/5.0/
+!blender/5.0/config/
+!blender/5.0/config/startup.blend
+!blender/5.0/scripts/
+!blender/5.0/scripts/presets/
+!blender/5.0/scripts/presets/keyconfig/
+!blender/5.0/scripts/presets/keyconfig/*
+!blender/5.0/scripts/presets/interface_theme/
+!blender/5.0/scripts/presets/interface_theme/custom.xml
