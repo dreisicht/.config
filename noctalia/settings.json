@@ -34,7 +34,7 @@
         "monitors": [
         ],
         "outerCorners": true,
-        "position": "top",
+        "position": "right",
         "showCapsule": true,
         "widgets": {
             "center": [

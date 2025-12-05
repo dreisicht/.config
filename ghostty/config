@@ -54,7 +54,8 @@ background-opacity = .9
 background-blur = 30
 window-padding-x = 5
 focus-follows-mouse = true
-bell-features = system,attention,border
+bell-features = system,attention,border,audio,title
+app-notifications=no-config-reload
 
 cursor-color = red
 cursor-style = bar
@@ -73,9 +74,6 @@ custom-shader = cursor_blaze.glsl
 #custom-shader = in-game-crt.glsl
 #custom-shader = bloom.glsl
 
-#theme = light:GitHub,dark:Github Dark Dimmed
-#theme = dark:GitHub,light:Github Dark Dimmed
-#theme = noctalia
 
 # Font Configuration
 # font-size = 12
@@ -119,3 +117,4 @@ gtk-single-instance = true
 
 # Dank color generation
 # config-file = ./config-dankcolors
+theme = noctalia
