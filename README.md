@@ -41,24 +41,24 @@ Theme, vs code open file dialog weird.
 ### New concept for shortcuts in fzf widgets
 - Ctrl-Enter would be cool for open in editor
 - enter for paste
-- ctrl+p as in vs code for jump to file -> ctrl+p unhandy and ctrl+t is used for similar in vs code.
+<!-- - ctrl+p as in vs code for jump to file -> ctrl+p unhandy and ctrl+t is used for similar in vs code. -->
 <!-- - ctrl + shift + f for fif -->
 <!-- - middle click for copy/paste? -->
 
 ### issues
-- gtk window weird -> file dialog
+<!-- - gtk window weird -> file dialog -->
 
 ### vicinae
 - close when clicking outside of area
-- cliboard manager not working
+- cliboard manager direct input
 <!-- - hook up paste manager -->
 
 ### iCloud
 - mount
 
 ### Drives
-- Mount hdd automatically
-- Create drive on ssd 2TB
+<!-- - Mount hdd automatically -->
+<!-- - Create drive on ssd 2TB -->
 
 ### Audio
 <!-- - Equalizer -->
