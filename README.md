@@ -54,7 +54,8 @@ Theme, vs code open file dialog weird.
 <!-- - hook up paste manager -->
 
 ### iCloud
-- mount
+<!-- - mount -->
+- try to ssh into macbook
 
 ### Drives
 <!-- - Mount hdd automatically -->
@@ -77,6 +78,7 @@ Theme, vs code open file dialog weird.
 <!-- - drag windows to other workspaces? -->
 <!-- - notification on mute -->
 <!-- Groups header coloring -->
+Hyprspace crashing
 
 ### Noctalia
 
@@ -107,7 +109,9 @@ Theme, vs code open file dialog weird.
 
 ### zsh
 <!-- fif still ignoring files -->
+ctrl+r?
 
 ### yazi
 <!-- backspage/del for trash -->
+d or x for delete?
 
