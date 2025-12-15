@@ -117,4 +117,4 @@ gtk-single-instance = true
 
 # Dank color generation
 # config-file = ./config-dankcolors
-theme = noctalia
+# theme = noctalia
