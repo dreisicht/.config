@@ -30,8 +30,9 @@ ya pkg add yazi-rs/plugins:mount
 ya pkg add yazi-rs/plugins:git
 
 ## Updates
-hyprpm update
+hyprpm update -f
 
+## Notes
 dms (dank material shell) is doing some magic when installing, so that after installing it and removing only the dank-material-shell-bin (or however the pacman package is called), dynamic switching of dark and light theme is working.
 Theme, vs code open file dialog weird.
 
@@ -66,8 +67,8 @@ Theme, vs code open file dialog weird.
 - headphone plugin/remove
 
 ### SSH
-- Access from local network
-- access from internet
+<!-- - Access from local network -->
+<!-- - access from internet -->
 
 ### Hyprland
 <!-- - help shortcuts -->
@@ -113,5 +114,5 @@ ctrl+r?
 
 ### yazi
 <!-- backspage/del for trash -->
-d or x for delete?
+<!-- d or x for delete? -->
 
