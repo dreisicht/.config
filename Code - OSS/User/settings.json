@@ -428,7 +428,7 @@
     "editor.autoClosingBrackets": "beforeWhitespace",
     "icontheme.darkIconTheme": "Catppuccin Macchiato",
     "icontheme.lightIconTheme": "Catppuccin Latte",
-    "workbench.iconTheme": "catppuccin-mocha",
     "editor.inlineSuggest.edits.showCollapsed": true,
-    "diffEditor.hideUnchangedRegions.enabled": true
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "workbench.iconTheme": "material-icon-theme"
 }

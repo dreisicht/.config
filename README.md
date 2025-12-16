@@ -24,6 +24,8 @@ hyprpm update
 hyprpm add https://github.com/KZDKM/Hyprspace
 hyprpm enable Hyprspace
 
+liquidctl --match h150i set fan speed 1 25 5 35 5 40 15 45 80 50 100
+
 ### Yazi
 ya pkg add yazi-rs/plugins:chmod
 ya pkg add yazi-rs/plugins:mount
