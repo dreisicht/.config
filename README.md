@@ -110,6 +110,10 @@ Hyprspace crashing
 
 ### VS Code
 <!-- distinction between delete until next word and next sentence with ctrl+backspace? -->
+alt+arrows for history
+alt+ctrl+arrows: word left/right
+alt+ctrl+shift+arrows: select more/less | increase selection by subword
+alt+shift: select word
 
 ### zsh
 <!-- fif still ignoring files -->
@@ -119,4 +123,5 @@ del not working
 ### yazi
 <!-- backspage/del for trash -->
 <!-- d or x for delete? -->
+fzf not working
 
