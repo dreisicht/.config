@@ -13,7 +13,7 @@
         "editor.detectIndentation": false,
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
-        "editor.tabSize": 4,
+        "editor.tabSize": 2,
         "diffEditor.ignoreTrimWhitespace": false
     },
     "AREPL.skipLandingPage": true,
@@ -430,5 +430,6 @@
     "icontheme.lightIconTheme": "Catppuccin Latte",
     "editor.inlineSuggest.edits.showCollapsed": true,
     "diffEditor.hideUnchangedRegions.enabled": true,
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.tabSize": 2
 }

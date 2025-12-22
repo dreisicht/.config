@@ -25,6 +25,7 @@ hyprpm add https://github.com/KZDKM/Hyprspace
 hyprpm enable Hyprspace
 
 liquidctl --match h150i set fan speed 1 25 5 35 5 40 15 45 80 50 100
+liquidctl initialize --match h150i --pump-mode quiet
 
 ### Yazi
 ya pkg add yazi-rs/plugins:chmod
@@ -113,6 +114,7 @@ Hyprspace crashing
 ### zsh
 <!-- fif still ignoring files -->
 ctrl+r?
+del not working
 
 ### yazi
 <!-- backspage/del for trash -->
