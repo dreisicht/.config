@@ -14,6 +14,7 @@ yazi/plugins
 !ghostty/cursor_blaze.glsl
 !ghostty/cursor_warp.glsl
 !ghostty/cursor_tail.glsl
+!mimeapps.list
 
 !karabiner
 !karabiner/karabiner.json

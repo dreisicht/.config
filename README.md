@@ -10,7 +10,7 @@ ln -s .config/.zshrc .zshrc
 ## Base install
 
 ```
-sudo pacman -S zen-browser cachyos-gaming-meta easyeffects hyprpicker liquidctl lsp-plugins hyprshot signal-desktop uv yazi blender steam gping btop git ghostty code yay starship ttf-firacode-nerd gwenview fzf noctalia-shell ddcutil brightnessctl wlsunset zoxide openssh nwg-look qt6ct ffmpeg 7zip jq poppler fd ripgrep resvg imagemagick
+sudo pacman -S zen-browser cachyos-gaming-meta easyeffects hyprpicker liquidctl lsp-plugins hyprshot signal-desktop uv yazi blender steam gping btop git ghostty code yay starship ttf-firacode-nerd gwenview fzf noctalia-shell ddcutil brightnessctl wlsunset zoxide openssh nwg-look qt6ct ffmpeg 7zip jq poppler fd ripgrep resvg imagemagick qview kimageformats qt6-imageformats
 
 yay -S vicinae-bin
 mkdir third_party && cd third_party
@@ -59,7 +59,7 @@ Theme, vs code open file dialog weird.
 
 ### iCloud
 <!-- - mount -->
-- try to ssh into macbook
+<!-- - try to ssh into macbook -->
 
 ### Drives
 <!-- - Mount hdd automatically -->
@@ -67,7 +67,8 @@ Theme, vs code open file dialog weird.
 
 ### Audio
 <!-- - Equalizer -->
-- headphone plugin/remove
+<!-- - headphone plugin/remove -->
+- Headphone no equalizer
 
 ### SSH
 <!-- - Access from local network -->
@@ -118,10 +119,11 @@ alt+shift: select word
 ### zsh
 <!-- fif still ignoring files -->
 ctrl+r?
-del not working
+<!-- del not working -->
 
 ### yazi
 <!-- backspage/del for trash -->
 <!-- d or x for delete? -->
 fzf not working
-
+<!-- reveal opening kitty instead of -->
+exiftool

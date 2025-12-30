@@ -28,6 +28,8 @@ keymap = [
 	{ on = "<S-PageDown>", run = "arrow 50%", desc = "Move cursor down half page" },
 	{ on = "<PageUp>", run = "arrow -100%", desc = "Move cursor up one page" },
 	{ on = "<PageDown>", run = "arrow 100%", desc = "Move cursor down one page" },
+	{ on = "<Home>", run = "arrow top", desc = "Go to top" },
+	{ on = "<End>", run = "arrow bot", desc = "Go to bottom" },
 
 	{ on = [
 		"g",
