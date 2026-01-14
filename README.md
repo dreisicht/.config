@@ -21,28 +21,31 @@ zen theme
 zen mod: <https://zen-browser.app/mods/ae7868dc-1fa1-469e-8b89-a5edf7ab1f24/?limit=96>
 
 hyprpm update
-hyprpm add https://github.com/KZDKM/Hyprspace
+hyprpm add <https://github.com/KZDKM/Hyprspace>
 hyprpm enable Hyprspace
 
 liquidctl --match h150i set fan speed 1 25 5 35 5 40 15 45 80 50 100
 liquidctl initialize --match h150i --pump-mode quiet
 
 ### Yazi
+
 ya pkg add yazi-rs/plugins:chmod
 ya pkg add yazi-rs/plugins:mount
 ya pkg add yazi-rs/plugins:git
 
 ## Updates
+
 hyprpm update -f
 
 ## Notes
+
 dms (dank material shell) is doing some magic when installing, so that after installing it and removing only the dank-material-shell-bin (or however the pacman package is called), dynamic switching of dark and light theme is working.
 Theme, vs code open file dialog weird.
-
 
 ## TODOs
 
 ### New concept for shortcuts in fzf widgets
+
 - Ctrl-Enter would be cool for open in editor
 - enter for paste
 <!-- - ctrl+p as in vs code for jump to file -> ctrl+p unhandy and ctrl+t is used for similar in vs code. -->
@@ -53,6 +56,7 @@ Theme, vs code open file dialog weird.
 <!-- - gtk window weird -> file dialog -->
 
 ### vicinae
+
 - close when clicking outside of area
 - cliboard manager direct input
 <!-- - hook up paste manager -->
@@ -127,3 +131,4 @@ ctrl+r?
 fzf not working
 <!-- reveal opening kitty instead of -->
 exiftool
+/ shortcut replacement
