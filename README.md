@@ -87,7 +87,7 @@ Theme, vs code open file dialog weird.
 <!-- - drag windows to other workspaces? -->
 <!-- - notification on mute -->
 <!-- Groups header coloring -->
-Hyprspace crashing
+<!-- Hyprspace crashing -->
 
 ### Noctalia
 

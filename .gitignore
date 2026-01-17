@@ -32,6 +32,7 @@ yazi/plugins
 
 !noctalia
 !noctalia/**
+noctalia/pam/password.conf
 
 !vicinae
 !vicinae/**
