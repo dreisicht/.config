@@ -145,15 +145,11 @@
     "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
   },
   {
-    "key": "alt+left",
-    "command": "cursorWordPartLeft"
-  },
-  {
-    "key": "alt+right",
+    "key": "ctrl+alt+right",
     "command": "cursorWordPartRight"
   },
   {
-    "key": "alt+backspace",
+    "key": "ctrl+alt+backspace",
     "command": "deleteWordPartLeft"
   },
   {
@@ -161,31 +157,64 @@
     "command": "deleteWordPartRight"
   },
   {
-    "key": "ctrl+alt+right",
-    "command": "editor.action.smartSelect.expand",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "shift+alt+right",
     "command": "-editor.action.smartSelect.expand",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+left",
-    "command": "editor.action.smartSelect.shrink",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+alt+left",
-    "command": "-editor.action.smartSelect.shrink",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+alt+right",
+    "key": "ctrl+shift+alt+right",
     "command": "cursorWordPartRightSelect"
   },
   {
-    "key": "shift+alt+left",
+    "key": "ctrl+shift+alt+left",
     "command": "cursorWordPartLeftSelect"
+  },
+  {
+    "key": "alt+left",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+alt+-",
+    "command": "-workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "cursorWordPartLeft"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "editor.action.smartSelect.expand"
+  },
+  {
+    "key": "alt+backspace",
+    "command": "editor.action.removeBrackets",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+backspace",
+    "command": "-editor.action.removeBrackets",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
   }
 ]

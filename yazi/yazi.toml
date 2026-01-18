@@ -9,18 +9,18 @@ sort_sensitive = false
 sort_reverse = false
 sort_dir_first = false
 sort_translit = false
-linemode = "none"
+linemode = "mtime"
 show_hidden = true
 show_symlink = true
 scrolloff = 5
-mouse_events = ["click", "scroll"]
+mouse_events = ["click", "scroll", "touch"]
 title_format = "Yazi: {cwd}"
 
 [preview]
 wrap = "no"
 tab_size = 2
-max_width = 600
-max_height = 900
+max_width = 3000
+max_height = 3000
 cache_dir = "~/.cache/yazi"
 image_delay = 30
 image_filter = "triangle"
@@ -265,3 +265,13 @@ sort_by = "none"
 sort_sensitive = false
 sort_reverse = false
 sort_translit = false
+
+[[plugin.prepend_fetchers]]
+id  = "git"
+url = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id  = "git"
+url = "*/"
+run = "git"

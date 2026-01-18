@@ -31,6 +31,13 @@ export FZF_ALT_C_OPTS="
   --header 'Enter: cd'
   --preview 'eza --color=always --icons {}'"
 
+export FZF_CTRL_R_OPTS="
+  --prompt '🕓>'
+  --color header:italic
+  --no-sort
+  --reverse
+  --tiebreak index
+  --inline-info"
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="

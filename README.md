@@ -115,20 +115,28 @@ Theme, vs code open file dialog weird.
 
 ### VS Code
 <!-- distinction between delete until next word and next sentence with ctrl+backspace? -->
-alt+arrows for history
-alt+ctrl+arrows: word left/right
-alt+ctrl+shift+arrows: select more/less | increase selection by subword
-alt+shift: select word
+<!-- alt+arrows go back / go forward
+
+alt+ctrl+arrows: cursorWordPathLeft/Right
+alt+shift+arrows: select more/less
+
+alt+ctrl+shift+arrows: cursorWordPartSelect
+
+alt+backspace deleteWordPartLeft
+alt+delete deleteWordPartRight
+
+format file shift + alt + f -->
+
 
 ### zsh
 <!-- fif still ignoring files -->
-ctrl+r?
+<!-- ctrl+r? -->
 <!-- del not working -->
 
 ### yazi
 <!-- backspage/del for trash -->
 <!-- d or x for delete? -->
-fzf not working
+fzf not working -> issue is open. Widget mode is the problem.
 <!-- reveal opening kitty instead of -->
 exiftool
-/ shortcut replacement
+<!-- / shortcut replacement -->
