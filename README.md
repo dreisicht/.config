@@ -17,26 +17,38 @@ mkdir third_party && cd third_party
 git clone https://github.com/HyDE-Project/HyDE
 ```
 
-zen theme
-zen mod: <https://zen-browser.app/mods/ae7868dc-1fa1-469e-8b89-a5edf7ab1f24/?limit=96>
+### zen theme
+zen mod:
+<https://zen-browser.app/mods/ae7868dc-1fa1-469e-8b89-a5edf7ab1f24/?limit=96>
 
+### hyprpm
+```Shell
 hyprpm update
 hyprpm add <https://github.com/KZDKM/Hyprspace>
 hyprpm enable Hyprspace
+```
 -> replaced by hyprexpo for now. Layout doesn't fit my vertical only scrolling and moving windows is missing there.
 
+### Cooling
+```Shell
 liquidctl --match h150i set fan speed 1 25 5 35 5 40 15 45 80 50 100
-liquidctl initialize --match h150i --pump-mode quiet
-
+liquidctl initialize --match h150i --pump-mode performance
+```
 ### Yazi
-
+For the initial setup of yazi installing these plugins:
+```Shell
 ya pkg add yazi-rs/plugins:chmod
 ya pkg add yazi-rs/plugins:mount
 ya pkg add yazi-rs/plugins:git
+```
 
 ## Updates
-
+Call to update all
+```Shell
 hyprpm update -f
+ya pkg upgrade
+```
+-> HyDE `git pull`?
 
 ## Notes
 
@@ -93,8 +105,8 @@ Theme, vs code open file dialog weird.
 ### Noctalia
 
 <!-- - wishlist: -->
-  <!-- - weather -->
-  <!-- - show disk IO -->
+<!-- - weather -->
+<!-- - show disk IO -->
 
 ### Affinity Photo
 <!-- - no starting -->

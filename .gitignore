@@ -9,6 +9,7 @@
 !yazi
 !yazi/**
 yazi/plugins
+yazi/package.toml
 
 !ghostty
 !ghostty/config
