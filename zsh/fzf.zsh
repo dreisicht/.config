@@ -27,6 +27,7 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 # Icon used is nerdfont
 export FZF_ALT_C_OPTS="
   --prompt '📁>'
+  --color header:italic
   --walker-skip .git,node_modules,target
   --header 'Enter: cd'
   --preview 'eza --color=always --icons {}'"
@@ -41,6 +42,9 @@ export FZF_CTRL_R_OPTS="
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
+  --prompt '📄>'
+  --color header:italic
+  --header 'Enter: Accept | CTRL-E: VS Code | CTRL-V: vim'
   --walker-skip .git,node_modules,target
   --preview '
     if [ -f {} ]; then
@@ -52,13 +56,9 @@ export FZF_CTRL_T_OPTS="
     fi
   '
   --preview-window 'right,60%,,+{2}+3/3,~3'
-  --prompt '📄>'
-  --color header:italic
-  --header 'Enter: Accept | CTRL-E: VS Code | CTRL-V: vim'
 
   --bind 'ctrl-e:become(code --goto {1}:{2})'
   --bind 'ctrl-v:become(nvim )'"
-#    'ctrl-/:change-preview-window(down|hidden|)'\
 
 
 # Shell integrations

@@ -1,220 +1,248 @@
 // Platzieren Sie Ihre Tastenzuordnungen in dieser Datei, um die Standardwerte zu überschreiben.
 [
   {
-    "key": "alt+up",
     "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "alt+up",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
     "command": "-editor.action.moveLinesUpAction",
+    "key": "alt+up",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "alt+down",
     "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "alt+down",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
     "command": "-editor.action.moveLinesDownAction",
+    "key": "alt+down",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+up",
     "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "shift+alt+up",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
     "command": "-editor.action.copyLinesUpAction",
+    "key": "shift+alt+up",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+down",
     "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "shift+alt+down",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
     "command": "-editor.action.copyLinesDownAction",
+    "key": "shift+alt+down",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "key": "ctrl+up",
+    "when": "editorTextFocus"
+  },
+  {
     "command": "-editor.action.insertCursorAbove",
+    "key": "ctrl+alt+up",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "key": "ctrl+down",
+    "when": "editorTextFocus"
+  },
+  {
     "command": "-editor.action.insertCursorBelow",
+    "key": "ctrl+alt+down",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+oem_4",
     "command": "editor.fold",
+    "key": "ctrl+shift+oem_4",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+oem_4",
     "command": "-editor.fold",
+    "key": "ctrl+alt+oem_4",
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+ctrl+space",
-    "command": "workbench.action.showCommands"
+    "command": "workbench.action.showCommands",
+    "key": "ctrl+shift+space"
   },
   {
-    "key": "ctrl+shift+p",
-    "command": "-workbench.action.showCommands"
+    "command": "-workbench.action.showCommands",
+    "key": "ctrl+shift+p"
   },
   {
-    "key": "ctrl+l",
-    "command": "editor.debug.action.toggleLogPoint"
+    "command": "editor.debug.action.toggleLogPoint",
+    "key": "ctrl+l"
   },
   {
-    "key": "ctrl+[Backslash]",
     "command": "editor.action.commentLine",
+    "key": "ctrl+[Backslash]",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+7",
     "command": "-editor.action.commentLine",
+    "key": "ctrl+shift+7",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+space",
-    "command": "editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    "command": "workbench.action.tasks.build",
+    "key": "f7"
   },
   {
-    "key": "ctrl+space",
-    "command": "-editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    "command": "-workbench.action.tasks.build",
+    "key": "ctrl+shift+b"
   },
   {
-    "key": "ctrl+[Semicolon]",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "command": "-workbench.action.showCommands",
+    "key": "f1"
   },
   {
-    "key": "ctrl+shift+[Equal]",
-    "command": "-workbench.action.terminal.toggleTerminal"
+    "command": "github.copilot.toggleCopilot",
+    "key": "alt+oem_5"
   },
   {
-    "key": "shift+alt+ctrl+space",
-    "command": "editor.action.triggerParameterHints",
-    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    "command": "editor.action.inlineSuggest.trigger",
+    "key": "f1",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   },
   {
-    "key": "shift+ctrl+space",
-    "command": "-editor.action.triggerParameterHints",
-    "when": "editorHasSignatureHelpProvider && editorTextFocus"
-  },
-  {
-    "key": "shift+ctrl+p",
-    "command": "-workbench.action.showCommands"
-  },
-  {
-    "key": "shift+ctrl+[Backslash]",
-    "command": "editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+a",
-    "command": "-editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "f2",
     "command": "renameFile",
+    "key": "f2",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "enter",
     "command": "-renameFile",
+    "key": "enter",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "tab",
-    "command": "acceptSelectedSuggestion",
-    "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+    "command": "-editor.action.inlineSuggest.trigger",
+    "key": "alt+oem_5",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   },
   {
-    "key": "enter",
-    "command": "-acceptSelectedSuggestion",
-    "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+    "command": "editor.action.selectHighlights",
+    "key": "ctrl+alt+d",
+    "when": "editorFocus"
   },
   {
-    "key": "ctrl+alt+right",
-    "command": "cursorWordPartRight"
+    "command": "-editor.action.selectHighlights",
+    "key": "ctrl+shift+l",
+    "when": "editorFocus"
   },
   {
-    "key": "ctrl+alt+backspace",
-    "command": "deleteWordPartLeft"
+    "command": "cursorWordPartRight",
+    "key": "ctrl+alt+right"
   },
   {
-    "key": "alt+delete",
-    "command": "deleteWordPartRight"
+    "command": "deleteWordPartLeft",
+    "key": "ctrl+alt+backspace"
   },
   {
-    "key": "shift+alt+right",
+    "command": "deleteWordPartRight",
+    "key": "alt+delete"
+  },
+  {
     "command": "-editor.action.smartSelect.expand",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+right",
-    "command": "cursorWordPartRightSelect"
-  },
-  {
-    "key": "ctrl+shift+alt+left",
-    "command": "cursorWordPartLeftSelect"
-  },
-  {
-    "key": "alt+left",
-    "command": "workbench.action.navigateBack",
-    "when": "canNavigateBack"
-  },
-  {
-    "key": "ctrl+alt+-",
-    "command": "-workbench.action.navigateBack",
-    "when": "canNavigateBack"
-  },
-  {
-    "key": "alt+right",
-    "command": "workbench.action.navigateForward",
-    "when": "canNavigateForward"
-  },
-  {
-    "key": "ctrl+shift+-",
-    "command": "-workbench.action.navigateForward",
-    "when": "canNavigateForward"
-  },
-  {
-    "key": "ctrl+alt+left",
-    "command": "cursorWordPartLeft"
-  },
-  {
     "key": "shift+alt+right",
-    "command": "editor.action.smartSelect.expand"
+    "when": "editorTextFocus"
   },
   {
-    "key": "alt+backspace",
+    "command": "cursorWordPartRightSelect",
+    "key": "ctrl+shift+alt+right"
+  },
+  {
+    "command": "cursorWordPartLeftSelect",
+    "key": "ctrl+shift+alt+left"
+  },
+  {
+    "command": "workbench.action.navigateBack",
+    "key": "alt+left",
+    "when": "canNavigateBack"
+  },
+  {
+    "command": "-workbench.action.navigateForward",
+    "key": "ctrl+shift+-",
+    "when": "canNavigateForward"
+  },
+  {
+    "command": "cursorWordPartLeft",
+    "key": "ctrl+alt+left"
+  },
+  {
+    "command": "editor.action.smartSelect.expand",
+    "key": "shift+alt+right"
+  },
+  {
     "command": "editor.action.removeBrackets",
+    "key": "alt+backspace",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+backspace",
     "command": "-editor.action.removeBrackets",
+    "key": "ctrl+alt+backspace",
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    "command": "blender.runScript",
+    "key": "ctrl+alt+r"
   },
   {
-    "key": "ctrl+shift+i",
-    "command": "-editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    "command": "copyFilePath",
+    "key": "ctrl+shift+c",
+    "when": "!editorFocus"
+  },
+  {
+    "command": "-copyFilePath",
+    "key": "shift+alt+c",
+    "when": "!editorFocus"
+  },
+  {
+    "command": "copyFilePath",
+    "key": "ctrl+shift+c",
+    "when": "editorFocus"
+  },
+  {
+    "command": "-copyFilePath",
+    "key": "shift+alt+c",
+    "when": "editorFocus"
+  },
+  {
+    "command": "copyRelativeFilePath",
+    "key": "ctrl+shift+alt+c",
+    "when": "!editorFocus"
+  },
+  {
+    "command": "-copyRelativeFilePath",
+    "key": "ctrl+k ctrl+shift+c",
+    "when": "!editorFocus"
+  },
+  {
+    "command": "copyRelativeFilePath",
+    "key": "ctrl+shift+alt+c",
+    "when": "editorFocus"
+  },
+  {
+    "command": "-copyRelativeFilePath",
+    "key": "ctrl+k ctrl+shift+c",
+    "when": "editorFocus"
+  },
+  {
+    "command": "editor.action.blockComment",
+    "key": "ctrl+shift+oem_2",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-editor.action.blockComment",
+    "key": "shift+alt+a",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
