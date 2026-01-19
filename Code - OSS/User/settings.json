@@ -1,4 +1,17 @@
 {
+    "[cpp]": {
+        "editor.stickyScroll.defaultModel": "outlineModel",
+        "editor.stickyTabStops": true
+    },
+    "[dockercompose]": {
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -9,12 +22,15 @@
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.detectIndentation": false,
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "diffEditor.ignoreTrimWhitespace": false
+        "editor.tabSize": 2
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "AREPL.skipLandingPage": true,
     "autopep8.args": [
@@ -40,6 +56,10 @@
     "C_Cpp.codeAnalysis.clangTidy.path": "clang-tidy",
     "C_Cpp.default.mergeConfigurations": true,
     "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": [
+        "--header-insertion=never",
+        "--query-driver=**"
+    ],
     "cmake.configureOnOpen": false,
     "cmake.showOptionsMovedNotification": false,
     "cpp-check-lint.cppcheck.--enable=": "",
@@ -115,11 +135,14 @@
         "xres",
         "yres"
     ],
+    "debug.console.fontFamily": "FiraCode Nerd Font",
     "debug.onTaskErrors": "abort",
     "debug.toolBarLocation": "commandCenter",
     "diffEditor.experimental.showMoves": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": true,
+    "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoIndent": "advanced",
     "editor.bracketPairColorization.enabled": true,
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
@@ -132,7 +155,9 @@
     "editor.formatOnType": true,
     "editor.guides.bracketPairs": "active",
     "editor.inlayHints.enabled": "off",
+    "editor.inlineSuggest.edits.showCollapsed": true,
     "editor.inlineSuggest.enabled": true,
+    "editor.minimap.autohide": "mouseover",
     "editor.minimap.size": "fit",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.quickSuggestionsDelay": 0,
@@ -148,6 +173,7 @@
     "editor.smoothScrolling": true,
     "editor.stickyTabStops": true,
     "editor.suggest.shareSuggestSelections": true,
+    "editor.tabSize": 2,
     "editor.tokenColorCustomizations": {
         "[GitHub Dark*]": {
             "textMateRules": [
@@ -255,22 +281,26 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
+    "git.blame.editorDecoration.enabled": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.ignoreRebaseWarning": true,
+    "git.openRepositoryInParentFolders": "never",
     "github.copilot.enable": {
         "*": false,
-        "plaintext": false,
+        "cpp": true,
         "markdown": false,
-        "scminput": false,
+        "plaintext": false,
         "python": true,
-        "cpp": false,
+        "scminput": false,
         "starlark": true
     },
     "github.copilot.nextEditSuggestions.enabled": true,
     "githubPullRequests.createOnPublishBranch": "never",
     "gitlens.views.branches.branches.layout": "list",
     "gtest-adapter.debugConfig": "bazel test ${WORKSPACEFOLDER}",
+    "icontheme.darkIconTheme": "Catppuccin Macchiato",
+    "icontheme.lightIconTheme": "Catppuccin Latte",
     "indentRainbow.colorOnWhiteSpaceOnly": true,
     "indentRainbow.colors": [
         "rgba(128,128,220,0.04)",
@@ -322,13 +352,17 @@
     },
     "search.collapseResults": "auto",
     "security.workspace.trust.untrustedFiles": "open",
+    "telemetry.feedback.enabled": false,
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.fontFamily": "FiraCode Nerd Font Ret",
     "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.minimumContrastRatio": 2,
     "terminal.integrated.persistentSessionScrollback": 1000,
     "terminal.integrated.scrollback": 10000,
@@ -390,46 +424,12 @@
     },
     // "workbench.colorTheme": "GitHub Dark",
     "workbench.editor.alwaysShowEditorActions": true,
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.list.smoothScrolling": true,
     "workbench.panel.defaultLocation": "right",
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
     "workbench.reduceMotion": "off",
     "workbench.tree.enableStickyScroll": true,
-    "workbench.view.alwaysShowHeaderActions": true,
-    "[cpp]": {
-        "editor.stickyScroll.defaultModel": "outlineModel",
-        "editor.stickyTabStops": true
-    },
-    "git.openRepositoryInParentFolders": "never",
-    "telemetry.feedback.enabled": false,
-    "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "debug.console.fontFamily": "FiraCode Nerd Font",
-    "terminal.integrated.fontLigatures.enabled": true,
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "editor.minimap.autohide": "mouseover",
-    "clangd.arguments": [
-        "--header-insertion=never",
-        "--query-driver=**"
-    ],
-    "git.blame.editorDecoration.enabled": true,
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "[dockercompose]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "advanced",
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "[github-actions-workflow]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "editor.autoClosingBrackets": "beforeWhitespace",
-    "icontheme.darkIconTheme": "Catppuccin Macchiato",
-    "icontheme.lightIconTheme": "Catppuccin Latte",
-    "editor.inlineSuggest.edits.showCollapsed": true,
-    "diffEditor.hideUnchangedRegions.enabled": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.tabSize": 2
+    "workbench.view.alwaysShowHeaderActions": true
 }
