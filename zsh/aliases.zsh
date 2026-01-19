@@ -9,5 +9,3 @@ alias i=ipython
 alias uvr=uv run
 alias bz=bazel
 alias bl=blender
-alias pi="pacman -Ss | paste -d '' - - | fzf --multi --preview 'pacman -Si {1}' | cut -d ' ' -f 1 | xargs -ro pacman -Si"
-alias pl="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"

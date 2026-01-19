@@ -3,7 +3,6 @@ bindkey -e
 bindkey '^[[A' history-search-backward  # Up arrow
 bindkey '^[[B' history-search-forward   # Down arrow
 bindkey '^[w' kill-region
-bindkey " " fzf-cd-widget
 
 # Ctrl + Left/Right jump words
 bindkey "^[[1;5D" backward-word  # Ctrl + Left
@@ -18,4 +17,3 @@ bindkey "^[[3;5~" kill-word
 bindkey "^[[3~" delete-char
 
 bindkey -s '^B' 'btop\n'
-bindkey '2;6u' fif

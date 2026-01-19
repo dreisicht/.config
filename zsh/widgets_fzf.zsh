@@ -1,60 +1,60 @@
 # Custom functions (https://github.com/junegunn/fzf/wiki/Examples)
 
-fzf-history-widget() {
-  local selected key cmd
+# fzf-history-widget() {
+#   local selected key cmd
 
-  # get history WITHOUT numbers
-  selected=("${(@f)$(fc -rl 1 | awk '{sub(/^[[:space:]]*[0-9]+[[:space:]]*/,""); print}' \
-    | fzf --no-sort \
-          --expect=enter,ctrl-e \
-          --reverse \
-          --prompt '🕓>' \
-          --tiebreak index \
-          --inline-info \
-          --color header:italic \
-          --header 'Enter: execute | CTRL-E: edit' \
-          --bind='ctrl-r:toggle-sort')}")
+#   # get history WITHOUT numbers
+#   selected=("${(@f)$(fc -rl 1 | awk '{sub(/^[[:space:]]*[0-9]+[[:space:]]*/,""); print}' \
+#     | fzf --no-sort \
+#           --expect=enter,ctrl-e \
+#           --reverse \
+#           --prompt '🕓>' \
+#           --tiebreak index \
+#           --inline-info \
+#           --color header:italic \
+#           --header 'Enter: execute | CTRL-E: edit' \
+#           --bind='ctrl-r:toggle-sort')}")
 
-  [[ -z $selected ]] && return
+#   [[ -z $selected ]] && return
 
-  key=$selected[1]
-  cmd=$selected[2]
+#   key=$selected[1]
+#   cmd=$selected[2]
 
-  # nothing chosen
-  [[ -z $cmd ]] && return
+#   # nothing chosen
+#   [[ -z $cmd ]] && return
 
-  case $key in
-    enter)
-      # execute immediately
-      BUFFER=$cmd
-      zle accept-line
-      ;;
-    ctrl-e)
-      # just insert so you can edit
-      BUFFER+=$cmd
-      zle -R
-      ;;
-  esac
-}
+#   case $key in
+#     enter)
+#       # execute immediately
+#       BUFFER=$cmd
+#       zle accept-line
+#       ;;
+#     ctrl-e)
+#       # just insert so you can edit
+#       BUFFER+=$cmd
+#       zle -R
+#       ;;
+#   esac
+# }
 
-zle -N fzf-history-widget
-bindkey '^R' fzf-history-widget
+# zle -N fzf-history-widget
+# bindkey '^R' fzf-history-widget
 
 
-# fkill - kill processes - list only the ones you can kill. Modified the earlier script.
-fkill() {
-    local pid
-    if [ "$UID" != "0" ]; then
-        pid=$(ps -f -u $UID | sed 1d | fzf -m | awk '{print $2}')
-    else
-        pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
-    fi
+# # fkill - kill processes - list only the ones you can kill. Modified the earlier script.
+# fkill() {
+#     local pid
+#     if [ "$UID" != "0" ]; then
+#         pid=$(ps -f -u $UID | sed 1d | fzf -m | awk '{print $2}')
+#     else
+#         pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+#     fi
 
-    if [ "x$pid" != "x" ]
-    then
-        echo $pid | xargs kill -${1:-9}
-    fi
-}
+#     if [ "x$pid" != "x" ]
+#     then
+#         echo $pid | xargs kill -${1:-9}
+#     fi
+# }
 
 fzf-man-widget() {
   manpage="echo {} | sed 's/\([[:alnum:][:punct:]]*\) (\([[:alnum:]]*\)).*/\2 \1/'"
@@ -86,19 +86,19 @@ fif() {
     # 3. Open the file in VS Code
     RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case --no-ignore --hidden"
     INITIAL_QUERY="${*:-}"
-    fzf --ansi --disabled --query "$INITIAL_QUERY" \
+    fzf --prompt '1. rg 🔍> ' \
+        --ansi --disabled --query "$INITIAL_QUERY" \
         --bind "start:reload:$RG_PREFIX {q}" \
         --bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
-        --bind "alt-enter:unbind(change,alt-enter)+change-prompt(2. fzf 📄> )+enable-search+clear-query" \
+        --bind "enter:unbind(change,enter)+change-prompt(2. fzf 📄> )+enable-search+clear-query" \
         --color "hl:-1:underline,hl+:-1:underline:reverse" \
-        --prompt '1. rg 🔍> ' \
         --delimiter : \
         --preview 'bat --color=always {1} --highlight-line {2}' \
-        --bind 'enter:become(code --goto {1}:{2})'\
-        --header 'ENTER: Open in VS Code | ALT+ENTER: Search for filename.'
+        --bind 'o:become(code --goto {1}:{2})'\
+        --header 'O: Open in VS Code | ENTER: Search for filename.'
 }
 
-bindkey '^F' fif
+bindkey '^[f' fif
 zle -N fif
 
 y() {

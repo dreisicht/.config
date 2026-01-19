@@ -6,7 +6,7 @@ mkcd () {
   cd "$1"
 }
 
-tempe () {
+mkcdtemp () {
   cd "$(mktemp -d)"
   chmod -R 0700 .
   if [[ $# -eq 1 ]]; then
@@ -28,9 +28,9 @@ boop () {
   $(exit "$last")
 }
 
-git-fworktree () {
-  cd "$(git worktree list | fzf | awk '{print $1}')"
-}
+# git-fworktree () {
+#   cd "$(git worktree list | fzf | awk '{print $1}')"
+# }
 
 hoy () {
     echo -n "$(date '+%Y-%m-%d')"

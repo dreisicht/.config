@@ -23,6 +23,7 @@ zen mod: <https://zen-browser.app/mods/ae7868dc-1fa1-469e-8b89-a5edf7ab1f24/?lim
 hyprpm update
 hyprpm add <https://github.com/KZDKM/Hyprspace>
 hyprpm enable Hyprspace
+-> replaced by hyprexpo for now. Layout doesn't fit my vertical only scrolling and moving windows is missing there.
 
 liquidctl --match h150i set fan speed 1 25 5 35 5 40 15 45 80 50 100
 liquidctl initialize --match h150i --pump-mode quiet
@@ -44,10 +45,10 @@ Theme, vs code open file dialog weird.
 
 ## TODOs
 
-### New concept for shortcuts in fzf widgets
+<!-- ### New concept for shortcuts in fzf widgets -->
 
-- Ctrl-Enter would be cool for open in editor
-- enter for paste
+<!-- - Ctrl-Enter would be cool for open in editor -->
+<!-- - enter for paste -->
 <!-- - ctrl+p as in vs code for jump to file -> ctrl+p unhandy and ctrl+t is used for similar in vs code. -->
 <!-- - ctrl + shift + f for fif -->
 <!-- - middle click for copy/paste? -->
@@ -57,7 +58,7 @@ Theme, vs code open file dialog weird.
 
 ### vicinae
 
-- close when clicking outside of area
+<!-- - close when clicking outside of area -->
 - cliboard manager direct input
 <!-- - hook up paste manager -->
 

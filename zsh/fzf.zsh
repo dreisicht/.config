@@ -1,8 +1,8 @@
 
 # Completion styling
 export FZF_DEFAULT_OPTS='--reverse --inline-info --ansi --height ~75% --preview-window "right,60%,,+{2}+3/3,~3"'
-export FZF_CTRL_T_COMMAND='fd --type f --color=always -u'
-export FZF_ALT_C_COMMAND='fd --type d --color=always -u'
+export FZF_CTRL_T_COMMAND='fdfind --type f --color=always -u'
+export FZF_ALT_C_COMMAND='fdfind --type d --color=always -u'
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group supporte
@@ -31,6 +31,7 @@ export FZF_ALT_C_OPTS="
   --walker-skip .git,node_modules,target
   --header 'Enter: cd'
   --preview 'eza --color=always --icons {}'"
+bindkey " " fzf-cd-widget
 
 export FZF_CTRL_R_OPTS="
   --prompt '🕓>'
@@ -44,7 +45,7 @@ export FZF_CTRL_R_OPTS="
 export FZF_CTRL_T_OPTS="
   --prompt '📄>'
   --color header:italic
-  --header 'Enter: Accept | CTRL-E: VS Code | CTRL-V: vim'
+  --header 'Enter: Accept | o: open'
   --walker-skip .git,node_modules,target
   --preview '
     if [ -f {} ]; then
@@ -56,9 +57,7 @@ export FZF_CTRL_T_OPTS="
     fi
   '
   --preview-window 'right,60%,,+{2}+3/3,~3'
-
-  --bind 'ctrl-e:become(code --goto {1}:{2})'
-  --bind 'ctrl-v:become(nvim )'"
+  --bind 'o:become(code --goto {1}:{2})'"
 
 
 # Shell integrations
