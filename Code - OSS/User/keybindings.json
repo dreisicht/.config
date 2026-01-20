@@ -244,5 +244,15 @@
     "command": "-editor.action.blockComment",
     "key": "shift+alt+a",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+[Semicolon]",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+shift+[Equal]",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
   }
 ]
