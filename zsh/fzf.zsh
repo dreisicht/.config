@@ -1,8 +1,8 @@
 
 # Completion styling
 export FZF_DEFAULT_OPTS='--reverse --inline-info --ansi --height ~75% --preview-window "right,60%,,+{2}+3/3,~3"'
-export FZF_CTRL_T_COMMAND='fdfind --type f --color=always -u'
-export FZF_ALT_C_COMMAND='fdfind --type d --color=always -u'
+export FZF_CTRL_T_COMMAND='fd --type f --color=always -u'
+export FZF_ALT_C_COMMAND='fd --type d --color=always -u'
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group supporte
@@ -27,9 +27,9 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 # Icon used is nerdfont
 export FZF_ALT_C_OPTS="
   --prompt '📁>'
+  --header 'Enter: cd'
   --color header:italic
   --walker-skip .git,node_modules,target
-  --header 'Enter: cd'
   --preview 'eza --color=always --icons {}'"
 bindkey " " fzf-cd-widget
 
@@ -44,8 +44,8 @@ export FZF_CTRL_R_OPTS="
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
   --prompt '📄>'
+  --header 'Tab: open | Enter: Accept'
   --color header:italic
-  --header 'Enter: Accept | o: open'
   --walker-skip .git,node_modules,target
   --preview '
     if [ -f {} ]; then
@@ -57,7 +57,8 @@ export FZF_CTRL_T_OPTS="
     fi
   '
   --preview-window 'right,60%,,+{2}+3/3,~3'
-  --bind 'o:become(code --goto {1}:{2})'"
+  --bind 'Enter:become(code --goto {1}:{2})'
+  --bind 'Tab:accept'"
 
 
 # Shell integrations

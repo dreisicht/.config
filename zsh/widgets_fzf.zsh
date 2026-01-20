@@ -65,7 +65,7 @@ fzf-man-widget() {
       -q "$1" \
       --ansi \
       --tiebreak=begin \
-      --prompt=' Man > '  \
+      --prompt=' Man > <Alt-C Change prompt | Alt-M Change preview | Alt-T Change preview'  \
       --preview "${bat}" \
       --bind "enter:execute(${manpage} | xargs -r man)" \
       --bind "alt-c:+change-preview(cht.sh {1})+change-prompt(ﯽ Cheat > )" \
@@ -87,15 +87,16 @@ fif() {
     RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case --no-ignore --hidden"
     INITIAL_QUERY="${*:-}"
     fzf --prompt '1. rg 🔍> ' \
+        --header 'Tab: Search for filename. | Enter: Open in VS Code' \
         --ansi --disabled --query "$INITIAL_QUERY" \
         --bind "start:reload:$RG_PREFIX {q}" \
         --bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
-        --bind "enter:unbind(change,enter)+change-prompt(2. fzf 📄> )+enable-search+clear-query" \
+        --bind "tab:unbind(change,tab)+change-prompt(2. fzf 📄> )+enable-search+clear-query" \
         --color "hl:-1:underline,hl+:-1:underline:reverse" \
+        --color header:italic \
         --delimiter : \
         --preview 'bat --color=always {1} --highlight-line {2}' \
-        --bind 'o:become(code --goto {1}:{2})'\
-        --header 'O: Open in VS Code | ENTER: Search for filename.'
+        --bind 'enter:become(code --goto {1}:{2})'\
 }
 
 bindkey '^[f' fif
