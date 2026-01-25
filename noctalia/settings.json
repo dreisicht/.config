@@ -485,6 +485,18 @@
             {
                 "enabled": true,
                 "id": "vicinae"
+            },
+            {
+                "enabled": true,
+                "id": "zenBrowser"
+            },
+            {
+                "enabled": true,
+                "id": "ghostty"
+            },
+            {
+                "enabled": true,
+                "id": "discord"
             }
         ],
         "enableUserTheming": false

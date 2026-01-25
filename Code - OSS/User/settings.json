@@ -431,5 +431,6 @@
     "workbench.preferredLightColorTheme": "GitHub Light",
     "workbench.reduceMotion": "off",
     "workbench.tree.enableStickyScroll": true,
-    "workbench.view.alwaysShowHeaderActions": true
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.activityBar.location": "top"
 }

@@ -7,7 +7,6 @@ if [ ! -d "$ZINIT_HOME" ]; then
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-# Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Load completions
@@ -15,7 +14,6 @@ autoload -Uz compinit && compinit
 
 zinit ice depth=1
 # Using starship from system install instead.
-# zinit light starship/starship
 eval "$(starship init zsh)"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -29,11 +27,11 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::aws
-zinit snippet OMZP::bazel
 zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::colorize
+zinit snippet OMZP::bazel
 
 zinit cdreplay -q

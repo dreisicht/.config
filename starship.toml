@@ -28,9 +28,9 @@ format = """
 $os\
 $username\
 $sudo\
-[](bg:7 fg:4)\
+[](bg:8 fg:4)\
 $directory\
-[](fg:7 bg:1)\
+[](fg:8 bg:1)\
 $git_branch\
 $git_status\
 $git_state\
@@ -101,7 +101,7 @@ format = '[$user]($style)'
 peterbaintner = "pb"
 
 [directory]
-style = "bg:7"
+style = "bg:8"
 format = "[ $path ]($style)"
 truncation_length = 10
 truncation_symbol = "…/"
@@ -194,15 +194,15 @@ format = '[ $symbol$version]($style)'
 [docker_context]
 symbol = ""
 style = "bg:2"
-format = '[[ $symbol( $context)](fg:#83a598 bg:7)]($style)'
+format = '[[ $symbol( $context)](fg:#83a598 bg:8)]($style)'
 
 [conda]
 style = "bg:2"
-format = '[[ $symbol( $environment)](fg:#83a598 bg:7)]($style)'
+format = '[[ $symbol( $environment)](fg:#83a598 bg:8)]($style)'
 
 [pixi]
 style = "bg:2"
-format = '[[ $symbol( $version)( $environment)]( bg:7)]($style)'
+format = '[[ $symbol( $version)( $environment)]( bg:8)]($style)'
 
 [time]
 disabled = false
