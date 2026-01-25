@@ -72,6 +72,7 @@ Theme, vs code open file dialog weird.
 
 <!-- - close when clicking outside of area -->
 - cliboard manager direct input
+- on paste weird behaviour. I think i mis-configured something here
 <!-- - hook up paste manager -->
 
 ### iCloud
@@ -101,9 +102,10 @@ Theme, vs code open file dialog weird.
 <!-- - notification on mute -->
 <!-- Groups header coloring -->
 <!-- Hyprspace crashing -->
+- 100% CPU usage -> following discussion on github.
 
 ### Noctalia
-
+- Theme switching with btop
 <!-- - wishlist: -->
 <!-- - weather -->
 <!-- - show disk IO -->
@@ -145,6 +147,7 @@ format file shift + alt + f -->
 <!-- fif still ignoring files -->
 <!-- ctrl+r? -->
 <!-- del not working -->
+- bazel target auto complete
 
 ### yazi
 <!-- backspage/del for trash -->
