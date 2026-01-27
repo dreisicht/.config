@@ -432,5 +432,6 @@
     "workbench.reduceMotion": "off",
     "workbench.tree.enableStickyScroll": true,
     "workbench.view.alwaysShowHeaderActions": true,
-    "workbench.activityBar.location": "top"
+    "workbench.activityBar.location": "top",
+    "bazel.buildifierExecutable": "/home/peterbaintner/.local/bin/buildifier"
 }
