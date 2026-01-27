@@ -44,7 +44,7 @@ export FZF_CTRL_R_OPTS="
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
   --prompt '📄>'
-  --header 'Tab: open | Enter: Accept'
+  --header 'Tab: Accept | Enter: Open in VS Code'
   --color header:italic
   --walker-skip .git,node_modules,target
   --preview '

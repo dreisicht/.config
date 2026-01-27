@@ -186,7 +186,7 @@
         "manualSunset": "18:30",
         "monitorForColors": "",
         "predefinedScheme": "Rose Pine",
-        "schedulingMode": "off",
+        "schedulingMode": "location",
         "useWallpaperColors": false
     },
     "controlCenter": {
@@ -507,7 +507,7 @@
         "boxBorderEnabled": false,
         "fontDefault": "Roboto",
         "fontDefaultScale": 1,
-        "fontFixed": "DejaVu Sans Mono",
+        "fontFixed": "FiraCode Nerd Font",
         "fontFixedScale": 1,
         "networkPanelView": "ethernet",
         "panelBackgroundOpacity": 0.78,
