@@ -44,7 +44,7 @@ export FZF_CTRL_R_OPTS="
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
   --prompt '📄>'
-  --header 'Tab: Accept | Enter: Open in VS Code'
+  --header 'Enter: Accept | Ctrl-O: Open in VS Code'
   --color header:italic
   --walker-skip .git,node_modules,target
   --preview '
@@ -57,8 +57,7 @@ export FZF_CTRL_T_OPTS="
     fi
   '
   --preview-window 'right,60%,,+{2}+3/3,~3'
-  --bind 'Enter:become(code --goto {1}:{2})'
-  --bind 'Tab:accept'"
+  --bind 'ctrl-o:become(code --goto {1}:{2})'"
 
 
 # Shell integrations
