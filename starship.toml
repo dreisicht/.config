@@ -184,7 +184,7 @@ style = " bg:3"
 pyenv_prefix = " in "
 pyenv_version_name = true
 version_format = '${raw}'
-format = '[ ${symbol}(${version})( $virtualenv)]($style)'
+format = '[ ${symbol} (${version})($virtualenv)]($style)'
 
 [package]
 style = " bg:2"
