@@ -1,8 +1,8 @@
 
 # Completion styling
 export FZF_DEFAULT_OPTS='--reverse --inline-info --ansi --height ~75% --preview-window "right,60%,,+{2}+3/3,~3"'
-export FZF_CTRL_T_COMMAND='fd --type f --color=always -u'
-export FZF_ALT_C_COMMAND='fd --type d --color=always -u'
+export FZF_CTRL_T_COMMAND='fdfind --type f --color=always -u'
+export FZF_ALT_C_COMMAND='fdfind --type d --color=always -u'
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group supporte
@@ -44,7 +44,7 @@ export FZF_CTRL_R_OPTS="
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
   --prompt '📄>'
-  --header 'Enter: Accept | Ctrl-O: Open in VS Code'
+  --header 'Enter: Accept | Ctrl-Enter: Open in VS Code'
   --color header:italic
   --walker-skip .git,node_modules,target
   --preview '
@@ -57,25 +57,25 @@ export FZF_CTRL_T_OPTS="
     fi
   '
   --preview-window 'right,60%,,+{2}+3/3,~3'
-  --bind 'ctrl-o:become(code --goto {1}:{2})'"
+  --bind 'ctrl-o(nvim {})'
+  --bind 'ctrl-enter(code --goto {1}:{2})'"
 
+# Just in case that the zsh history search doesn't work.
+# start typing + [Up-Arrow] - fuzzy find history forward
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+    autoload -U up-line-or-beginning-search
+    zle -N up-line-or-beginning-search
+    bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+# start typing + [Down-Arrow] - fuzzy find history backward
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+    autoload -U down-line-or-beginning-search
+    zle -N down-line-or-beginning-search
+    bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
 
 # Shell integrations
 eval "$(zoxide init zsh)"
-
-# Just in case that the zsh history search doesn't work.
-# # start typing + [Up-Arrow] - fuzzy find history forward
-# if [[ "${terminfo[kcuu1]}" != "" ]]; then
-#     autoload -U up-line-or-beginning-search
-#     zle -N up-line-or-beginning-search
-#     bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-# fi
-# # start typing + [Down-Arrow] - fuzzy find history backward
-# if [[ "${terminfo[kcud1]}" != "" ]]; then
-#     autoload -U down-line-or-beginning-search
-#     zle -N down-line-or-beginning-search
-#     bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-# fi
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source <(fzf --zsh)

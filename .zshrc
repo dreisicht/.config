@@ -6,7 +6,6 @@ if [[ -f "/opt/homebrew/bin/brew" ]] then
 fi
 
 zsh_path="$HOME/.config/zsh/"
-# bb say "Hey!"
 
 source "${zsh_path}variables.zsh"
 source "${zsh_path}aliases.zsh"
