@@ -16,4 +16,4 @@ bindkey "^H" backward-kill-word
 bindkey "^[[3;5~" kill-word
 bindkey "^[[3~" delete-char
 
-bindkey -s '^B' 'btop\n'
+#bindkey -s '^B' 'btop\n'

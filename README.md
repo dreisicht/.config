@@ -29,6 +29,10 @@ hyprpm enable Hyprspace
 ```
 -> replaced by hyprexpo for now. Layout doesn't fit my vertical only scrolling and moving windows is missing there.
 
+### Nvidia
+Add to boot options
+nvidia_drm.modeset=1 nvidia_drm.fbdev=1 nvidia.NVreg_EnableGpuFirmware=0 pcie_aspm=off
+
 ### Cooling
 ```Shell
 liquidctl --match h150i set fan speed 1 25 5 35 5 40 15 45 80 50 100
