@@ -58,7 +58,7 @@ export FZF_CTRL_T_OPTS="
   '
   --preview-window 'right,60%,,+{2}+3/3,~3'
   --bind 'alt-enter:become(code --goto {})'
-  --bind 'alt-v:become(nvim {})'"
+  --bind 'alt-v:execute(nvim {})'"
 
 # Just in case that the zsh history search doesn't work.
 # start typing + [Up-Arrow] - fuzzy find history forward
