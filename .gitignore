@@ -34,6 +34,7 @@ yazi/package.toml
 
 !noctalia
 !noctalia/**
+noctalia/plugins
 noctalia/pam/password.conf
 
 !vicinae
