@@ -9,3 +9,5 @@ alias i=ipython
 alias uvr=uv run
 alias bz=bazel
 alias bl=blender
+alias just="task"
+alias j="task"
