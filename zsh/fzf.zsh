@@ -1,8 +1,8 @@
 
 # Completion styling
 export FZF_DEFAULT_OPTS='--reverse --inline-info --ansi --height ~75% --preview-window "right,60%,,+{2}+3/3,~3"'
-export FZF_CTRL_T_COMMAND='fdfind --type f --color=always -u'
-export FZF_ALT_C_COMMAND='fdfind --type d --color=always -u'
+export FZF_CTRL_T_COMMAND='fd --type f --color=always -u'
+export FZF_ALT_C_COMMAND='fd --type d --color=always -u'
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group supporte
