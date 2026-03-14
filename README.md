@@ -1,5 +1,14 @@
 # Config files
 
+## Remove lsp from app list:
+
+grep '"in.lsp_plug' ~/.config/vicinae/settings.json \
+  | grep -oP 'in\.lsp_plug[^"]+' \
+  | while read id; do
+      printf '[Desktop Entry]\nHidden=true\n' \
+        > ~/.local/share/applications/${id}.desktop
+    done
+
 ## .zshrc
 
 ```
