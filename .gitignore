@@ -25,6 +25,8 @@ yazi/package.toml
 
 !hypr/
 !hypr/**
+hypr/noctalia/
+hypr/noctalia/noctalia-colors.conf
 
 !Code - OSS/
 !Code - OSS/User/
@@ -32,10 +34,11 @@ yazi/package.toml
 !Code - OSS/User/settings.json
 !Code - OSS/User/extensions.sh
 
-!noctalia
+!noctalia/
 !noctalia/**
 noctalia/plugins
 noctalia/pam/password.conf
+noctalia/colors.json
 
 !vicinae
 !vicinae/**
