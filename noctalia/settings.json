@@ -377,11 +377,13 @@
         "onlySameOutput": true,
         "pinnedApps": [
             "zen",
+            "signal",
+            "discord",
             "com.mitchellh.ghostty",
             "code-oss",
             "blender",
             "1password",
-            "discord",
+            "steam",
             "spotify-launcher"
         ],
         "pinnedStatic": false,
@@ -561,7 +563,7 @@
             1,
             3
         ],
-        "location": "bottom",
+        "location": "top",
         "monitors": [
         ],
         "overlayLayer": true
