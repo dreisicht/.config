@@ -109,8 +109,12 @@ y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
-
 zle -N y
+
+b() {
+  btop
+}
+zle -N b
 
 pmi(){
   # PMI - PacMan Install
