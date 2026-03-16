@@ -552,14 +552,16 @@
         }
     },
     "osd": {
-        "autoHideMs": 3000,
+        "autoHideMs": 2000,
         "backgroundOpacity": 1,
         "enabled": true,
         "enabledTypes": [
             0,
-            2
+            2,
+            1,
+            3
         ],
-        "location": "top_right",
+        "location": "bottom",
         "monitors": [
         ],
         "overlayLayer": true
