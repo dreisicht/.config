@@ -390,15 +390,15 @@
         "onlySameOutput": true,
         "pinnedApps": [
             "org.gnome.Nautilus",
-            "zen",
             "signal",
             "discord",
-            "com.mitchellh.ghostty",
-            "code-oss",
             "blender",
             "1password",
             "steam",
             "org.kde.gwenview",
+            "code-oss",
+            "zen",
+            "com.mitchellh.ghostty",
             "spotify-launcher"
         ],
         "pinnedStatic": false,
@@ -687,10 +687,6 @@
             },
             {
                 "enabled": true,
-                "id": "zenBrowser"
-            },
-            {
-                "enabled": true,
                 "id": "discord"
             },
             {
@@ -728,6 +724,10 @@
             {
                 "enabled": true,
                 "id": "ghostty"
+            },
+            {
+                "enabled": true,
+                "id": "zenBrowser"
             }
         ],
         "enableUserTheming": false
