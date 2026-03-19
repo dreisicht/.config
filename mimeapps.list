@@ -11,7 +11,7 @@ application/x-extension-xhtml=zen.desktop
 application/x-extension-xht=zen.desktop
 image/png=com.interversehq.qView.desktop
 image/jpg=com.interversehq.qView.desktop
-inode/directory=org.kde.dolphin.desktop
+inode/directory=org.gnome.Nautilus.desktop
 x-scheme-handler/sgnl=signal.desktop
 x-scheme-handler/signalcaptcha=signal.desktop
 
