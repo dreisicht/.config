@@ -57,7 +57,7 @@
         "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
-        "contentPadding": 3,
+        "contentPadding": 1,
         "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": false,
@@ -113,6 +113,16 @@
                 }
             ],
             "left": [
+                {
+                    "defaultSettings": {
+                        "customColor": "none",
+                        "showConditionIcon": true,
+                        "showTempUnit": true,
+                        "showTempValue": true,
+                        "tooltipOption": "everything"
+                    },
+                    "id": "plugin:weather-indicator"
+                },
                 {
                     "compactMode": true,
                     "diskPath": "/",
@@ -171,7 +181,7 @@
                     "showVisualizer": true,
                     "textColor": "none",
                     "useFixedWidth": false,
-                    "visualizerType": "wave"
+                    "visualizerType": "linear"
                 },
                 {
                     "applyToAllMonitors": false,
