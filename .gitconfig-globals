@@ -23,7 +23,7 @@
     git worktree list | grep -E '^\\[.*\\]\\s.*\\(merged\\)' | awk '{print $1}' | xargs -I {} git worktree remove {}; \
 }; f"
   d = !git checkout dev && git pull
-  m = !git checkout master && git pull
+  m = !git checkout main && git pull
   fomo = !git fetch origin dev:dev && git merge dev
   amend = !git commit --amend --no-edit
   yeet = !git commit -a --amend --no-edit && git push --force-with-lease
