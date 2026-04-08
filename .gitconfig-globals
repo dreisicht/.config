@@ -1,0 +1,33 @@
+# Add to your ~/.gitconfig
+# [include]
+#   path = ~/.config/.gitconfig-globals
+
+[credential]
+  helper = store
+
+[alias]
+  unstage = reset HEAD --
+  steal = "!f() { git merge $1 --no-commit --no-ff && rm .git/MERGE_HEAD; }; f"
+  cleanup = "!f() { \
+    git fetch --prune; \
+    if [ -z \"$branches\" ]; then \
+        echo \"No branches to delete.\"; \
+        exit 0; \
+    fi; \
+    if [ \"$1\" = \"-f\" ]; then \
+        git branch -D $(git branch -vv | grep ': gone]' | awk '{print $1}'); \
+    else \
+        git branch -d $(git branch -vv | grep ': gone]' | awk '{print $1}'); \
+    fi; \
+    git worktree prune; \
+    git worktree list | grep -E '^\\[.*\\]\\s.*\\(merged\\)' | awk '{print $1}' | xargs -I {} git worktree remove {}; \
+}; f"
+  d = !git checkout dev && git pull
+  m = !git checkout master && git pull
+  fomo = !git fetch origin dev:dev && git merge dev
+  amend = !git commit --amend --no-edit
+  yeet = !git commit -a --amend --no-edit && git push --force-with-lease
+  bud = !git worktree add
+
+[rerere]
+  enabled = true
