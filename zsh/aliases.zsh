@@ -12,3 +12,4 @@ alias bt=btop
 alias co=code
 alias x=xdg-open
 alias j=just
+alias g=git
