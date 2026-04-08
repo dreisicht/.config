@@ -116,6 +116,9 @@ Theme, vs code open file dialog weird.
 <!-- Groups header coloring -->
 <!-- Hyprspace crashing -->
 - 100% CPU usage -> following discussion on github.
+- Reorder workspaces with renaming: https://www.reddit.com/r/hyprland/comments/1p3xvs6/is_there_a_good_way_to_moveswap_workspaces_on_the/
+- set default workspace: https://wiki.hypr.land/Configuring/Workspace-Rules/
+- try hyprtasking: https://github.com/raybbian/hyprtasking
 
 ### Noctalia
 - Theme switching with btop
