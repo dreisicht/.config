@@ -116,6 +116,24 @@ Theme, vs code open file dialog weird.
 <!-- Groups header coloring -->
 <!-- Hyprspace crashing -->
 - 100% CPU usage -> following discussion on github.
+ 1. Inspect Kernel Logs (Crucial):
+  Immediately after the performance drop occurs, run:
+  sudo dmesg | grep -iE "nvidia|drm|modeset"
+  1. Look for "NVRM: GPU holds a lock," "page fault," or any error related to "reconfiguration."
+  2. Check Kernel Parameters:
+  Run cat /proc/cmdline and verify that nvidia_drm.modeset=1 is present. If it's not, this is the #1 suspect.
+  3. Monitor hyprctl during the spike:
+  When the lag is happening, run:
+  hyprctl monitors
+  3. Check if the refresh rate (refreshRate) reported by Hyprland matches what your monitor is actually doing. Sometimes the
+  driver reports a weird frequency (like 25Hz or 30Hz) during the initial handshake.
+  4. Test with nvidia-smi:
+  While the lag is happening, check the GPU utilization and memory:
+  nvidia-smi
+  4. If GPU utilization is low but CPU is high, the bottleneck is definitely the driver/CPU synchronization (software/driver
+  side). If GPU utilization is also high, the driver is struggling with the actual rendering workload.
+
+
 - Reorder workspaces with renaming: https://www.reddit.com/r/hyprland/comments/1p3xvs6/is_there_a_good_way_to_moveswap_workspaces_on_the/
 - set default workspace: https://wiki.hypr.land/Configuring/Workspace-Rules/
 - try hyprtasking: https://github.com/raybbian/hyprtasking

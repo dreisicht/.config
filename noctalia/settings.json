@@ -708,11 +708,15 @@
             },
             {
                 "enabled": true,
-                "id": "ghostty"
+                "id": "zenBrowser"
             },
             {
                 "enabled": true,
-                "id": "zenBrowser"
+                "id": "btop"
+            },
+            {
+                "enabled": true,
+                "id": "ghostty"
             }
         ],
         "enableUserTheming": false
