@@ -27,6 +27,7 @@
   fomo = !git fetch origin dev:dev && git merge dev
   amend = !git commit --amend --no-edit
   yeet = !git commit -a --amend --no-edit && git push --force-with-lease
+  beam = !beam
 
 [rerere]
   enabled = true

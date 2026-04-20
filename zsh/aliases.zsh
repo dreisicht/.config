@@ -15,6 +15,7 @@ alias j=just
 alias g=git
 
 export BEAM_DIR="../.worktrees"
+
 beam() {
   local name="$1"
   local dirname="${name##*/}"
