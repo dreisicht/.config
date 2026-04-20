@@ -10,14 +10,16 @@
   steal = "!f() { git merge $1 --no-commit --no-ff && rm .git/MERGE_HEAD; }; f"
   cleanup = "!f() { \
     git fetch --prune; \
-    branches=$(git branch -vv | grep ': gone]' | awk '{print $1}'); \
+    branches=$(git branch -vv | grep ': gone]' | awk '{print $2}'); \
     if [ -z \"$branches\" ]; then \
         echo \"No branches to delete.\"; \
         exit 0; \
     fi; \
     if [ \"$1\" = \"-f\" ]; then \
+        git worktree remove $branches; \
         echo \"$branches\" | xargs git branch -D; \
     else \
+        git worktree remove $branches; \
         echo \"$branches\" | xargs git branch -d; \
     fi; \
     git worktree prune; \
