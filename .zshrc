@@ -8,9 +8,9 @@ fi
 zsh_path="$HOME/.config/zsh/"
 
 source "${zsh_path}variables.zsh"
-source "${zsh_path}aliases.zsh"
 source "${zsh_path}history.zsh"
 source "${zsh_path}zinit.zsh"
+source "${zsh_path}aliases.zsh"
 source "${zsh_path}keybinds.zsh"
 source "${zsh_path}widgets_fzf.zsh"
 source "${zsh_path}widgets_eh.zsh"

@@ -31,8 +31,13 @@ _beam_complete() {
   local_branches=(${(f)"$(git branch --format='%(refname:short)' 2>/dev/null)"})
   remote_branches=(${(f)"$(git branch -r --format='%(refname:short)' 2>/dev/null)"})
   tags=(${(f)"$(git tag 2>/dev/null)"})
-  _describe -t local-branches 'local branch' local_branches
-  _describe -t remote-branches 'remote branch' remote_branches
-  _describe -t tags 'tag' tags
+  _alternative \
+    'local-branches:local branch:compadd -a local_branches' \
+    'remote-branches:remote branch:compadd -a remote_branches' \
+    'tags:tag:compadd -a tags'
 }
 compdef _beam_complete beam
+
+zstyle ':completion:*:local-branches'  list-colors '=*=32'
+zstyle ':completion:*:remote-branches' list-colors '=*=33'
+zstyle ':completion:*:tags'            list-colors '=*=36'
