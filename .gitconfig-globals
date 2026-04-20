@@ -14,6 +14,7 @@
     if [ -z \"$branches\" ]; then \
         echo \"No branches to delete.\"; \
         exit 0; \
+    fi; \
     if [ \"$1\" = \"-f\" ]; then \
         echo \"$branches\" | xargs git branch -D; \
     else \
