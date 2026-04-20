@@ -13,3 +13,21 @@ alias co=code
 alias x=xdg-open
 alias j=just
 alias g=git
+
+export BEAM_DIR="../.worktrees"
+beam() {
+  local name="$1"
+  local dirname="${name##*/}"
+  local target="${BEAM_DIR}/${dirname}"
+  if [ ! -d "$target" ]; then
+    git worktree add "$target" "$name" || return 1
+  fi
+  cd "$target"
+}
+
+_beam_complete() {
+  local -a refs
+  refs=(${(f)"$(git for-each-ref --format='%(refname:short)' refs/heads refs/remotes refs/tags 2>/dev/null)"})
+  _describe 'ref' refs
+}
+compdef _beam_complete beam
