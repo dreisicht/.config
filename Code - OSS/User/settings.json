@@ -38,6 +38,7 @@
         "--ignore",
         "E402"
     ],
+    "bazel.buildifierExecutable": "/home/peterbaintner/.local/bin/buildifier",
     "bazel.buildifierFixOnFormat": true,
     "bazel.enableCodeLens": true,
     "bazel.queriesShareServer": false,
@@ -60,6 +61,7 @@
         "--header-insertion=never",
         "--query-driver=**"
     ],
+    "claudeCode.preferredLocation": "panel",
     "cmake.configureOnOpen": false,
     "cmake.showOptionsMovedNotification": false,
     "cpp-check-lint.cppcheck.--enable=": "",
@@ -310,6 +312,16 @@
     "isort.args": [
         "-l 100"
     ],
+    "json.schemaDownload.trustedDomains": {
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://json-schema.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://schemastore.azurewebsites.net/": true,
+        "https://vicinae.com/schemas/config.json": true,
+        "https://www.schemastore.org/": true
+    },
     "latex-workshop.latex.tools": [
         {
             "args": [
@@ -428,21 +440,8 @@
     "workbench.list.smoothScrolling": true,
     "workbench.panel.defaultLocation": "right",
     "workbench.preferredDarkColorTheme": "GitHub Dark",
-    "workbench.preferredLightColorTheme": "GitHub Light",
+    "workbench.preferredLightColorTheme": "GitHub Dark",
     "workbench.reduceMotion": "off",
     "workbench.tree.enableStickyScroll": true,
-    "workbench.view.alwaysShowHeaderActions": true,
-    "workbench.activityBar.location": "top",
-    "bazel.buildifierExecutable": "/home/peterbaintner/.local/bin/buildifier",
-    "json.schemaDownload.trustedDomains": {
-        "https://developer.microsoft.com/json-schemas/": true,
-        "https://json-schema.org/": true,
-        "https://json.schemastore.org/": true,
-        "https://raw.githubusercontent.com/devcontainers/spec/": true,
-        "https://raw.githubusercontent.com/microsoft/vscode/": true,
-        "https://schemastore.azurewebsites.net/": true,
-        "https://vicinae.com/schemas/config.json": true,
-        "https://www.schemastore.org/": true
-    },
-    "claudeCode.preferredLocation": "panel"
+    "workbench.view.alwaysShowHeaderActions": true
 }

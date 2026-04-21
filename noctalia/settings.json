@@ -134,6 +134,15 @@
                     "textColor": "none",
                     "useMonospaceFont": true,
                     "usePadding": false
+                },
+                {
+                    "defaultSettings": {
+                        "currentIconName": "world-download",
+                        "hideOnZero": false,
+                        "updateIntervalMinutes": 30,
+                        "updateTerminalCommand": "foot -e"
+                    },
+                    "id": "plugin:update-count"
                 }
             ],
             "right": [
@@ -208,6 +217,7 @@
                 {
                     "colorizeDistroLogo": true,
                     "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": false,
                     "icon": "noctalia",
@@ -374,10 +384,10 @@
         "pinnedApps": [
             "zen",
             "org.gnome.Nautilus",
-            "com.mitchellh.ghostty",
             "code-oss",
             "blender",
             "org.kde.krita",
+            "com.mitchellh.ghostty",
             "signal",
             "discord",
             "steam",
@@ -458,7 +468,7 @@
         "telemetryEnabled": true
     },
     "hooks": {
-        "colorGeneration": "",
+        "colorGeneration": "~/.config/hypr/update-hyprbars-color.sh",
         "darkModeChange": "",
         "enabled": true,
         "performanceModeDisabled": "~/.config/hypr/set_no_gamemode.sh",
@@ -704,19 +714,19 @@
             },
             {
                 "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
                 "id": "zenBrowser"
             },
             {
                 "enabled": true,
-                "id": "btop"
+                "id": "ghostty"
             },
             {
                 "enabled": true,
-                "id": "ghostty"
+                "id": "starship"
+            },
+            {
+                "enabled": true,
+                "id": "gtk"
             }
         ],
         "enableUserTheming": false
