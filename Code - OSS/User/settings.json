@@ -156,7 +156,7 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.guides.bracketPairs": "active",
-    "editor.inlayHints.enabled": "off",
+    "editor.inlayHints.enabled": "on",
     "editor.inlineSuggest.edits.showCollapsed": true,
     "editor.inlineSuggest.enabled": true,
     "editor.minimap.autohide": "mouseover",
@@ -443,5 +443,7 @@
     "workbench.preferredLightColorTheme": "GitHub Dark",
     "workbench.reduceMotion": "off",
     "workbench.tree.enableStickyScroll": true,
-    "workbench.view.alwaysShowHeaderActions": true
+    "workbench.view.alwaysShowHeaderActions": true,
+    "chat.viewSessions.orientation": "stacked",
+    "testMate.cpp.test.executables": "{build,Build,BUILD,out,Out,OUT,bazel-bin}/**/*{test,Test,TEST}*"
 }

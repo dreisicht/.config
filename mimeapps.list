@@ -9,7 +9,7 @@ application/x-extension-shtml=zen.desktop
 application/xhtml+xml=zen.desktop
 application/x-extension-xhtml=zen.desktop
 application/x-extension-xht=zen.desktop
-image/png=org.kde.gwenview.desktop
+image/png=gwenview.desktop
 image/jpg=org.kde.gwenview.desktop
 inode/directory=org.gnome.Nautilus.desktop
 x-scheme-handler/sgnl=signal.desktop
@@ -18,6 +18,7 @@ x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 text/plain=code-oss.desktop
 image/jpeg=org.kde.gwenview.desktop
 application/pdf=zen.desktop
+image/webp=org.kde.gwenview.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
@@ -34,3 +35,4 @@ text/plain=code-oss.desktop;
 image/jpeg=org.kde.gwenview.desktop;
 application/pdf=zen.desktop;
 image/png=org.kde.gwenview.desktop;
+image/webp=org.kde.gwenview.desktop;

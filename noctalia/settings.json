@@ -197,16 +197,6 @@
                     "useCustomFont": false
                 },
                 {
-                    "defaultSettings": {
-                        "customColor": "none",
-                        "showConditionIcon": true,
-                        "showTempUnit": true,
-                        "showTempValue": true,
-                        "tooltipOption": "everything"
-                    },
-                    "id": "plugin:weather-indicator"
-                },
-                {
                     "hideWhenZero": true,
                     "hideWhenZeroUnread": false,
                     "iconColor": "none",
@@ -737,7 +727,7 @@
         "fontDefaultScale": 1,
         "fontFixed": "FiraCode Nerd Font",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.87,
+        "panelBackgroundOpacity": 0.77,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
         "settingsPanelMode": "centered",
