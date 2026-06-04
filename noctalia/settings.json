@@ -373,11 +373,11 @@
         "onlySameOutput": true,
         "pinnedApps": [
             "zen",
+            "com.mitchellh.ghostty",
             "org.gnome.Nautilus",
             "code-oss",
             "blender",
             "org.kde.krita",
-            "com.mitchellh.ghostty",
             "signal",
             "discord",
             "steam",
