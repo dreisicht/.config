@@ -223,7 +223,7 @@ disabled = false
 threshold = 90
 symbol = " "
 style = "bg:4"
-format = '[ $symbol ${ram}( | ${swap})]($style)'
+format = '[ $symbol ${ram}]($style)'
 
 [line_break]
 disabled = false
@@ -251,6 +251,54 @@ disabled = false
 style = " bg:4"
 symbol = "•"
 format = "[$symbol]($style)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

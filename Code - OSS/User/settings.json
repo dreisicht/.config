@@ -449,5 +449,6 @@
     "workbench.tree.enableStickyScroll": true,
     "workbench.view.alwaysShowHeaderActions": true,
     "chat.viewSessions.orientation": "stacked",
-    "testMate.cpp.test.executables": "{build,Build,BUILD,out,Out,OUT,bazel-bin}/**/*{test,Test,TEST}*"
+    "testMate.cpp.test.executables": "{build,Build,BUILD,out,Out,OUT,bazel-bin}/**/*{test,Test,TEST}*",
+    "editor.selectionClipboard": false
 }
