@@ -77,6 +77,15 @@ fi
 # Shell integrations
 eval "$(zoxide init zsh)"
 
+# Make bare `z` (no args) open the interactive fzf widget instead of cd-ing to $HOME
+z() {
+    if [[ "$#" -eq 0 ]]; then
+        __zoxide_zi
+    else
+        __zoxide_z "$@"
+    fi
+}
+
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source <(fzf --zsh)
 
