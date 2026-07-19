@@ -50,7 +50,7 @@
 
 
 # General
-background-opacity = 1
+background-opacity = 0.95
 background-blur = 0
 window-padding-x = 5
 focus-follows-mouse = true

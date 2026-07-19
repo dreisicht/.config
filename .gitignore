@@ -44,6 +44,9 @@ noctalia/colors.json
 !vicinae
 !vicinae/**
 
+!niri
+!niri/**
+
 !easyeffects
 !easyeffects/db/
 !easyeffects/db/equalizerrc
