@@ -1,0 +1,18 @@
+///////////////////////
+/////// STARTUPS //////
+///////////////////////
+
+// Migrated from Hyprland `exec-once`. Dropped: `hyprpm reload` (Hyprland
+// plugin manager, N/A). waybar is intentionally NOT started — you use noctalia.
+spawn-at-startup "easyeffects" "--gapplication-service"
+spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "hypridle"
+
+// CPU cooler settings (need shell for sleep/&&).
+spawn-at-startup "liquidctl --match h150i set fan speed 25 5 30 15 35 40 38 70 40 100"
+spawn-at-startup "liquidctl initialize --match h150i --pump-mode performance"
+
+// Startup apps.
+spawn-at-startup "ghostty"
+spawn-at-startup "zen-browser"
+spawn-at-startup "signal-desktop"

@@ -296,26 +296,18 @@
     "desktopWidgets": {
         "enabled": false,
         "gridSnap": true,
-        "gridSnapScale": false,
+        "gridSnapScale": true,
         "monitorWidgets": [
             {
                 "name": "DP-1",
                 "widgets": [
                     {
-                        "hideMode": "visible",
-                        "id": "MediaPlayer",
-                        "showBackground": true,
-                        "visualizerType": "linear",
-                        "x": 2346.9765625,
-                        "y": 40.44921875
-                    },
-                    {
                         "id": "Weather",
                         "roundedCorners": true,
-                        "scale": 1.2707813858684422,
+                        "scale": 2.012638681130194,
                         "showBackground": true,
-                        "x": 2397,
-                        "y": 153
+                        "x": 2295,
+                        "y": 357
                     },
                     {
                         "clockColor": "none",
@@ -324,11 +316,11 @@
                         "format": "HH:mm\\nd MMMM yyyy",
                         "id": "Clock",
                         "roundedCorners": true,
-                        "scale": 2.035045965200902,
+                        "scale": 3.4028637450900328,
                         "showBackground": true,
                         "useCustomFont": false,
-                        "x": 2397,
-                        "y": 306
+                        "x": 2295,
+                        "y": 561
                     }
                 ]
             }
@@ -391,10 +383,10 @@
         "clockStyle": "custom",
         "compactLockScreen": false,
         "dimmerOpacity": 0,
-        "enableBlurBehind": false,
+        "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": true,
-        "enableShadows": false,
+        "enableShadows": true,
         "forceBlackScreenCorners": true,
         "iRadiusRatio": 1,
         "keybinds": {
@@ -704,6 +696,10 @@
             {
                 "enabled": true,
                 "id": "gtk"
+            },
+            {
+                "enabled": true,
+                "id": "niri"
             }
         ],
         "enableUserTheming": false

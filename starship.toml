@@ -1,5 +1,5 @@
 # Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = "https://starship.rs/config-schema.json"
 palette = "noctalia"
 
 # Inserts a blank line between shell prompts
@@ -23,7 +23,7 @@ add_newline = false
 # [█](fg:14)\
 # [█](fg:15)\
 
-#  
+#   
 format = """
 [](fg:4)\
 $os\
@@ -96,7 +96,8 @@ openSUSE = ""
 show_always = true
 style_user = "bg:4 "
 style_root = "bg:4 "
-format = '[$user]($style)'
+format = "[$user]($style)"
+
 [username.aliases]
 peterbaintner = "pb"
 
@@ -117,11 +118,11 @@ truncate_to_repo = false
 [git_branch]
 symbol = ""
 style = "bg:1"
-format = '[[ $symbol $branch ]( bg:1)]($style)'
+format = "[[ $symbol $branch ]( bg:1)]($style)"
 
 [git_status]
 style = "bg:1"
-format = '[[($all_status$ahead_behind )]( bg:1)]($style)'
+format = "[[($all_status$ahead_behind )]( bg:1)]($style)"
 
 [git_state]
 style = "bg:1"
@@ -131,84 +132,84 @@ format = '\([$state( $progress_current/$progress_total)]($style)\) '
 disabled = false
 added_style = "fg:#005d30 bg:1"
 deleted_style = "fg:#5d0030 bg:1"
-format = '([+$added ]($added_style))([-$deleted]($deleted_style))'
+format = "([+$added ]($added_style))([-$deleted]($deleted_style))"
 
 [nodejs]
 symbol = ""
 style = "bg:3"
-format = '[[ $symbol( $version) ]( bg:3)]($style)'
+format = "[[ $symbol( $version) ]( bg:3)]($style)"
 
 [c]
 symbol = " "
 style = "bg:3"
-format = '[[ $symbol( $version) ]( bg:3)]($style)'
+format = "[[ $symbol( $version) ]( bg:3)]($style)"
 
 [cpp]
 symbol = " "
 style = "bg:3"
-format = '[[ $symbol( $version) ]( bg:3)]($style)'
+format = "[[ $symbol( $version) ]( bg:3)]($style)"
 
 [rust]
 symbol = ""
 style = "bg:3"
-format = '[[ $symbol( $version) ]( bg:3)]($style)'
+format = "[[ $symbol( $version) ]( bg:3)]($style)"
 
 [golang]
 symbol = ""
 style = "bg:3"
-format = '[[ $symbol( $version) ]( bg:3)]($style)'
+format = "[[ $symbol( $version) ]( bg:3)]($style)"
 
 [php]
 symbol = ""
 style = "bg:3"
-format = '[[ $symbol( $version) ]( bg:3)]($style)'
+format = "[[ $symbol( $version) ]( bg:3)]($style)"
 
 [java]
 symbol = ""
 style = "bg:3"
-format = '[[ $symbol( $version) ]( bg:3)]($style)'
+format = "[[ $symbol( $version) ]( bg:3)]($style)"
 
 [kotlin]
 symbol = ""
 style = "bg:3"
-format = '[[ $symbol( $version) ]( bg:3)]($style)'
+format = "[[ $symbol( $version) ]( bg:3)]($style)"
 
 [haskell]
 symbol = ""
 style = "bg:3"
-format = '[[ $symbol( $version) ]( bg:3)]($style)'
+format = "[[ $symbol( $version) ]( bg:3)]($style)"
 
 [python]
 symbol = ""
 style = " bg:3"
 pyenv_prefix = " in "
 pyenv_version_name = true
-version_format = '${raw}'
-format = '[ ${symbol} (${version})($virtualenv)]($style)'
+version_format = "${raw}"
+format = "[ ${symbol} (${version})($virtualenv)]($style)"
 
 [package]
 style = " bg:2"
 symbol = "󰏗 "
-format = '[ $symbol$version]($style)'
+format = "[ $symbol$version]($style)"
 
 [docker_context]
 symbol = ""
 style = "bg:2"
-format = '[[ $symbol( $context)](fg:#83a598 bg:8)]($style)'
+format = "[[ $symbol( $context)](fg:#83a598 bg:8)]($style)"
 
 [conda]
 style = "bg:2"
-format = '[[ $symbol( $environment)](fg:#83a598 bg:8)]($style)'
+format = "[[ $symbol( $environment)](fg:#83a598 bg:8)]($style)"
 
 [pixi]
 style = "bg:2"
-format = '[[ $symbol( $version)( $environment)]( bg:8)]($style)'
+format = "[[ $symbol( $version)( $environment)]( bg:8)]($style)"
 
 [time]
 disabled = false
 time_format = "%R"
 style = "bg:0"
-format = '[[  $time ]( bg:0)]($style)'
+format = "[[  $time ]( bg:0)]($style)"
 
 [battery]
 disabled = false
@@ -216,31 +217,31 @@ format = "[ $symbol$percentage]($style)"
 
 [[battery.display]]
 threshold = 20
-style = 'bold fg:red bg:4'
+style = "bold fg:red bg:4"
 
 [memory_usage]
 disabled = false
 threshold = 90
 symbol = " "
 style = "bg:4"
-format = '[ $symbol ${ram}]($style)'
+format = "[ $symbol ${ram}]($style)"
 
 [line_break]
 disabled = false
 
 [fill]
-symbol = '─'
-style = 'selection-background'
+symbol = "─"
+style = "selection-background"
 
 [character]
 disabled = false
 # ❯❮ 
-success_symbol = '[❯](bold)'
-error_symbol = '[❯](bold fg:1)'
-vimcmd_symbol = '[❮](bold )'
-vimcmd_replace_one_symbol = '[❮](bold fg:5)'
-vimcmd_replace_symbol = '[❮](bold fg:5)'
-vimcmd_visual_symbol = '[❮](bold fg:3)'
+success_symbol = "[❯](bold)"
+error_symbol = "[❯](bold fg:1)"
+vimcmd_symbol = "[❮](bold )"
+vimcmd_replace_one_symbol = "[❮](bold fg:5)"
+vimcmd_replace_symbol = "[❮](bold fg:5)"
+vimcmd_visual_symbol = "[❮](bold fg:3)"
 
 [cmd_duration]
 style = " bg:6"
@@ -251,77 +252,6 @@ disabled = false
 style = " bg:4"
 symbol = "•"
 format = "[$symbol]($style)"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
