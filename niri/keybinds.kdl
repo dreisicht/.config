@@ -45,8 +45,8 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp   allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
+    XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -299,12 +299,12 @@ binds {
     Mod+L { power-off-monitors; }
 
     // ---- Noctalia shell (compositor-agnostic IPC — unchanged from Hyprland) ----
-    Mod+Space { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
     // Mod+I { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
     // Mod+Comma { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-    Mod+V { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
-    Mod+Ctrl+Shift+D { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "darkMode" "toggle"; }
-    Mod+Alt+G { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "powerProfile" "toggleNoctaliaPerformance"; }
+    Mod+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+Ctrl+Shift+D { spawn-sh "noctalia msg theme-mode-toggle"; }
+    Mod+Alt+G { spawn-sh "noctalia msg power-cycle"; }
 
     // ---- Screen capture ----
     // Hyprland used hyprshot (Hyprland-only); niri has built-in screenshots.

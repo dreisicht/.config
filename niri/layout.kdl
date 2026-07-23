@@ -24,7 +24,6 @@ layout {
 
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
-
     }
 
     // You can also customize the heights that "switch-preset-window-height" (Mod+Ctrl+Shift+R) toggles between.
@@ -181,7 +180,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -199,7 +198,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    slowdown 0.5
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -226,6 +225,8 @@ window-rule {
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
+    default-column-width { proportion 0.125; }
+    default-window-height { proportion 0.25; }
 }
 
 // Example: block out two password managers from screen capture.
@@ -243,8 +244,30 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 13
+    geometry-corner-radius 12
     clip-to-geometry true
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+}
+
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id="Alacritty"
+    match app-id="zen"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="kitty"
+    draw-border-with-background false
+}
+
+window-rule {
+    match is-active=false
+    opacity 0.98
+    background-effect {
+        blur false
+    }
 }
 
 window-rule {
@@ -255,17 +278,17 @@ window-rule {
 }
 
 window-rule {
-    match at-startup=true app-id=r#"^zen-browser$"#
+    match at-startup=true app-id=r#"^zen$"#
     open-on-workspace "2"
 }
 
 window-rule {
-    match at-startup=true app-id=r#"^ghostty$"#
+    match at-startup=true app-id=r#"^com\.mitchellh\.ghostty$"#
     open-on-workspace "2"
 }
 
 window-rule {
-    match at-startup=true app-id=r#"^signal-desktop$"#
+    match at-startup=true app-id=r#"^signal$"#
     open-on-workspace "1"
 }
 
@@ -280,21 +303,59 @@ window-rule {
 
 // Make the backdrop light.
 overview {
-    backdrop-color "#110F19"
+    backdrop-color "#110F1900"
+    // Optionally, disable workspace shadows in the overview.
+    workspace-shadow {
+        off
+  }
 }
 
-// // Make the wallpaper stationary, rather than moving with workspaces.
+// Place the regular wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-wallpaper"
+  place-within-backdrop true
+}
+
+/* Apps: blur them all without xray so it looks more realistic. */
+window-rule {
+  background-effect {
+    xray false
+    blur false
+  }
+}
+
+/*
+  Noctalia
+  Disable xray on all our surfaces so it looks more realistic.
+  Noctalia publishes blur regions automatically when ext-background-effects is available.
+*/
 // layer-rule {
-//     // This is for swaybg; change for other wallpaper tools.
-//     // Find the right namespace by running niri msg layers.
-//     match namespace="^wallpaper$"
-//     place-within-backdrop true
+//   match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+//   background-effect {
+//     xray false
+//     blur true
+//   }
 // }
 
-// These are the default values:
+// /* Enable blur on noctalia's window switcher and disable xray. */
+// layer-rule {
+//     match namespace="noctalia-window-switcher"
+//     background-effect {
+//         blur true
+//         xray false
+//     }
+// }
+
+/* You can also fine-tune the blur effect globally. */
 blur {
-    passes 2
-    offset 5
-    noise 0.05
-    saturation 1
+  passes 0        // more passes = stronger blur (default: 3)
+  offset 2.0      // sample distance per pass (default: 3.0)
+  noise 0.01      // grain overlay (default: 0.02)
+  saturation 1.0  // color saturation boost (default: 1.5)
+}
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+//   wait-for-frame-completion-before-queueing
 }
