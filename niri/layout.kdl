@@ -18,9 +18,8 @@ layout {
         // Proportion sets the width as a fraction of the output width, taking gaps into account.
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
-        proportion 0.33333
+        proportion 0.25
         proportion 0.5
-        proportion 0.66667
 
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
@@ -227,6 +226,7 @@ window-rule {
     open-floating true
     default-column-width { proportion 0.125; }
     default-window-height { proportion 0.25; }
+    default-floating-position x=32 y=32 relative-to="bottom-right"
 }
 
 // Example: block out two password managers from screen capture.
@@ -262,13 +262,7 @@ window-rule {
     draw-border-with-background false
 }
 
-window-rule {
-    match is-active=false
-    opacity 0.98
-    background-effect {
-        blur false
-    }
-}
+
 
 window-rule {
     match app-id=r#"(?i)^code"#
@@ -300,6 +294,12 @@ window-rule {
     match at-startup=true app-id=r#"^spotify$"#
     open-on-workspace "1"
 }
+window-rule {
+    match app-id=r#"^blender$"#
+    open-maximized-to-edges false
+    open-maximized false
+    default-column-width { proportion 0.5; }
+}
 
 // Make the backdrop light.
 overview {
@@ -319,9 +319,17 @@ layer-rule {
 /* Apps: blur them all without xray so it looks more realistic. */
 window-rule {
   background-effect {
-    xray false
+    xray true
     blur false
   }
+}
+
+window-rule {
+    match is-active=false
+    opacity 0.98
+    background-effect {
+        blur false
+    }
 }
 
 /*
@@ -329,13 +337,13 @@ window-rule {
   Disable xray on all our surfaces so it looks more realistic.
   Noctalia publishes blur regions automatically when ext-background-effects is available.
 */
-// layer-rule {
-//   match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
-//   background-effect {
-//     xray false
-//     blur true
-//   }
-// }
+layer-rule {
+  match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
+  background-effect {
+    xray false
+    blur false
+  }
+}
 
 // /* Enable blur on noctalia's window switcher and disable xray. */
 // layer-rule {
@@ -349,7 +357,7 @@ window-rule {
 /* You can also fine-tune the blur effect globally. */
 blur {
   passes 0        // more passes = stronger blur (default: 3)
-  offset 2.0      // sample distance per pass (default: 3.0)
+  offset 3.0      // sample distance per pass (default: 3.0)
   noise 0.01      // grain overlay (default: 0.02)
   saturation 1.0  // color saturation boost (default: 1.5)
 }

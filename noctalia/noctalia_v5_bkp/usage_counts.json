@@ -1,0 +1,12 @@
+{
+  "Applications": {
+    "/usr/share/applications/1password.desktop": 1,
+    "/usr/share/applications/DaVinciResolve.desktop": 1,
+    "/usr/share/applications/code-oss.desktop": 2,
+    "/usr/share/applications/discord.desktop": 2,
+    "/usr/share/applications/electron37.desktop": 1,
+    "/usr/share/applications/spotify-launcher.desktop": 2,
+    "/usr/share/applications/steam.desktop": 3,
+    "/usr/share/applications/zen.desktop": 1
+  }
+}

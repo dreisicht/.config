@@ -1,0 +1,245 @@
+config_version = 2
+
+[audio]
+enable_sounds = true
+
+[backdrop]
+blur_intensity = 0.0
+
+[bar.default]
+background_opacity = 0.36999999172985554
+capsule = true
+capsule_padding = 10.0
+center = [
+    "session",
+    "group:g1",
+    "media",
+    "tray",
+    "spacer_3",
+    "taskbar",
+    "spacer_2",
+    "bluetooth",
+    "brightness",
+    "volume",
+    "clock",
+    "weather",
+    "notifications"
+]
+concave_edge_corners = false
+contact_shadow = true
+end = [ "clipboard", "network" ]
+margin_ends = 0
+start = []
+
+    [bar.default.dead_zone]
+    middle_command = "niri msg action open-overview"
+    scroll_down_command = "niri msg action focus-workspace-down"
+    scroll_up_command = "niri msg action focus-workspace-up"
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "cpu", "temp", "sysmon", "ram", "network_rx", "network_tx" ]
+    opacity = 1.0
+    padding = 10.0
+
+[brightness]
+enable_ddcutil = true
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "dark_mode"
+
+[desktop_widgets]
+enabled = false
+
+[dock]
+enabled = true
+launcher_position = "start"
+pinned = [
+    "zen",
+    "org.gnome.Nautilus",
+    "code-oss",
+    "blender",
+    "gwenview",
+    "spotify-launcher",
+    "1password",
+    "steam",
+    "signal",
+    "discord"
+]
+reserve_space = false
+show_dots = true
+smart_auto_hide = true
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = false
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 2560.0
+    cy = 1321.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+[nightlight]
+enabled = true
+
+[shell]
+niri_overview_type_to_launch_enabled = true
+polkit_agent = true
+screen_time_enabled = true
+telemetry_enabled = true
+
+    [shell.launcher.providers.session]
+    global = true
+
+    [shell.launcher.providers.wallpaper]
+    global = false
+
+    [shell.launcher.providers.windows]
+    global = true
+
+    [shell.panel]
+    open_near_click_control_center = true
+    open_near_click_session = true
+    open_near_click_wallpaper = true
+
+    [shell.screen_corners]
+    enabled = true
+
+    [shell.shadow]
+    direction = "down_right"
+
+[system.monitor]
+gpu_poll_seconds = 2
+net_rx_critical_threshold = 100.0
+net_tx_critical_threshold = 32.700000000000003
+network_poll_seconds = 2
+
+[theme]
+builtin = "Rosé Pine"
+mode = "dark"
+
+    [theme.templates]
+    builtin_ids = [ "cava", "gtk3", "gtk4", "ghostty", "kcolorscheme", "niri", "qt", "starship" ]
+    community_ids = [ "zen-browser" ]
+
+[wallpaper]
+transition = [ "fade" ]
+
+    [wallpaper.default]
+    path = "/home/peterbaintner/Pictures/Wallpapers/wp6761047_crop.jpg"
+
+    [wallpaper.last]
+    path = "/home/peterbaintner/Pictures/Wallpapers/wp6761047_crop.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/peterbaintner/Pictures/Wallpapers/wp6761047_crop.jpg"
+
+[widget.clipboard]
+enabled = false
+
+[widget.cpu]
+show_label = false
+
+[widget.media]
+max_length = 93
+
+[widget.network]
+enabled = false
+
+[widget.network_rx]
+show_label = false
+
+[widget.network_tx]
+show_label = false
+
+[widget.ram]
+show_label = false
+
+[widget.spacer_2]
+length = 70
+type = "spacer"
+
+[widget.spacer_3]
+length = 70
+type = "spacer"
+
+[widget.sysmon]
+show_label = false
+stat = "gpu_usage"
+
+[widget.taskbar]
+anchor = true
+capsule_radius = "auto"
+group_by_workspace = true
+
+[widget.temp]
+show_label = false
+
+[widget.tray]
+capsule = true
+
+[widget.weather]
+show_condition = false
+
+[widget.workspaces]
+labels_only_when_occupied = true
