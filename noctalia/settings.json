@@ -17,8 +17,7 @@
         "iconMode": "tabler",
         "ignoreMouseInput": false,
         "overviewLayer": false,
-        "pinnedApps": [
-        ],
+        "pinnedApps": [],
         "position": "center",
         "screenshotAnnotationTool": "",
         "showCategories": true,
@@ -28,8 +27,7 @@
         "viewMode": "grid"
     },
     "audio": {
-        "mprisBlacklist": [
-        ],
+        "mprisBlacklist": [],
         "preferredPlayer": "spotify",
         "spectrumFrameRate": 120,
         "spectrumMirrored": true,
@@ -51,7 +49,7 @@
         "displayMode": "always_visible",
         "enableExclusionZoneInset": false,
         "fontScale": 1,
-        "frameRadius": 16,
+        "frameRadius": 18,
         "frameThickness": 4,
         "hideOnOverview": false,
         "marginHorizontal": 5,
@@ -59,8 +57,7 @@
         "middleClickAction": "launcherPanel",
         "middleClickCommand": "",
         "middleClickFollowMouse": true,
-        "monitors": [
-        ],
+        "monitors": [],
         "mouseWheelAction": "workspace",
         "mouseWheelWrap": true,
         "outerCorners": false,
@@ -69,8 +66,7 @@
         "rightClickAction": "settings",
         "rightClickCommand": "",
         "rightClickFollowMouse": true,
-        "screenOverrides": [
-        ],
+        "screenOverrides": [],
         "showCapsule": true,
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
@@ -135,15 +131,13 @@
             ],
             "right": [
                 {
-                    "blacklist": [
-                    ],
+                    "blacklist": [],
                     "chevronColor": "none",
                     "colorizeIcons": false,
                     "drawerEnabled": false,
                     "hidePassive": false,
                     "id": "Tray",
-                    "pinned": [
-                    ]
+                    "pinned": []
                 },
                 {
                     "compactMode": false,
@@ -206,8 +200,7 @@
         }
     },
     "brightness": {
-        "backlightDeviceMappings": [
-        ],
+        "backlightDeviceMappings": [],
         "brightnessStep": 5,
         "enableDdcSupport": true,
         "enforceMinimum": false
@@ -348,8 +341,7 @@
         "launcherIconColor": "none",
         "launcherPosition": "start",
         "launcherUseDistroLogo": false,
-        "monitors": [
-        ],
+        "monitors": [],
         "onlySameOutput": true,
         "pinnedApps": [
             "com.mitchellh.ghostty",
@@ -418,8 +410,7 @@
         "lockScreenAnimations": true,
         "lockScreenBlur": 0,
         "lockScreenCountdownDuration": 10000,
-        "lockScreenMonitors": [
-        ],
+        "lockScreenMonitors": [],
         "lockScreenTint": 0,
         "passwordChars": true,
         "radiusRatio": 1,
@@ -513,8 +504,7 @@
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 15,
-        "monitors": [
-        ],
+        "monitors": [],
         "normalUrgencyDuration": 22,
         "overlayLayer": true,
         "respectExpireTimeout": true,
@@ -544,8 +534,7 @@
             3
         ],
         "location": "top",
-        "monitors": [
-        ],
+        "monitors": [],
         "overlayLayer": true
     },
     "plugins": {
@@ -723,8 +712,7 @@
         "directory": "/home/peterbaintner/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
-        "favorites": [
-        ],
+        "favorites": [],
         "fillColor": "#000000",
         "fillMode": "center",
         "hideWallpaperFilenames": false,
