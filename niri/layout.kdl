@@ -321,7 +321,7 @@ layer-rule {
 /* Apps: blur them all without xray so it looks more realistic. */
 window-rule {
   background-effect {
-    xray true
+    xray false
     blur false
   }
 }
@@ -351,7 +351,7 @@ layer-rule {
 // layer-rule {
 //     match namespace="noctalia-window-switcher"
 //     background-effect {
-//         blur true
+//         blur false
 //         xray false
 //     }
 // }
