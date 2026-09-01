@@ -17,6 +17,8 @@ yazi/package.toml
 !ghostty/cursor_blaze.glsl
 !ghostty/cursor_warp.glsl
 !ghostty/cursor_tail.glsl
+!ghostty/themes/
+!ghostty/themes/*
 !mimeapps.list
 
 !karabiner
