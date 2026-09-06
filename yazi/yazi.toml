@@ -14,7 +14,6 @@ show_hidden = true
 show_symlink = true
 scrolloff = 5
 mouse_events = ["click", "scroll", "touch"]
-title_format = "Yazi: {cwd}"
 
 [preview]
 wrap = "no"
@@ -113,10 +112,8 @@ rules = [
 ]
 
 [tasks]
-micro_workers = 10
-macro_workers = 10
 bizarre_retry = 3
-image_alloc = 536870912  # 512MB
+image_alloc = 536870912      # 512MB
 image_bound = [12000, 12000]
 suppress_preload = false
 
@@ -126,6 +123,10 @@ fetchers = [
   { url = "*/", run = "mime.dir", prio = "high", group = "mime" },
   { url = "local://*", run = "mime.local", prio = "high", group = "mime" },
   { url = "remote://*", run = "mime.remote", prio = "high", group = "mime" },
+]
+prepend_fetchers = [
+  { group = "git", url = "*", run = "git" },
+  { group = "git", url = "*/", run = "git" },
 ]
 spotters = [
   { url = "*/", run = "folder" },
@@ -157,6 +158,21 @@ preloaders = [
   # Font
   { mime = "font/*", run = "font" },
   { mime = "application/ms-opentype", run = "font" },
+]
+prepend_previewers = [
+  { url = "*.blend", run = "blender-preview" },
+  { url = "*.blend1", run = "blender-preview" },
+  { url = "*.md", run = 'faster-piper --rely-on-preloader' },
+  { url = "*.tar*", run = 'faster-piper --rely-on-preloader --format=url' },
+  { url = "*.txt.gz", run = 'faster-piper --rely-on-preloader' },
+  # { url = "*/", run = 'faster-piper -- eza -TL=2 --color=always --icons=always --group-directories-first --no-quotes "$1"' },
+]
+prepend_preloaders = [
+  { url = "*.blend", run = "blender-preview" },
+  { url = "*.blend1", run = "blender-preview" },
+  { url = "*.md", run = 'faster-piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dracula -- "$1"' },
+  { url = "*.tar*", run = 'faster-piper -- tar tf "$1"' },
+  { url = "*.txt.gz", run = 'faster-piper -- gzip -dc "$1"' },
 ]
 previewers = [
   { url = "*/", run = "folder" },
@@ -193,16 +209,6 @@ previewers = [
   # Fallback
   { url = "*", run = "file" },
 ]
-
-[[plugin.prepend_fetchers]]
-group = "git"
-url = "*"
-run = "git"
-
-[[plugin.prepend_fetchers]]
-group = "git"
-url = "*/"
-run = "git"
 
 [input]
 cursor_blink = true
