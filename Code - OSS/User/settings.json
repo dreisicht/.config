@@ -23,8 +23,13 @@
     },
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        },
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
         "editor.tabSize": 2
@@ -57,6 +62,7 @@
     "C_Cpp.codeAnalysis.clangTidy.path": "clang-tidy",
     "C_Cpp.default.mergeConfigurations": true,
     "C_Cpp.intelliSenseEngine": "disabled",
+    "chat.viewSessions.orientation": "stacked",
     "clangd.arguments": [
         "--header-insertion=never",
         "--query-driver=**"
@@ -165,6 +171,7 @@
     "editor.quickSuggestionsDelay": 0,
     "editor.renderWhitespace": "boundary",
     "editor.scrollBeyondLastLine": false,
+    "editor.selectionClipboard": false,
     "editor.semanticHighlighting.enabled": true,
     "editor.semanticTokenColorCustomizations": {
         "enabled": true,
@@ -175,7 +182,6 @@
     "editor.smoothScrolling": true,
     "editor.stickyTabStops": true,
     "editor.suggest.shareSuggestSelections": true,
-    "editor.tabSize": 2,
     "editor.tokenColorCustomizations": {
         "[GitHub Dark*]": {
             "textMateRules": [
@@ -352,7 +358,15 @@
     "python.autoComplete.extraPaths": [
         "C:/Users/peter/AppData/Local/Programs/Python/Python310/Lib/site-packages"
     ],
+    // ty owns navigation + type diagnostics; this is the ty extension's default anyway
+    "python.languageServer": "None",
     "python.terminal.shellIntegration.enabled": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    // these stay with ms-python.python and are unaffected
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
     "pythonIndent.trimLinesWithOnlyWhitespace": true,
     "pythonIndent.useTabOnHangingIndent": true,
     "redhat.telemetry.enabled": false,
@@ -362,6 +376,7 @@
         "147.189.194.246": "linux",
         "147.189.196.144": "linux"
     },
+    "ruff.importStrategy": "fromEnvironment",
     "search.collapseResults": "auto",
     "security.workspace.trust.untrustedFiles": "open",
     "telemetry.feedback.enabled": false,
@@ -380,6 +395,9 @@
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.stickyScroll.enabled": true,
+    "testMate.cpp.test.executables": "{build,Build,BUILD,out,Out,OUT,bazel-bin}/**/*{test,Test,TEST}*",
+    // use the binaries from the project venv so the editor matches CI
+    "ty.importStrategy": "fromEnvironment",
     "window.autoDetectColorScheme": true,
     "workbench.colorCustomizations": {
         "[GitHub Dark*]": {
@@ -414,8 +432,8 @@
         "editor.foldBackground": "#d5e4f04b",
         "editorBracketHighlight.foreground1": "#798cb4",
         "editorBracketHighlight.foreground2": "#bb9af7",
-        "editorBracketHighlight.foreground4": "#e0af68",
         "editorBracketHighlight.foreground3": "#7dcfff",
+        "editorBracketHighlight.foreground4": "#e0af68",
         "editorBracketHighlight.foreground5": "#77b64d",
         "editorBracketHighlight.foreground6": "#bdb766",
         "editorBracketHighlight.unexpectedBracket.foreground": "#ff0080",
@@ -447,8 +465,5 @@
     "workbench.preferredLightColorTheme": "GitHub Light",
     "workbench.reduceMotion": "off",
     "workbench.tree.enableStickyScroll": true,
-    "workbench.view.alwaysShowHeaderActions": true,
-    "chat.viewSessions.orientation": "stacked",
-    "testMate.cpp.test.executables": "{build,Build,BUILD,out,Out,OUT,bazel-bin}/**/*{test,Test,TEST}*",
-    "editor.selectionClipboard": false
+    "workbench.view.alwaysShowHeaderActions": true
 }
