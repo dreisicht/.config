@@ -1,4 +1,5 @@
 [soe][Equalizer#0]
+bypass=true
 outputGain=-12.5
 
 [soe][Equalizer#0#left]

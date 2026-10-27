@@ -59,6 +59,10 @@ download = [
   { run = "ya emit download --open %S", desc = "Download and open" },
   { run = "ya emit download %S", desc = "Download" },
 ]
+trash = [
+  { run = "ya pub trash-restore --list %S", desc = "Restore selected files" },
+  { run = "ya pub trash-empty --list %S", desc = "Empty trash bin" },
+]
 
 [open]
 rules = [
@@ -104,6 +108,11 @@ rules = [
   ] },
   # Virtual file system
   { mime = "vfs/{absent,stale}", use = "download" },
+  # Trash
+  { mime = "trash/**", use = [
+    "open",
+    "trash",
+  ] },
   # Fallback
   { url = "*", use = [
     "open",
@@ -122,6 +131,7 @@ fetchers = [
   # Mimetype
   { url = "*/", run = "mime.dir", prio = "high", group = "mime" },
   { url = "local://*", run = "mime.local", prio = "high", group = "mime" },
+  { url = "trash://*", run = "mime.trash", prio = "high", group = "mime" },
   { url = "remote://*", run = "mime.remote", prio = "high", group = "mime" },
 ]
 prepend_fetchers = [
@@ -141,6 +151,8 @@ spotters = [
   { mime = "video/*", run = "video" },
   # Virtual file system
   { mime = "vfs/*", run = "vfs" },
+  # Trash
+  { mime = "trash/**", run = "trash" },
   # Error
   { mime = "null/*", run = "null" },
   # Fallback
@@ -158,6 +170,8 @@ preloaders = [
   # Font
   { mime = "font/*", run = "font" },
   { mime = "application/ms-opentype", run = "font" },
+  # Trash
+  { mime = "trash/**", run = "trash" },
 ]
 prepend_previewers = [
   { url = "*.blend", run = "blender-preview" },
@@ -204,6 +218,8 @@ previewers = [
   { mime = "inode/empty", run = "empty" },
   # Virtual file system
   { mime = "vfs/*", run = "vfs" },
+  # Trash
+  { mime = "trash/**", run = "trash" },
   # Error
   { mime = "null/*", run = "null" },
   # Fallback
