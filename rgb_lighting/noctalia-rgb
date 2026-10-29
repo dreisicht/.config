@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# Apply the Noctalia (Rosé Pine) colour shift to the Corsair Vengeance RGB DDR5 modules.
+#
+# "Color Shift" is a device-stored effect and takes exactly two colours, so this
+# sweeps primary (rose) to tertiary (pine). Unlike Direct mode it may well
+# survive a power cycle on its own; this unit re-asserts it either way.
+#
+# Device indices are resolved by name rather than hardcoded, and every openrgb
+# call carries an explicit -d. An openrgb invocation without -d targets *all*
+# devices and blanks the ones it has no colour for.
+#
+# Note: openrgb exits 0 even when it rejects arguments, so failures show up as
+# text on stderr, not in the exit status. The unit's journal is the place to look.
+set -euo pipefail
+
+COLORS="EBBCBA,31748F"   # Rosé Pine: rose -> pine
+MODE="Color Shift"
+SPEED=0                  # 0 = slowest end of the device's speed range
+DRAM_NAME="Corsair Vengeance RGB DDR5"
+
+# udev grants /dev/i2c-* access via uaccess when the seat session goes active,
+# which can land after this unit starts; retry rather than fail the boot.
+indices=()
+for attempt in {1..15}; do
+    mapfile -t indices < <(
+        openrgb --list-devices 2>/dev/null |
+            grep -E "^[0-9]+: ${DRAM_NAME}\$" |
+            cut -d: -f1
+    )
+    ((${#indices[@]} > 0)) && break
+    sleep 2
+done
+
+if ((${#indices[@]} == 0)); then
+    echo "noctalia-rgb: no '${DRAM_NAME}' modules detected" >&2
+    exit 1
+fi
+
+args=()
+for i in "${indices[@]}"; do
+    args+=(-d "$i" -m "$MODE" -c "$COLORS" -s "$SPEED")
+done
+
+echo "noctalia-rgb: applying '${MODE}' to ${#indices[@]} module(s): ${indices[*]}"
+exec openrgb "${args[@]}"

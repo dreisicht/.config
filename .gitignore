@@ -69,3 +69,9 @@ noctalia/colors.json
 !blender/5.0/scripts/presets/keyconfig/*
 !blender/5.0/scripts/presets/interface_theme/
 !blender/5.0/scripts/presets/interface_theme/custom.xml
+
+!rgb_lighting/
+!rgb_lighting/noctalia-rgb
+
+!davinci-resolve/
+!davinci-resolve/davinci-resolve-nv

@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# DaVinci Resolve launcher for niri / XWayland on this machine.
+#
+# Why this exists:
+#   XWayland hands GL clients the AMD iGPU (radeonsi) by default here, so
+#   Resolve's OpenGL context lands on the 9950X3D's integrated Radeon while
+#   its CUDA context is on the RTX 4090. cudaGraphicsGLRegisterImage() cannot
+#   bridge two different physical devices, so it returns cudaErrorUnknown and
+#   Resolve's error path reports it as "Your GPU memory is full".
+#
+#   __GLX_VENDOR_LIBRARY_NAME=nvidia makes GLVND load NVIDIA's own GLX driver,
+#   putting GL and CUDA on the same 4090. Do NOT use DRI_PRIME=1 instead: that
+#   yields a zink (Mesa-on-Vulkan) context, which is still not NVIDIA's GL
+#   driver and leaves interop broken.
+#
+#   QT_QPA_PLATFORM=xcb is needed because the session exports
+#   QT_QPA_PLATFORM=wayland, and Resolve ships no Wayland Qt platform plugin.
+
+cd /opt/resolve || exit 1
+
+exec env \
+    __GLX_VENDOR_LIBRARY_NAME=nvidia \
+    QT_QPA_PLATFORM=xcb \
+    QT_XCB_GL_INTEGRATION=glx \
+    /opt/resolve/bin/resolve "$@"
