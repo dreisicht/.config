@@ -25,6 +25,7 @@ yazi/package.toml
 !karabiner/karabiner.json
 
 !README.md
+!startup.sh
 
 !hypr/
 !hypr/**
@@ -72,6 +73,7 @@ noctalia/colors.json
 
 !rgb_lighting/
 !rgb_lighting/noctalia-rgb
+!rgb_lighting/fire-rgb
 
 !davinci-resolve/
 !davinci-resolve/davinci-resolve-nv
