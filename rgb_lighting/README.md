@@ -125,8 +125,10 @@ The LEDs lean yellow, so keep the green channel low for orange and red.
 
 - `openrgb` exits with 0 even when it fails, so look for the problem in its
   text output:
-  - login: `~/.cache/fire-rgb.log`
-  - suspend/resume: `journalctl -b -t rgb-sleep`
+  - `fire-rgb`, at login and after resume: `~/.cache/fire-rgb.log`
+    (`startup.sh` redirects it there either way)
+  - suspend/resume, i.e. the RAM dimming before suspend and the rest of
+    `startup.sh` (liquidctl) after resume: `journalctl -b -t rgb-sleep`
 - Is the server running? `systemctl --user status openrgb-server`. Start it
   with `systemctl --user start openrgb-server`.
 - RAM stayed bright during suspend? The journal will say "OpenRGB server not
