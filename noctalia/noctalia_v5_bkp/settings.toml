@@ -4,67 +4,53 @@ notification_sound = "/home/peterbaintner/.config/noctalia/noctalia_v5_bkp/mixki
 sound_volume = 0.25999999418854713
 
 [bar]
-order = [ "default", "sidebar" ]
+order = ["default", "sidebar"]
 
-    [bar.default]
-    background_opacity = 0.64999998547136784
-    capsule = true
-    capsule_padding = 10.0
-    center = [
-        "session",
-        "group:g1",
-        "tray",
-        "spacer_3",
-        "taskbar",
-        "spacer_2",
-        "media",
-        "bluetooth",
-        "brightness",
-        "volume",
-        "clock",
-        "weather",
-        "notifications"
-    ]
-    concave_edge_corners = false
-    contact_shadow = true
-    end = [ "clipboard", "network", "badge" ]
-    margin_ends = 0
-    start = []
+[bar.default]
+background_opacity = 0.64999998547136784
+capsule = true
+capsule_padding = 10.0
+center = ["session", "group:g1", "tray", "spacer_3", "taskbar", "spacer_2", "media", "bluetooth", "brightness", "volume", "clock", "weather", "notifications"]
+concave_edge_corners = false
+contact_shadow = true
+end = ["clipboard", "network", "badge"]
+margin_ends = 0
+start = []
 
-        [bar.default.dead_zone.actions]
-        middle = "exec niri msg action open-overview"
-        scroll_down = "exec niri msg action focus-workspace-down"
-        scroll_up = "exec niri msg action focus-workspace-up"
+[bar.default.dead_zone.actions]
+middle = "exec niri msg action open-overview"
+scroll_down = "exec niri msg action focus-workspace-down"
+scroll_up = "exec niri msg action focus-workspace-up"
 
-        [[bar.default.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        enabled = true
-        fill = "surface_container"
-        id = "g1"
-        members = [ "cpu", "ram", "temp", "sysmon", "sysmon_2", "network_rx", "network_tx", "summary_2", "widget" ]
-        opacity = 1.0
-        padding = 10.0
-        widget_spacing = 10
+[[bar.default.capsule_group]]
+accordion = false
+accordion_direction = "end"
+enabled = true
+fill = "surface_container"
+id = "g1"
+members = ["cpu", "ram", "temp", "sysmon", "sysmon_2", "network_rx", "network_tx", "summary_2", "widget"]
+opacity = 1.0
+padding = 10.0
+widget_spacing = 10
 
-    [bar.sidebar]
-    background_opacity = 0.18999999575316906
-    center = [ "bar", "audio_visualizer", "media" ]
-    enabled = false
-    end = []
-    position = "right"
-    smart_auto_hide = true
-    start = [ "widget_2", "group:g1", "summary" ]
+[bar.sidebar]
+background_opacity = 0.18999999575316906
+center = ["bar", "audio_visualizer", "media"]
+enabled = false
+end = []
+position = "right"
+smart_auto_hide = true
+start = ["widget_2", "group:g1", "summary"]
 
-        [[bar.sidebar.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        enabled = true
-        fill = "surface_container"
-        id = "g1"
-        members = [ "cpu", "ram", "sysmon", "sysmon_2", "network_rx", "network_tx", "temp" ]
-        opacity = 1.0
-        padding = 6.0
+[[bar.sidebar.capsule_group]]
+accordion = false
+accordion_direction = "end"
+enabled = true
+fill = "surface_container"
+id = "g1"
+members = ["cpu", "ram", "sysmon", "sysmon_2", "network_rx", "network_tx", "temp"]
+opacity = 1.0
+padding = 6.0
 
 [brightness]
 enable_ddcutil = true
@@ -73,10 +59,10 @@ enable_ddcutil = true
 enabled = true
 refresh_minutes = 5
 
-    [calendar.account.personal_icloud]
-    provider = "icloud"
-    type = "caldav"
-    username = "peter@baintner.de"
+[calendar.account.personal_icloud]
+provider = "icloud"
+type = "caldav"
+username = "peter@baintner.de"
 
 [config]
 
@@ -106,52 +92,41 @@ enabled = false
 schema_version = 2
 widget_order = []
 
-    [desktop_widgets.grid]
-    cell_size = 16
-    major_interval = 4
-    visible = true
+[desktop_widgets.grid]
+cell_size = 16
+major_interval = 4
+visible = true
 
-    [desktop_widgets.widget]
+[desktop_widgets.widget]
 
 [dock]
 enabled = true
 launcher_position = "start"
-pinned = [
-    "zen",
-    "com.mitchellh.ghostty",
-    "org.gnome.Nautilus",
-    "code-oss",
-    "blender",
-    "DaVinciResolve",
-    "spotify-launcher",
-    "signal",
-    "steam",
-    "discord"
-]
+pinned = ["zen", "com.mitchellh.ghostty", "org.gnome.Nautilus", "code-oss", "blender", "DaVinciResolve", "spotify-launcher", "signal", "steam", "discord"]
 reserve_space = false
 show_dots = true
 smart_auto_hide = true
 
 [hooks]
-started = "liquidctl --match h150i set fan speed 25 5 30 5 35 50 40 100"
+started = "liquidctl --match h150i set fan speed 25 30 30 40 35 60 40 100"
 
 [idle]
-behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+behavior_order = ["lock", "screen-off", "lock-and-suspend"]
 
-    [idle.behavior.lock]
-    action = "lock"
-    enabled = false
-    timeout = 600.0
+[idle.behavior.lock]
+action = "lock"
+enabled = false
+timeout = 600.0
 
-    [idle.behavior.lock-and-suspend]
-    action = "lock_and_suspend"
-    enabled = false
-    timeout = 900.0
+[idle.behavior.lock-and-suspend]
+action = "lock_and_suspend"
+enabled = false
+timeout = 900.0
 
-    [idle.behavior.screen-off]
-    action = "screen_off"
-    enabled = true
-    timeout = 660.0
+[idle.behavior.screen-off]
+action = "screen_off"
+enabled = true
+timeout = 660.0
 
 [location]
 auto_locate = true
@@ -163,39 +138,39 @@ lock_before_suspend = false
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
-widget_order = [ "lockscreen-login-box@DP-1" ]
+widget_order = ["lockscreen-login-box@DP-1"]
 
-    [lockscreen_widgets.grid]
-    cell_size = 16
-    major_interval = 4
-    visible = true
+[lockscreen_widgets.grid]
+cell_size = 16
+major_interval = 4
+visible = true
 
-    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
-    box_height = 196.0
-    box_width = 720.0
-    cx = 2560.0
-    cy = 1321.0
-    output = "DP-1"
-    placement_height = 1440.0
-    placement_width = 5120.0
-    rotation = 0.0
-    type = "login_box"
+[lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+box_height = 196.0
+box_width = 720.0
+cx = 2560.0
+cy = 1321.0
+output = "DP-1"
+placement_height = 1440.0
+placement_width = 5120.0
+rotation = 0.0
+type = "login_box"
 
-        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
-        background_color = "surface_container"
-        background_opacity = 0.88
-        background_radius = 12.0
-        center_password_text = false
-        input_opacity = 1.0
-        input_radius = 6.0
-        layout = "regular"
-        show_caps_lock = true
-        show_keyboard_layout = true
-        show_login_button = true
-        show_media = true
-        show_session_buttons = true
-        show_unlock_hint = true
-        show_weather = true
+[lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+background_color = "surface_container"
+background_opacity = 0.88
+background_radius = 12.0
+center_password_text = false
+input_opacity = 1.0
+input_radius = 6.0
+layout = "regular"
+show_caps_lock = true
+show_keyboard_layout = true
+show_login_button = true
+show_media = true
+show_session_buttons = true
+show_unlock_hint = true
+show_weather = true
 
 [nightlight]
 enabled = true
@@ -205,7 +180,7 @@ drives_placement = "attached"
 system_collector_enabled = true
 
 [plugins]
-enabled = [ "nightwatch75/claude-cockpit", "noctalia/timer", "gustav0ar/drive-health", "nilsonlinux/rss-notifier" ]
+enabled = ["nightwatch75/claude-cockpit", "noctalia/timer", "gustav0ar/drive-health", "nilsonlinux/rss-notifier"]
 
 [shell]
 niri_overview_type_to_launch_enabled = true
@@ -213,74 +188,74 @@ polkit_agent = true
 screen_time_enabled = true
 telemetry_enabled = true
 
-    [shell.launcher.providers.session]
-    global = true
+[shell.launcher.providers.session]
+global = true
 
-    [shell.launcher.providers.wallpaper]
-    global = false
+[shell.launcher.providers.wallpaper]
+global = false
 
-    [shell.launcher.providers.windows]
-    global = true
+[shell.launcher.providers.windows]
+global = true
 
-    [shell.panel]
-    control_center_placement = "floating"
-    open_near_click_control_center = true
-    open_near_click_session = true
-    open_near_click_wallpaper = true
-    transparency_mode = "soft"
+[shell.panel]
+control_center_placement = "floating"
+open_near_click_control_center = true
+open_near_click_session = true
+open_near_click_wallpaper = true
+transparency_mode = "soft"
 
-    [shell.screen_corners]
-    enabled = true
-    size = 22
+[shell.screen_corners]
+enabled = true
+size = 22
 
-    [shell.session]
-    grid = true
-    grid_columns = 4
+[shell.session]
+grid = true
+grid_columns = 4
 
-        [[shell.session.actions]]
-        action = "lock"
-        countdown_seconds = 0.0
-        enabled = false
-        shortcut = "1"
-        variant = "default"
+[[shell.session.actions]]
+action = "lock"
+countdown_seconds = 0.0
+enabled = false
+shortcut = "1"
+variant = "default"
 
-        [[shell.session.actions]]
-        action = "logout"
-        countdown_seconds = 0.0
-        enabled = true
-        shortcut = "2"
-        variant = "default"
+[[shell.session.actions]]
+action = "logout"
+countdown_seconds = 0.0
+enabled = true
+shortcut = "2"
+variant = "default"
 
-        [[shell.session.actions]]
-        action = "lock_and_suspend"
-        countdown_seconds = 0.0
-        enabled = false
-        shortcut = "3"
-        variant = "default"
+[[shell.session.actions]]
+action = "lock_and_suspend"
+countdown_seconds = 0.0
+enabled = false
+shortcut = "3"
+variant = "default"
 
-        [[shell.session.actions]]
-        action = "suspend"
-        countdown_seconds = 0.0
-        enabled = true
-        variant = "default"
+[[shell.session.actions]]
+action = "suspend"
+countdown_seconds = 0.0
+enabled = true
+variant = "default"
 
-        [[shell.session.actions]]
-        action = "reboot"
-        countdown_seconds = 0.0
-        enabled = true
-        shortcut = "4"
-        variant = "default"
+[[shell.session.actions]]
+action = "reboot"
+countdown_seconds = 0.0
+enabled = true
+shortcut = "4"
+variant = "default"
 
-        [[shell.session.actions]]
-        action = "shutdown"
-        countdown_seconds = 0.0
-        enabled = true
-        shortcut = "5"
-        variant = "destructive"
+[[shell.session.actions]]
+action = "shutdown"
+countdown_seconds = 0.0
+enabled = true
+shortcut = "5"
+variant = "destructive"
 
-    [shell.shadow]
-    alpha = 0.28999999351799488
-    direction = "down_right"
+[shell.shadow]
+alpha = 0.28999999351799488
+direction = "down_right"
 
 [system.monitor]
 cpu_freq_critical_threshold = 5.2000000000000002
@@ -296,21 +271,21 @@ network_poll_seconds = 2
 builtin = "Rosé Pine"
 mode = "dark"
 
-    [theme.templates]
-    builtin_ids = [ "cava", "gtk3", "gtk4", "ghostty", "kcolorscheme", "niri", "qt", "starship" ]
-    community_ids = [ "zen-browser" ]
+[theme.templates]
+builtin_ids = ["cava", "gtk3", "gtk4", "ghostty", "kcolorscheme", "niri", "qt", "starship"]
+community_ids = ["zen-browser"]
 
 [wallpaper]
-transition = [ "fade" ]
+transition = ["fade"]
 
-    [wallpaper.default]
-    path = "/home/peterbaintner/Pictures/Wallpapers/wp6761047_crop.jpg"
+[wallpaper.default]
+path = "/home/peterbaintner/Pictures/Wallpapers/wp6761047_crop.jpg"
 
-    [wallpaper.last]
-    path = "/home/peterbaintner/Pictures/Wallpapers/wp6761047_crop.jpg"
+[wallpaper.last]
+path = "/home/peterbaintner/Pictures/Wallpapers/wp6761047_crop.jpg"
 
-    [wallpaper.monitors.DP-1]
-    path = "/home/peterbaintner/Pictures/Wallpapers/wp6761047_crop.jpg"
+[wallpaper.monitors.DP-1]
+path = "/home/peterbaintner/Pictures/Wallpapers/wp6761047_crop.jpg"
 
 [widget.audio_visualizer]
 centered = false
@@ -334,9 +309,9 @@ max_length = 128
 show_progress = true
 title_scroll = "on_hover"
 
-    [widget.media.actions]
-    scroll_down = "media next"
-    scroll_up = "media previous"
+[widget.media.actions]
+scroll_down = "media next"
+scroll_up = "media previous"
 
 [widget.network]
 enabled = false
