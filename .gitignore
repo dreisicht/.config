@@ -74,6 +74,14 @@ noctalia/colors.json
 !rgb_lighting/
 !rgb_lighting/noctalia-rgb
 !rgb_lighting/fire-rgb
+!rgb_lighting/rgb-sleep-hook
+!cooling/
+!cooling/case-fans
+!cooling/99-case-fans.rules
+!cooling/README.md
+!systemd/
+!systemd/user/
+!systemd/user/openrgb-server.service
 
 !davinci-resolve/
 !davinci-resolve/davinci-resolve-nv

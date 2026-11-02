@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# Program the case-fan curve into the board's fan chip (Nuvoton NCT6799 on the
+# ASUS PRIME X870-P). The chip then runs the curve by itself ("Smart Fan IV"),
+# so nothing keeps running here. This overrides whatever Q-Fan curve the UEFI
+# set at boot, so a CMOS reset or BIOS update can't lose the curve.
+#
+# Runs as root from a root-owned copy in /usr/local/bin (never run root code
+# from a user-writable path): from 99-case-fans.rules when the nct6775 driver
+# loads at boot, and from rgb-sleep-hook after resume. After editing this
+# file, re-install it (see README.md).
+# Logs: journalctl -t case-fans
+
+FANS=(1 3 4 6)   # case-fan headers; fan2 carries the H150i pump tach, 5/7 are empty
+SOURCE=1         # temperature source: temp1 = SYSTIN ("Motherboard" in the UEFI)
+
+# Curve: SYSTIN °C -> fan duty %. Point 5 is the chip's critical point
+# (125 °C -> 100 %) and stays untouched. Below point 1 the duty holds at
+# point 1's value, so that must be a duty all fans actually spin at (the
+# chip's pwm_floor doesn't stick on this board, so it can't be the safety net).
+# Measured start-from-standstill duty: fan1/fan4 25 %, fan6 35 %; fan3 never
+# drops below ~600 rpm. So 35 % is the lowest point that keeps all four running.
+TEMPS=(37 40 43 45)
+DUTIES=(35 50 100 100)
+
+log() { echo "$*" | systemd-cat -t case-fans; }
+
+H=$(grep -lx nct6799 /sys/class/hwmon/hwmon*/name 2>/dev/null | head -1)
+if [[ -z $H ]]; then
+    log "nct6799 not found (is the nct6775 module loaded?)"
+    exit 1
+fi
+H=${H%/name}
+
+pct() { echo $(( $1 * 255 / 100 )); }
+
+for n in "${FANS[@]}"; do
+    echo 5 >"$H/pwm${n}_enable"          # Smart Fan IV: the chip follows the curve
+    echo "$SOURCE" >"$H/pwm${n}_temp_sel"
+    for i in 0 1 2 3; do
+        p=$((i + 1))
+        echo $(( TEMPS[i] * 1000 )) >"$H/pwm${n}_auto_point${p}_temp"
+        pct "${DUTIES[i]}" >"$H/pwm${n}_auto_point${p}_pwm"
+    done
+done
+
+log "case fans ${FANS[*]}: SYSTIN ${TEMPS[*]} °C -> ${DUTIES[*]} %"

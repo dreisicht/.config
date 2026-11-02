@@ -44,8 +44,8 @@ nvidia_drm.modeset=1 nvidia_drm.fbdev=1 nvidia.NVreg_EnableGpuFirmware=0 pcie_as
 
 ### Cooling
 ```Shell
-liquidctl --match h150i set fan speed 1 25 5 35 5 40 15 45 80 50 100
 liquidctl initialize --match h150i --pump-mode performance
+liquidctl --match h150i set fan speed 25 30 30 40 35 60 40 100
 ```
 ### Yazi
 For the initial setup of yazi installing these plugins:

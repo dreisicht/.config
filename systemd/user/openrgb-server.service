@@ -1,0 +1,8 @@
+[Unit]
+Description=OpenRGB SDK server (scans hardware once so later openrgb calls are instant)
+Documentation=file:///home/peterbaintner/.config/rgb_lighting/README.md
+
+# Not enabled on purpose: ~/.config/startup.sh starts it after fire-rgb has
+# waited for the RAM to appear, because the server only scans once.
+[Service]
+ExecStart=/usr/bin/openrgb --server --noautoconnect

@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# systemd-sleep hook: dim the RAM to SLEEP_COLOR before suspend, restore fire orange on resume.
+# With deep suspend only the Corsair RAM stays powered and keeps its last
+# colour, so it has to be dimmed explicitly. See README.md.
+#
+# Install (systemd only runs hooks from this root-owned directory):
+#   sudo install -m 755 ~/.config/rgb_lighting/rgb-sleep-hook /usr/lib/systemd/system-sleep/rgb
+# Logs: journalctl -b -t rgb-sleep
+
+USER_NAME=peterbaintner
+SLEEP_COLOR="100000"   # colour while suspended: very dim red (000000 = off)
+
+case "$1" in
+    pre)
+        # Suspend waits for this, so it must stay instant. It goes through the
+        # OpenRGB server (openrgb-server.service), which takes ~35 ms. Without
+        # a server, openrgb would fall back to a full hardware scan (~2 s), so
+        # if the server isn't listening, skip the colour change entirely.
+        if timeout 0.2 bash -c '</dev/tcp/127.0.0.1/6742' 2>/dev/null; then
+            args=()
+            for i in 0 1 2 3; do args+=(-d "$i" -m Direct -c "$SLEEP_COLOR"); done
+            # Normally ~35 ms. If the server is still scanning, the call can
+            # hang for seconds; openrgb ignores SIGTERM, so -k hard-kills it.
+            timeout -k 0.1 0.5 openrgb "${args[@]}" 2>&1 | systemd-cat -t rgb-sleep
+        else
+            echo "OpenRGB server not running; leaving RAM lit" | systemd-cat -t rgb-sleep
+        fi
+        ;;
+    post)
+        # Case-fan curve back into the fan chip, in case the firmware reset it
+        # on wake (root-owned copy of ~/.config/cooling/case-fans).
+        [[ -x /usr/local/bin/case-fans ]] && /usr/local/bin/case-fans
+        # The H150i, GPU and board lost power, so redo the login setup
+        # (startup.sh) in the background, as the user.
+        systemd-run --user --machine="$USER_NAME@" --no-block --collect --quiet \
+            --unit="startup-resume-$(date +%s)" \
+            bash -c "~/.config/startup.sh 2>&1 | systemd-cat -t rgb-sleep"
+        ;;
+esac
+exit 0

@@ -1,0 +1,6 @@
+# Program the case-fan curve as soon as the board's fan chip shows up at boot
+# (after the nct6775 module from /etc/modules-load.d/nct6775.conf loads).
+# Install (see README.md):
+#   sudo install -m 755 ~/.config/cooling/case-fans /usr/local/bin/case-fans
+#   sudo install -m 644 ~/.config/cooling/99-case-fans.rules /etc/udev/rules.d/
+ACTION=="add", SUBSYSTEM=="hwmon", ATTR{name}=="nct6799", RUN+="/usr/local/bin/case-fans"
