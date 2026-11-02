@@ -8,8 +8,9 @@
 #     so the two never open the same device.
 #   - OpenRGB: the four Corsair Vengeance RAM sticks and the RTX 4090.
 #
-# OpenRGB uses Direct mode because it is the one mode both the RAM and the GPU
-# support (neither has "Static"). Colours live in the devices until power is
+# OpenRGB uses Direct mode for static colours because it is the one mode both
+# the RAM and the GPU support (neither has "Static"); the RAM's default look is
+# its "Color Shift" effect (see RAM_MODE below). Colours live in the devices until power is
 # cut, so this runs at login and after every resume via ~/.config/startup.sh.
 #
 # Every OpenRGB device gets an explicit -d: an openrgb call without -d targets
@@ -22,6 +23,17 @@ set -euo pipefail
 COLOR="${1:-FF3000}"   # fire orange by default (LEDs skew yellow, so keep green low);
                        # pass another hex colour as $1, e.g. 000000 = off
 MODE="Direct"
+
+# Default look (no argument): the RAM runs its own "Color Shift" effect,
+# blending between fire orange and deep red on the sticks' controller (no CPU
+# load). With a colour argument everything, the RAM included, goes static in
+# that colour, so previews and "off" stay simple.
+RAM_MODE="Color Shift"
+RAM_COLORS="FF3000,8B0000"
+RAM_SPEED=40               # 0-100
+if (($# > 0)); then
+    RAM_MODE=""
+fi
 
 # Board headers and pump logo via liquidctl. A failure here shouldn't keep
 # the RAM and GPU from getting their colour, so only warn.
@@ -48,8 +60,12 @@ fi
 
 args=()
 for i in "${indices[@]}"; do
-    args+=(-d "$i" -m "$MODE" -c "$COLOR")
+    if [[ -n $RAM_MODE ]] && grep -qE "^$i: Corsair Vengeance" <<<"$listing"; then
+        args+=(-d "$i" -m "$RAM_MODE" -c "$RAM_COLORS" -s "$RAM_SPEED")
+    else
+        args+=(-d "$i" -m "$MODE" -c "$COLOR")
+    fi
 done
 
-echo "fire-rgb: setting ${#indices[@]} device(s) to #${COLOR}: ${indices[*]}"
+echo "fire-rgb: setting ${#indices[@]} device(s) to #${COLOR}${RAM_MODE:+ (RAM: $RAM_MODE $RAM_COLORS)}: ${indices[*]}"
 exec openrgb "${args[@]}"

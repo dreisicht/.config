@@ -116,6 +116,12 @@ sudo rm /usr/lib/systemd/system-sleep/rgb
 - Preview any colour live: `~/.config/rgb_lighting/fire-rgb 200000`
 - Go back to normal: `~/.config/rgb_lighting/fire-rgb`
 - Day colour: change `COLOR` default in `fire-rgb`. No reinstall needed.
+- RAM effect: by default the RAM runs its own "Color Shift" effect between
+  fire orange and deep red (`RAM_MODE`, `RAM_COLORS`, `RAM_SPEED` in
+  `fire-rgb`). Other effects the sticks support: Color Pulse, Color Wave,
+  Visor, Rain, Marquee, Rainbow, Rainbow Wave, Sequential
+  (`openrgb --list-detailed`). Passing a colour to `fire-rgb` sets the RAM
+  static in that colour too.
 - Suspend colour: change `SLEEP_COLOR` in `rgb-sleep-hook`, then **re-run the
   install command**.
 
