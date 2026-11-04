@@ -303,8 +303,11 @@ binds {
     Mod+S { screenshot-window; }
     Mod+Ctrl+S { screenshot-screen; }
     Print { screenshot; }
-    // Color picker: hyprpicker copies the hex value to the clipboard.
-    Mod+Shift+C { spawn-sh "hyprpicker -an"; }
+    // Color picker: click a pixel, its hex value is copied to the clipboard.
+    // grim instead of hyprpicker: hyprpicker >= 0.4.8 needs ext-image-copy-capture-v1,
+    // which niri 26.04 lacks. Pick with the source window focused, otherwise the
+    // inactive-window opacity rule in layout.kdl blends the background into the color.
+    Mod+Shift+C { spawn-sh "grim -g \"$(slurp -p)\" -t ppm - | magick - -format '#%[hex:p{0,0}]' info:- | wl-copy -n"; }
     Mod+Alt+Ctrl+T { toggle-debug-tint; }
     Mod+Alt+Ctrl+O { debug-toggle-opaque-regions; }
     Mod+Alt+Ctrl+D { debug-toggle-damage; }
