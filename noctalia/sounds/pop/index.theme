@@ -1,0 +1,8 @@
+[Sound Theme]
+Name=Pop
+Comment=Ocean with custom notification pop
+Inherits=ocean
+Directories=stereo
+
+[stereo]
+OutputProfile=stereo

@@ -514,13 +514,13 @@
             "normal": true
         },
         "sounds": {
-            "criticalSoundFile": "/home/peterbaintner/.config/noctalia/noctalia_v5_bkp/floraphonic-happy-pop-2-185287.wav",
-            "enabled": true,
+            "criticalSoundFile": "",
+            "enabled": false,
             "excludedApps": "discord,firefox,chrome,chromium,edge",
-            "lowSoundFile": "/home/peterbaintner/.config/noctalia/noctalia_v5_bkp/mixkit-message-pop-alert-2354.wav",
-            "normalSoundFile": "/home/peterbaintner/.config/noctalia/noctalia_v5_bkp/mixkit-message-pop-alert-2354.wav",
-            "separateSounds": true,
-            "volume": 0.26
+            "lowSoundFile": "",
+            "normalSoundFile": "",
+            "separateSounds": false,
+            "volume": 0.5
         }
     },
     "osd": {

@@ -1,7 +1,7 @@
 [audio]
 enable_sounds = true
-notification_sound = "/home/peterbaintner/.config/noctalia/noctalia_v5_bkp/mixkit-message-pop-alert-2354.wav"
 sound_volume = 0.25999999418854713
+sound_theme = "pop"
 
 [bar]
 order = ["default", "sidebar"]
