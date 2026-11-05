@@ -1,6 +1,6 @@
 [Sound Theme]
 Name=Pop
-Comment=Ocean with custom notification pop
+Comment=Ocean with custom notification and volume pops
 Inherits=ocean
 Directories=stereo
 
