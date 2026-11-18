@@ -264,8 +264,6 @@ window-rule {
     default-window-height { proportion 1.0; }
 }
 
-
-
 window-rule {
     match app-id=r#"(?i)^code"#
     open-floating false
@@ -301,6 +299,7 @@ window-rule {
     match app-id=r#"^[Ss]potify$"#
     open-on-workspace "1"
 }
+
 window-rule {
     match app-id=r#"^blender$"#
     open-maximized-to-edges false
@@ -323,49 +322,33 @@ layer-rule {
   place-within-backdrop true
 }
 
-/* Apps: blur them all without xray so it looks more realistic. */
+/*
+  Blur. Everything uses xray blur (the default): niri blurs the wallpaper once
+  and reuses it, so it's nearly free. Non-xray blur re-blurs whatever is behind
+  each surface on every change and was too slow here.
+  The performance power profile turns all blur off, see power-profile.sh.
+*/
 window-rule {
   background-effect {
-    xray false
-    blur false
+    blur true
   }
 }
 
 window-rule {
     match is-active=false
     opacity 0.98
-    background-effect {
-        blur false
-    }
 }
 
 /*
-  Noctalia
-  Disable xray on all our surfaces so it looks more realistic.
-  Noctalia publishes blur regions automatically when ext-background-effects is available.
+  Noctalia surfaces need no rule: Noctalia requests blur itself via
+  ext-background-effect, with the right shape for its rounded corners.
 */
-layer-rule {
-  match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
-  background-effect {
-    xray false
-    blur false
-  }
-}
 
-// /* Enable blur on noctalia's window switcher and disable xray. */
-// layer-rule {
-//     match namespace="noctalia-window-switcher"
-//     background-effect {
-//         blur false
-//         xray false
-//     }
-// }
-
-/* You can also fine-tune the blur effect globally. */
+/* Global blur tuning. Raise offset before passes: offset costs nothing extra. */
 blur {
-  passes 0        // more passes = stronger blur (default: 3)
+  passes 1        // more passes = stronger blur, more GPU (default: 3)
   offset 3.0      // sample distance per pass (default: 3.0)
-  noise 0.01      // grain overlay (default: 0.02)
+  noise 0.05      // grain overlay (default: 0.02)
   saturation 1.0  // color saturation boost (default: 1.5)
 }
 
@@ -374,3 +357,4 @@ debug {
   honor-xdg-activation-with-invalid-serial
 //   wait-for-frame-completion-before-queueing
 }
+

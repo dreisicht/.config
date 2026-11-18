@@ -11,6 +11,9 @@ include "./layout.kdl"
 include "./noctalia.kdl"
 include "./autostart.kdl"
 
+// Written by power-profile.sh: turns blur off in the performance power profile.
+include optional=true "./power-profile.kdl"
+
 // debug {
 //   enable-overlay-planes
 //   deactivate-unfocused-windows
