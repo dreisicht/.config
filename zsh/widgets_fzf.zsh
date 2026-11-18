@@ -111,11 +111,6 @@ y() {
 }
 zle -N y
 
-b() {
-  btop
-}
-zle -N b
-
 pmi(){
   # PMI - PacMan Install
   # search and install a package
