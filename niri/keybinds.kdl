@@ -298,7 +298,7 @@ binds {
     // Mod+I { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
     // Mod+Comma { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
     Mod+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
-    Mod+Alt+T { spawn-sh "noctalia msg theme-mode-toggle"; }
+    Mod+Ctrl+Shift+D hotkey-overlay-title="Toggle light/dark mode" { spawn-sh "noctalia msg theme-mode-toggle"; }
     Mod+Alt+G { spawn-sh "noctalia msg power-cycle"; }
 
     // ---- Screen capture ----
