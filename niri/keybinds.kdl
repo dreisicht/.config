@@ -143,8 +143,8 @@ binds {
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
     // Resize the focused column like Mod+Plus / Mod+Minus.
-    Mod+Alt+WheelScrollUp   cooldown-ms=100 { set-column-width "+10%"; }
-    Mod+Alt+WheelScrollDown cooldown-ms=100 { set-column-width "-10%"; }
+    Mod+Alt+WheelScrollUp   cooldown-ms=100 { set-column-width "+5%"; }
+    Mod+Alt+WheelScrollDown cooldown-ms=100 { set-column-width "-5%"; }
 
     // Similarly, you can bind touchpad scroll "ticks".
     // Touchpad scrolling is continuous, so for these binds it is split into
