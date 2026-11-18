@@ -16,6 +16,17 @@ chsh -s $(which zsh)
 ln -s .config/.zshrc .zshrc
 ```
 
+## Desktop entry overrides
+
+`applications/` holds `.desktop` files that override the system ones in
+`/usr/share/applications` (e.g. `blender.desktop` launches with `-w` so niri's
+50% column rule applies instead of Blender maximizing itself). Link them in:
+
+```
+mkdir -p ~/.local/share/applications
+ln -sf ~/.config/applications/*.desktop ~/.local/share/applications/
+```
+
 ## Base install
 
 ```

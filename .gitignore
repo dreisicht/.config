@@ -85,3 +85,6 @@ noctalia/colors.json
 
 !davinci-resolve/
 !davinci-resolve/davinci-resolve-nv
+
+!applications/
+!applications/*.desktop
