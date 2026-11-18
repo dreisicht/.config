@@ -273,6 +273,11 @@ window-rule {
     default-window-height { proportion 1.0; }
 }
 
+// Named workspaces so the open-on-workspace rules below can target them
+// (open-on-workspace takes a name, not an index). Declared first = indices 1 and 2.
+workspace "1"
+workspace "2"
+
 window-rule {
     match at-startup=true app-id=r#"^zen$"#
     open-on-workspace "2"
@@ -284,16 +289,16 @@ window-rule {
 }
 
 window-rule {
-    match at-startup=true app-id=r#"^signal$"#
+    match app-id=r#"^signal$"#
     open-on-workspace "1"
 }
 
 window-rule {
-    match at-startup=true app-id=r#"^steam$"#
+    match app-id=r#"^steam$"#
     open-on-workspace "1"
 }
 window-rule {
-    match at-startup=true app-id=r#"^spotify$"#
+    match app-id=r#"^[Ss]potify$"#
     open-on-workspace "1"
 }
 window-rule {
