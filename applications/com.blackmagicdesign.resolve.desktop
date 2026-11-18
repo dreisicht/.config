@@ -1,0 +1,18 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DaVinci Resolve
+GenericName=DaVinci Resolve
+Comment=Revolutionary new tools for editing, visual effects, color correction and professional audio post production, all in a single application!
+Path=/opt/resolve/
+Exec=/home/peterbaintner/.local/bin/davinci-resolve-nv %u
+Terminal=false
+MimeType=application/x-resolveproj;
+Icon=/opt/resolve/graphics/DV_Resolve.png
+StartupNotify=true
+StartupWMClass=resolve
+Name[en_US]=DaVinci Resolve
+# Hidden from menus: DaVinciResolve.desktop is the single visible entry.
+# Kept (rather than deleted) so this desktop ID still routes through the
+# wrapper if anything launches Resolve by ID or via the .drp MIME handler.
+NoDisplay=true

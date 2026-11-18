@@ -20,11 +20,15 @@ ln -s .config/.zshrc .zshrc
 
 `applications/` holds `.desktop` files that override the system ones in
 `/usr/share/applications` (e.g. `blender.desktop` launches with `-w` so niri's
-50% column rule applies instead of Blender maximizing itself). Link them in:
+50% column rule applies instead of Blender maximizing itself; the two DaVinci
+Resolve entries launch through the `davinci-resolve-nv` wrapper, with
+`com.blackmagicdesign.resolve.desktop` hidden so only one menu entry shows).
+Link them in:
 
 ```
-mkdir -p ~/.local/share/applications
+mkdir -p ~/.local/share/applications ~/.local/bin
 ln -sf ~/.config/applications/*.desktop ~/.local/share/applications/
+ln -sf ~/.config/davinci-resolve/davinci-resolve-nv ~/.local/bin/
 ```
 
 ## Base install
