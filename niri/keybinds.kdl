@@ -17,6 +17,7 @@ binds {
     Mod+E hotkey-overlay-title="Files: nautilus" { spawn "nautilus" "--new-window"; }
     Mod+B hotkey-overlay-title="Browser: zen" { spawn "zen-browser"; }
     Mod+D hotkey-overlay-title="VS Code" { spawn "code"; }
+
     Mod+L repeat=false hotkey-overlay-title="Suspend" { spawn "systemctl" "suspend"; }
 
     // Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
@@ -57,9 +58,7 @@ binds {
     Mod+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
-
     Mod+Right { focus-column-right; }
-
 
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Right { move-column-right; }
@@ -67,12 +66,8 @@ binds {
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
-    Mod+J     { focus-window-or-workspace-down; }
     Mod+Down     { focus-window-or-workspace-down; }
-    Mod+K     { focus-window-or-workspace-up; }
     Mod+Up     { focus-window-or-workspace-up; }
-    Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-    Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
     Mod+Ctrl+Down  { move-window-down-or-to-workspace-down; }
     Mod+Ctrl+Up    { move-window-up-or-to-workspace-up; }
 
@@ -103,8 +98,6 @@ binds {
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
@@ -129,6 +122,8 @@ binds {
     Mod+WheelScrollUp        cooldown-ms=1 { focus-workspace-up; }
     Mod+Ctrl+WheelScrollDown cooldown-ms=1 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp   cooldown-ms=1 { move-column-to-workspace-up; }
+    Mod+Alt+WheelScrollDown cooldown-ms=1 { move-column-to-workspace-down focus=false;}
+    Mod+Alt+WheelScrollUp   cooldown-ms=1 { move-column-to-workspace-up focus=false;}
 
     Mod+WheelScrollRight      { focus-column-right; }
     Mod+WheelScrollLeft       { focus-column-left; }
@@ -143,8 +138,8 @@ binds {
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
     // Resize the focused column like Mod+Plus / Mod+Minus.
-    Mod+Alt+WheelScrollUp   cooldown-ms=100 { set-column-width "+5%"; }
-    Mod+Alt+WheelScrollDown cooldown-ms=100 { set-column-width "-5%"; }
+    // Mod+Alt+WheelScrollUp   cooldown-ms=100 { set-column-width "+5%"; }
+    // Mod+Alt+WheelScrollDown cooldown-ms=100 { set-column-width "-5%"; }
 
     // Similarly, you can bind touchpad scroll "ticks".
     // Touchpad scrolling is continuous, so for these binds it is split into
@@ -217,12 +212,12 @@ binds {
     // Jump directly to fixed column widths (Mod+M maximizes to 100%).
     Mod+N       { set-column-width "25%"; }
     Mod+Alt+N { set-column-width "50%"; }
+    Mod+M { maximize-column; }
+    Mod+F { fullscreen-window; }
 
     Mod+Ctrl+Shift+N { switch-preset-window-height; }
     Mod+Ctrl+N { reset-window-height; }
 
-    Mod+M { maximize-column; }
-    Mod+F { fullscreen-window; }
 
     // While maximize-column leaves gaps and borders around the window,
     // maximize-window-to-edges doesn't: the window expands to the edges of the screen.
@@ -232,7 +227,7 @@ binds {
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    Mod+Ctrl+F { expand-column-to-available-width; }
+    Mod+Alt+F { expand-column-to-available-width; }
 
     Mod+C { center-column; }
 

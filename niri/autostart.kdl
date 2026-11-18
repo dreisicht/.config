@@ -9,3 +9,6 @@ spawn-at-startup "easyeffects" "--gapplication-service"
 spawn-at-startup "ghostty"
 spawn-at-startup "zen-browser"
 spawn-at-startup "signal-desktop"
+spawn-at-startup "spotify"
+
+spawn-at-startup "source ~/.config/startup.sh"
