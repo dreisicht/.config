@@ -11,4 +11,4 @@ spawn-at-startup "zen-browser"
 spawn-at-startup "signal-desktop"
 spawn-at-startup "spotify"
 
-spawn-at-startup "source ~/.config/startup.sh"
+spawn-sh-at-startup "~/.config/startup.sh"

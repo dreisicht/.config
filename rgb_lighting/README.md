@@ -75,8 +75,8 @@ order above holds.
 
 ### 1. Login and server
 
-Nothing to install. The unit lives in `~/.config/systemd/user/`, and Noctalia
-runs `~/.config/startup.sh` at login (see `noctalia/settings.json`). After
+Nothing to install. The unit lives in `~/.config/systemd/user/`, and niri
+runs `~/.config/startup.sh` at login (see `niri/autostart.kdl`). After
 adding or changing the unit file, run:
 
 ```sh

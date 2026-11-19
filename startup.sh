@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Hardware setup: H150i pump and radiator curve, then RGB.
 #
-# Runs at login (Noctalia, see noctalia/settings.json) and again after every
+# Runs at login (niri, see niri/autostart.kdl) and again after every
 # resume (rgb_lighting/rgb-sleep-hook), because in deep suspend the H150i, GPU
 # and board lose power and forget their settings. So only put things here that
 # are safe to run again after waking up.
